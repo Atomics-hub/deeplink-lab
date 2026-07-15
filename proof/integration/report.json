@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "toolVersion": "0.1.0",
-  "runId": "20260715T195827Z",
-  "generatedAt": "2026-07-15T19:58:27.391332Z",
+  "runId": "20260715T204854Z",
+  "generatedAt": "2026-07-15T20:48:54.114962Z",
   "spec": "integration-candidate.yml",
   "referenceSetup": null,
   "preflight": {
@@ -18,7 +18,7 @@
     "passed": 1,
     "failed": 0,
     "unavailable": 0,
-    "durationMs": 8867,
+    "durationMs": 13306,
     "platforms": [
       "android"
     ],
@@ -38,7 +38,7 @@
         "target": "app",
         "destination": "product/7"
       },
-      "durationMs": 8676,
+      "durationMs": 12364,
       "startingState": {
         "install": "installed",
         "launch": "cold",
@@ -55,9 +55,9 @@
         "logs": "cases/01-candidate-product-cold-r01/device.log",
         "commands": "cases/01-candidate-product-cold-r01/commands.log",
         "sha256": {
-          "cases/01-candidate-product-cold-r01/commands.log": "d2b3fefaf02bbcccacdf90e8919472373081468222ff0c157c8588f3d6a65665",
-          "cases/01-candidate-product-cold-r01/device.log": "b9dd67b4a23c2c8db49c55f46ef0aaa600e33497ea8a337271e766dea36ff229",
-          "cases/01-candidate-product-cold-r01/screenshot.png": "1564427900c63ce176aabb63391f1e6db4fdb80dc0937c3b97093b400073cd11"
+          "cases/01-candidate-product-cold-r01/commands.log": "09a9e17ccbf9d1d09b7f9b5c0dc180032269b12e30d347604f3820145e813596",
+          "cases/01-candidate-product-cold-r01/device.log": "e52ef9cd63f6cf1039ff364b32e3f2335f51ede75bfd4e27042f8b33fdf2ae21",
+          "cases/01-candidate-product-cold-r01/screenshot.png": "996338eba1f62b806d8a7a15770a16ec16614e862c3097940bc075abfd521cfa"
         },
         "completeForFailure": true
       },

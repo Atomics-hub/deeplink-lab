@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "startedAt": "2026-07-15T19:57:25Z",
-  "durationSeconds": 71,
+  "startedAt": "2026-07-15T20:47:59Z",
+  "durationSeconds": 68,
   "spec": "examples/integration-candidate.yml",
   "caseId": "candidate-product-cold",
   "classification": "passed",
   "actualDestination": "product/7",
   "runnerCodeChanged": false,
-  "runtimeSha256": "48846f98d8452103b9bda26784b6e90d3dace8543dfab210839b82bd9d17d5f0",
+  "runtimeSha256": "86940bd469dff85cadb7e8c11077c6bade155b07c0fea0201da5118fde673be6",
   "report": "report.json"
 }

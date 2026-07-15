@@ -3,7 +3,7 @@ metadata:
   name: DeepLink Lab deterministic two-platform fixture
   description: Known-good routes and runtime-only routing failures against static-valid configuration.
   referenceSetup: Apple M4, macOS 26.5.2, Xcode 26.6/iOS 26.5 Simulator, Android API 36 arm64 emulator at 720x1600
-  integrationSeconds: 71
+  integrationSeconds: 68
 apps:
   ios-fixture:
     platform: ios

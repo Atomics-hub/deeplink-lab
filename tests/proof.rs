@@ -9,6 +9,17 @@ fn load_report(path: &str) -> RunReport {
     serde_json::from_slice(&fs::read(path).unwrap()).unwrap()
 }
 
+fn sha256_hex(bytes: impl AsRef<[u8]>) -> String {
+    let digest = Sha256::digest(bytes);
+    let mut encoded = String::with_capacity(digest.len() * 2);
+    const HEX: &[u8; 16] = b"0123456789abcdef";
+    for byte in digest {
+        encoded.push(HEX[(byte >> 4) as usize] as char);
+        encoded.push(HEX[(byte & 0x0f) as usize] as char);
+    }
+    encoded
+}
+
 #[test]
 fn committed_hostile_gates_pass() {
     let loaded = LoadedSpec::load("deeplinklab.yml").unwrap();
@@ -43,10 +54,7 @@ fn committed_evidence_hashes_match() {
                 assert!(!relative
                     .components()
                     .any(|part| matches!(part, Component::ParentDir)));
-                let actual = format!(
-                    "{:x}",
-                    Sha256::digest(fs::read(root.join(relative)).unwrap())
-                );
+                let actual = sha256_hex(fs::read(root.join(relative)).unwrap());
                 assert_eq!(actual, expected, "hash mismatch for {}", relative.display());
             }
         }
@@ -58,7 +66,7 @@ fn integration_proof_matches_current_runner() {
     let evidence: serde_json::Value =
         serde_json::from_slice(&fs::read("proof/integration/integration-evidence.json").unwrap())
             .unwrap();
-    let runtime = format!("{:x}", Sha256::digest(fs::read("src/runtime.rs").unwrap()));
+    let runtime = sha256_hex(fs::read("src/runtime.rs").unwrap());
 
     assert_eq!(evidence["runnerCodeChanged"], false);
     assert_eq!(evidence["classification"], "passed");

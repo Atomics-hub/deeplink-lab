@@ -13,8 +13,8 @@ Starting: Intent { act=android.intent.action.VIEW cat=[android.intent.category.B
 Status: ok
 LaunchState: COLD
 Activity: dev.deeplinklab.candidate/dev.deeplinklab.fixture.MainActivity
-TotalTime: 4186
-WaitTime: 4195
+TotalTime: 4470
+WaitTime: 4671
 Complete
 [exit 0]
 $ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 exec-out screencap -p

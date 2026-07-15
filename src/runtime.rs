@@ -1155,7 +1155,14 @@ fn path_to_report(path: &Path, root: &Path) -> String {
 
 fn digest_file(path: &Path) -> Result<String> {
     let bytes = fs::read(path)?;
-    Ok(format!("{:x}", Sha256::digest(bytes)))
+    let digest = Sha256::digest(bytes);
+    let mut encoded = String::with_capacity(digest.len() * 2);
+    const HEX: &[u8; 16] = b"0123456789abcdef";
+    for byte in digest {
+        encoded.push(HEX[(byte >> 4) as usize] as char);
+        encoded.push(HEX[(byte & 0x0f) as usize] as char);
+    }
+    Ok(encoded)
 }
 
 fn shell_quote(value: &str) -> String {
