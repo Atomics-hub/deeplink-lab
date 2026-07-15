@@ -1,0 +1,11 @@
+Timestamp               Ty Process[PID:TID]
+2026-07-15 12:59:23.698 Df DeepLinkFixture[50412:107cb39] (CoreFoundation) *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: 'Application windows are expected to have a root view controller at the end of application launch'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x00000001804c3dec __exceptionPreprocess + 172
+	1   libobjc.A.dylib                     0x0000000180063438 objc_exception_throw + 72
+	2   Foundation                          0x0000000181075818 _userInfoForFileAndLine + 0
+	3   UIKitCore                           0x00000001864a885c -[UIApplication _runWithMainScene:transitionContext:completion:] + 1420
+	4   UIKitCore                           0x00000001859a41e8 -[_UISceneLifecycleMultiplexer completeApplicationLaunchWithFBSScene:transitionContext:] + 88
+	5   UIKitCore                           0x0000000185fafa28 _UIScenePerformActionsWithLifecycleActionMask + 96
+	6   UIKitCore                           0x00000001859a4a8c __101-[_UISceneLifecycleMultiplexer _evalTransitionToSettings:fromSettings:fo<…>

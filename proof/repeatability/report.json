@@ -1,0 +1,4949 @@
+{
+  "schemaVersion": 1,
+  "toolVersion": "0.1.0",
+  "runId": "20260715T194102Z",
+  "generatedAt": "2026-07-15T19:41:02.883462Z",
+  "spec": "deeplinklab.yml",
+  "referenceSetup": "Apple M4, macOS 26.5.2, Xcode 26.6/iOS 26.5 Simulator, Android API 36 arm64 emulator at 720x1600",
+  "preflight": {
+    "schemaVersion": 1,
+    "specVersion": 1,
+    "valid": true,
+    "errors": 0,
+    "warnings": 0,
+    "issues": []
+  },
+  "summary": {
+    "total": 120,
+    "passed": 0,
+    "failed": 120,
+    "unavailable": 0,
+    "durationMs": 782198,
+    "platforms": [
+      "android"
+    ],
+    "repeats": 20
+  },
+  "results": [
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 1,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 5559,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r01/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r01/device.log",
+        "commands": "cases/14-android-wrong-destination-r01/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r01/commands.log": "4af754f886a7e8297aa3b0d26a6d12bbcb25dcde3ab14aae06f1a23e0fe188c8",
+          "cases/14-android-wrong-destination-r01/device.log": "81d6303d1e53d0ba1e4eb6bd73667ec42c26e44e522b77bdc24b35cac5b6b630",
+          "cases/14-android-wrong-destination-r01/screenshot.png": "06f6a7f0334fc3ae3d0f6d7c01a4824f0cfc4677ebf4ce262ec6132055c639b7"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 1,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 3579,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r01/screenshot.png",
+        "logs": "cases/15-android-query-loss-r01/device.log",
+        "commands": "cases/15-android-query-loss-r01/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r01/commands.log": "2291e542aed4d12326c71e9a46950595a5e1a0d0ce1f0ca73dc8187c5ff85b83",
+          "cases/15-android-query-loss-r01/device.log": "c959830f4603bbc0e743481b25b1e0be4a5c6efa7329bd49ff9606547ae15d56",
+          "cases/15-android-query-loss-r01/screenshot.png": "b510e2564cdf8c242ef416edd0536d3c86a97b143731f4f1144f2606d677f1ff"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 1,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 3532,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r01/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r01/device.log",
+        "commands": "cases/16-android-fragment-loss-r01/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r01/commands.log": "89ab71015979845c6c5ff37aeb252a2129a98eb87a6e667d4b1420d0cc0c102a",
+          "cases/16-android-fragment-loss-r01/device.log": "9afff1305b50f0c75b9762c5f8312a9009dff816389b78f00cfa4df84275d68e",
+          "cases/16-android-fragment-loss-r01/screenshot.png": "540125d5b0ebc7fc3491fc5451364b7de60de124f980af47d5339d68659a29fe"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 1,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 3240,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r01/screenshot.png",
+        "logs": "cases/17-android-route-collision-r01/device.log",
+        "commands": "cases/17-android-route-collision-r01/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r01/commands.log": "dd520fdceac8eb19ea5fdb755d3a0d58d8747c829a658baf97c9ac26f028b8a8",
+          "cases/17-android-route-collision-r01/device.log": "104edc94b308eee93e10709480b7d5a03a2b69e0b1261bfb445b083f6461910c",
+          "cases/17-android-route-collision-r01/screenshot.png": "3b0d8487c76b20806f5834959237197dedd3e06a9359bb2cc11aff71731e9328"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 1,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 3362,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r01/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r01/device.log",
+        "commands": "cases/18-android-warm-stale-r01/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r01/commands.log": "3ef3aabb06ee0a5eb600806f58f97f124d35e996af0f4922a8786b96062948e8",
+          "cases/18-android-warm-stale-r01/device.log": "69cd91e8f69c5fa915cf18013bfc408daaf2b2bfeff5985e97f05486ae870cef",
+          "cases/18-android-warm-stale-r01/screenshot.png": "7186a7021e37e67411345b90d26794ca16409bf87bfa815546de766e69ae76e1"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 1,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 3748,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r01/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r01/device.log",
+        "commands": "cases/19-android-background-ignored-r01/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r01/commands.log": "04dab3868a94f37dca9cc14f89c41a0ef0d24e192dc9a0ec8140b39b8bb6ed3b",
+          "cases/19-android-background-ignored-r01/device.log": "59a57fe74d5d6a004116bab00fc67daa34ff6b3d2d7d65e8dd7c306f0ed43a4f",
+          "cases/19-android-background-ignored-r01/screenshot.png": "a2c12a59777e0804e6617aff58c3ebfdb1fcf935c8e858848a37f912c22622d7"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 2,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 3920,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r02/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r02/device.log",
+        "commands": "cases/14-android-wrong-destination-r02/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r02/commands.log": "89fc8036182692f48d322a1821fb164befbd8c143b7c74601fb25e23a053b39d",
+          "cases/14-android-wrong-destination-r02/device.log": "ada219413e53f80765f05c0889d7d4c9d11c4f0d22a866ef97eaaefd31e8c8d1",
+          "cases/14-android-wrong-destination-r02/screenshot.png": "eafea72122420084f2dc7bcf656acb143d30e0eb900ed56a9cbc63f9b00d26b1"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 2,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 2933,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r02/screenshot.png",
+        "logs": "cases/15-android-query-loss-r02/device.log",
+        "commands": "cases/15-android-query-loss-r02/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r02/commands.log": "100a82823177edee667574f14e0dfead2265a2f15885c05f524a9b287a7d7e14",
+          "cases/15-android-query-loss-r02/device.log": "f4bd8e1bd9240edb3341c5079a8d395fa7be3972a93836c5890f45dfe159a280",
+          "cases/15-android-query-loss-r02/screenshot.png": "99bf43103879fd8596a4d19b8e292d1fd8a3f924734bb2b0b4221f576af37030"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 2,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 2859,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r02/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r02/device.log",
+        "commands": "cases/16-android-fragment-loss-r02/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r02/commands.log": "65e041abfa946363cd78499167e4d86a63ff3194e7ba871b23c1712be31c947f",
+          "cases/16-android-fragment-loss-r02/device.log": "6669dbd10820f8391fee3c448d1d85bdddb440ad6dae8789414e6736984e39d8",
+          "cases/16-android-fragment-loss-r02/screenshot.png": "540125d5b0ebc7fc3491fc5451364b7de60de124f980af47d5339d68659a29fe"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 2,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 3515,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r02/screenshot.png",
+        "logs": "cases/17-android-route-collision-r02/device.log",
+        "commands": "cases/17-android-route-collision-r02/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r02/commands.log": "26a2d6e6dee4b030d24720705ef54685a795d9486fe326b30557d255db30703f",
+          "cases/17-android-route-collision-r02/device.log": "5148ef64828e195231d572905f03380906be924d7dc3212e6de8ff45a2a2adda",
+          "cases/17-android-route-collision-r02/screenshot.png": "acd777029978bd1c55f46c2fd1f1a44b147ed878f42bf34ffa44524e6c253b11"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 2,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 3552,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r02/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r02/device.log",
+        "commands": "cases/18-android-warm-stale-r02/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r02/commands.log": "ecf8efa341e99b9e35d56dee8210bd650214f7223450bdebe0747b3c8557ddf5",
+          "cases/18-android-warm-stale-r02/device.log": "14d0f2f6ee7c53a04b400bfca2374b9dc8bb384d3109034b7a1623e71c241f5a",
+          "cases/18-android-warm-stale-r02/screenshot.png": "a311351108d9badf9d29a434eabb081886a1cc8518c039ba8feee2e26951fa22"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 2,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 4087,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r02/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r02/device.log",
+        "commands": "cases/19-android-background-ignored-r02/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r02/commands.log": "9323c80bd9efdbfd55ec3b71b78249093ad557cb6134c355f37f966234592adc",
+          "cases/19-android-background-ignored-r02/device.log": "6b94f7570d2d3b013c5cd7ea3e418976ce5145d8681aad567f5c93a79ede0698",
+          "cases/19-android-background-ignored-r02/screenshot.png": "f06043811f58359aadf1b176293a24b6e4c26a92db85361c37801f9a88cb596a"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 3,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 3546,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r03/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r03/device.log",
+        "commands": "cases/14-android-wrong-destination-r03/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r03/commands.log": "c4ab39d363d649a70524c7f0bdcfc13e1c37041039252cda38927deae876035c",
+          "cases/14-android-wrong-destination-r03/device.log": "b3dc785dfc23e4efcdb4cacba87ceb513e6632540f0a5cf65b2924acfd083faf",
+          "cases/14-android-wrong-destination-r03/screenshot.png": "14f17e407778cec330a1b1a947822a7e1c1e2bebc89c24b7be52c5e1112a0947"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 3,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 3580,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r03/screenshot.png",
+        "logs": "cases/15-android-query-loss-r03/device.log",
+        "commands": "cases/15-android-query-loss-r03/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r03/commands.log": "47840f0444cfc25a8f97806fc0d6e1e8973353c20404cb25f518cf3e2fa7b982",
+          "cases/15-android-query-loss-r03/device.log": "273db9ee5f0967a9692e5f7c0c941d4acb0f9e307e3bd6c70f168377b0ea70cc",
+          "cases/15-android-query-loss-r03/screenshot.png": "a5eb9373b5033486057e59c90da76288c81c49d7365b70656d9ff66c36162c04"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 3,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 2938,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r03/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r03/device.log",
+        "commands": "cases/16-android-fragment-loss-r03/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r03/commands.log": "ad7996d6ee44b024eb758b4067ff06bf7bef56313eef9494dda2971c884add63",
+          "cases/16-android-fragment-loss-r03/device.log": "d9d35feb0bab73b464d8545ab22518d06752d390f70040af220408c3155e89f0",
+          "cases/16-android-fragment-loss-r03/screenshot.png": "a64f06e72abd094a9c301f4f2e1a0e682ad699161b8ad32a642887226c1bdba9"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 3,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 3015,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r03/screenshot.png",
+        "logs": "cases/17-android-route-collision-r03/device.log",
+        "commands": "cases/17-android-route-collision-r03/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r03/commands.log": "2fc034215aa7cbdbfb4f75ec1fa473c839bd3a4b5a99455866dd524da6aa27b3",
+          "cases/17-android-route-collision-r03/device.log": "0a9ee4f430b8444bd846ba8caed6bdfd38ec46655ccd4114441c80f99e06da04",
+          "cases/17-android-route-collision-r03/screenshot.png": "fcc0a6e8b9c7f5736d09ab096912135cf489ce521896f394c3613804f4b235b6"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 3,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 3024,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r03/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r03/device.log",
+        "commands": "cases/18-android-warm-stale-r03/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r03/commands.log": "9195fb84e29dfd7ed6dea7fced5257afcb21b2857204c23484889a99d05e30d9",
+          "cases/18-android-warm-stale-r03/device.log": "cb84bfb029472745365d0f385cc46bc72e82b4598c50d9159d6ce57813fafe11",
+          "cases/18-android-warm-stale-r03/screenshot.png": "5a23d4545845c1db83f15184557a5876065f6c326a145c8fb3a41a02d041bf9a"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 3,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 3421,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r03/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r03/device.log",
+        "commands": "cases/19-android-background-ignored-r03/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r03/commands.log": "6130634a90222ae4bd6579552e83bbf5065a2a25b6458c80883bfffada5328d9",
+          "cases/19-android-background-ignored-r03/device.log": "fb3e5b10a1c2be479b59a7b9c28336fdc182bd0f7a03bdac5f330b1a39a03b50",
+          "cases/19-android-background-ignored-r03/screenshot.png": "11ef55d580a31aff44af4b26ce37d8de9a8c6122831ee79dbe43799cc0250626"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 4,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 3266,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r04/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r04/device.log",
+        "commands": "cases/14-android-wrong-destination-r04/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r04/commands.log": "74ca0a70fee0f6baf43e95fae963366c7ee0c370421f3d3ef99bf99b18522ac8",
+          "cases/14-android-wrong-destination-r04/device.log": "ab7c211b3fd9822108158356a7bc52f0933ab4e26ff55ee79b17ef85b4e66894",
+          "cases/14-android-wrong-destination-r04/screenshot.png": "17e643d52b10e170cf53768ae9a364143dbdc5daf4c2fb4658e6d4ff3c558351"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 4,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 3379,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r04/screenshot.png",
+        "logs": "cases/15-android-query-loss-r04/device.log",
+        "commands": "cases/15-android-query-loss-r04/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r04/commands.log": "5c38b20380ac32501dba1976fde4c9df4d81e2719e3254b4f5f4113a9fefd26a",
+          "cases/15-android-query-loss-r04/device.log": "22a0c6bf8c965d4712d13148f12cf67442e3c9a6f8036e7654c4cac350555b0a",
+          "cases/15-android-query-loss-r04/screenshot.png": "9f151dab575b878b3f7dee1cf2d60e9e2fb1de1f5bb9050473c78102df853524"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 4,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 4068,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r04/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r04/device.log",
+        "commands": "cases/16-android-fragment-loss-r04/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r04/commands.log": "d4eb8682d54314125f10e90b0963be1836fb10843646becaf2ec896d34a539b3",
+          "cases/16-android-fragment-loss-r04/device.log": "6b65b2bca48b76c1e6c0428bef0c53db3238626798ac8d87bd97cee2d9ef5cf0",
+          "cases/16-android-fragment-loss-r04/screenshot.png": "deb25d8f3db87cc036c7bc32aa5d320a662cd405ae516b5936f16a41c48a89fb"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 4,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 3409,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r04/screenshot.png",
+        "logs": "cases/17-android-route-collision-r04/device.log",
+        "commands": "cases/17-android-route-collision-r04/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r04/commands.log": "c580467e25e3ed044ad02de6fb6ae98146b924f496f471ae09dea611376bfec7",
+          "cases/17-android-route-collision-r04/device.log": "8aadbcae2f499fe9e50db22d95900de6d71617e7c66a24ae208e6e1e0108b758",
+          "cases/17-android-route-collision-r04/screenshot.png": "c2db27b01c85316e75254e08f0755c5fb86ebfc223a50fb02afd04b26a3e6dd7"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 4,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 5623,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r04/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r04/device.log",
+        "commands": "cases/18-android-warm-stale-r04/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r04/commands.log": "864ed943ee3e9cd51496f3b1519b5ebacc76f31a710282dd78fcd4e845f11f0b",
+          "cases/18-android-warm-stale-r04/device.log": "9f7cfb41e2feba6d96d95893753c7489bdfdb0a4c81dfce4db0c17e5fcbceaac",
+          "cases/18-android-warm-stale-r04/screenshot.png": "17e643d52b10e170cf53768ae9a364143dbdc5daf4c2fb4658e6d4ff3c558351"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 4,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 6602,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r04/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r04/device.log",
+        "commands": "cases/19-android-background-ignored-r04/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r04/commands.log": "b104a4bbcf724b4fdc33603420ffed98cc776aee9e102880d9135aa80f809bd9",
+          "cases/19-android-background-ignored-r04/device.log": "b21c954e287f803ea4f1c607e124d6e7b394a034cf54ca6ace26df28079a5086",
+          "cases/19-android-background-ignored-r04/screenshot.png": "11ef55d580a31aff44af4b26ce37d8de9a8c6122831ee79dbe43799cc0250626"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 5,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 8506,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r05/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r05/device.log",
+        "commands": "cases/14-android-wrong-destination-r05/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r05/commands.log": "6f71d2d5b17a3e913084f935185b2b7006a882fd5868450c226b696724f463ff",
+          "cases/14-android-wrong-destination-r05/device.log": "fe85b186ddcd363d14cb63e85e165fc1650e0bbfb0953d15f55fd609c19e90dd",
+          "cases/14-android-wrong-destination-r05/screenshot.png": "afa1a32986d46398bc46da3c6aac2d9b1bb9024259f8ab711ea7116fc6710c0b"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 5,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 7705,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r05/screenshot.png",
+        "logs": "cases/15-android-query-loss-r05/device.log",
+        "commands": "cases/15-android-query-loss-r05/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r05/commands.log": "eeef321c4a233192826d87e493a0ac335dddc475105dbe32174d31d67e782480",
+          "cases/15-android-query-loss-r05/device.log": "c88bf101a4e0fb496bc19fee1361d6cfe9c15227e5b83fdf202945a390cdecd7",
+          "cases/15-android-query-loss-r05/screenshot.png": "9a67557e1498ec185f95d2b53c022bb616804fcd2454705405a07474d78540f7"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 5,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 7510,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r05/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r05/device.log",
+        "commands": "cases/16-android-fragment-loss-r05/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r05/commands.log": "2ca208db62cd81ff1d0c70ddd2e6b2f1b92714c1156fb67e0d09f3592c6c27e1",
+          "cases/16-android-fragment-loss-r05/device.log": "49fc13b481c1234b9f9677759a9472856014cf543273d48c7816dcdbb8c80ef0",
+          "cases/16-android-fragment-loss-r05/screenshot.png": "e754f35ace9e23826ba63ec9a0b9e63cddbf0cb2fff4b68dc1d66ffc6c0d8058"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 5,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 8550,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r05/screenshot.png",
+        "logs": "cases/17-android-route-collision-r05/device.log",
+        "commands": "cases/17-android-route-collision-r05/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r05/commands.log": "2f18f416d704dc3dba2b67bc821008b8f62c3d05c688d1fbccbecc02a5b7ec62",
+          "cases/17-android-route-collision-r05/device.log": "3e5d5120765a5b75c7d9b0f4bed0e691e82b8e04e0896064b623f25798ed6a4c",
+          "cases/17-android-route-collision-r05/screenshot.png": "f329c2e4b5d5ec6ae2ff5e22721180eb7c91c0a7c5f20707e75bdd9987829b79"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 5,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 12592,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r05/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r05/device.log",
+        "commands": "cases/18-android-warm-stale-r05/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r05/commands.log": "05ea765dfc49d701286a1cd6bc7b86bf1f66deed6f8bcca303914349020bc625",
+          "cases/18-android-warm-stale-r05/device.log": "075d11cf6c8377b05715f4bf30961cf4dbf0a284374d4bdc40ea575989b361d0",
+          "cases/18-android-warm-stale-r05/screenshot.png": "2faab8d88e93cba9bddc3ea4baeaf5e49740674bb9b5b371d830b635734cfc84"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 5,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 5151,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r05/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r05/device.log",
+        "commands": "cases/19-android-background-ignored-r05/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r05/commands.log": "a407fc897c42758aef4661779a031c71abe56adf8c625566f71806a9a4f70460",
+          "cases/19-android-background-ignored-r05/device.log": "227ca31bc205b02d3c3a10c98911e1892c73b88240bdcf55e44845f0aabbd809",
+          "cases/19-android-background-ignored-r05/screenshot.png": "5b94dd5cd0536ec3e9faa650f390b178f4e59484bfd3a60d4a46550dffd865ac"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 6,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 3959,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r06/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r06/device.log",
+        "commands": "cases/14-android-wrong-destination-r06/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r06/commands.log": "ee95626ec2ab218836d67f17e18fe0b131d9568fa3708e727554c61b24e2d793",
+          "cases/14-android-wrong-destination-r06/device.log": "1851bb723f3112f645b5b23997e9d5af1f2151e240481f521c2785c2dad99a5a",
+          "cases/14-android-wrong-destination-r06/screenshot.png": "aeada9bf26bf46a10ab4c7f62511a849f7837d3753c08d9babe5a7bbed9650e0"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 6,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 3176,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r06/screenshot.png",
+        "logs": "cases/15-android-query-loss-r06/device.log",
+        "commands": "cases/15-android-query-loss-r06/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r06/commands.log": "60182930abe20e4ed656b31990b2ab82f59d636a9482e445acbdbe404d5f907c",
+          "cases/15-android-query-loss-r06/device.log": "4792671981bb0c8d2d789ff342c1801e3b22c27026d9afe85cc132a1f7e0e119",
+          "cases/15-android-query-loss-r06/screenshot.png": "3b9cb564d7d977219fc577b8a0893a406d8470ce966322f343cb9450f09be95e"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 6,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 3776,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r06/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r06/device.log",
+        "commands": "cases/16-android-fragment-loss-r06/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r06/commands.log": "df00b2b46a1d45e7a8d730c4360f020f5b9973ba4f44973405b1dc3db62a9184",
+          "cases/16-android-fragment-loss-r06/device.log": "5e80fafb5cf3e084f7ecc99fe85ede9f4cc1956952d429ec6f5cc3b558270e9a",
+          "cases/16-android-fragment-loss-r06/screenshot.png": "467162b1fdce259f1234aaae8ae6148d06f71573084b88452bfb38b42f746fc8"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 6,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 2859,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r06/screenshot.png",
+        "logs": "cases/17-android-route-collision-r06/device.log",
+        "commands": "cases/17-android-route-collision-r06/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r06/commands.log": "b708db4d5cea2dd0d8e59569e3edc6c09b25eae696841f287476c007ead3c546",
+          "cases/17-android-route-collision-r06/device.log": "5d1f8450ee2cdc0682262d09ebb566877bcd31aa06df41581b000e58bbc4f38d",
+          "cases/17-android-route-collision-r06/screenshot.png": "835a97b6c178f127cdc0ce01e7772387c614e19cfb84c1012b1ba6fd5e6b3a14"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 6,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 3071,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r06/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r06/device.log",
+        "commands": "cases/18-android-warm-stale-r06/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r06/commands.log": "3af278df1ce5dd664cb36dc62532f70a35bdcd9e51ffe3252186e123d0d59f45",
+          "cases/18-android-warm-stale-r06/device.log": "09e9d7ab877a2181efa49b3e7d99a184d2ababc3f3bff783b6d87dcfb11fca06",
+          "cases/18-android-warm-stale-r06/screenshot.png": "ab681221a5f923bc8ad337c638683ebec31b39632eb2ea48644a492d87240aa5"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 6,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 3626,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r06/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r06/device.log",
+        "commands": "cases/19-android-background-ignored-r06/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r06/commands.log": "00f8c18b8e14805fe575ef680a257a839a5e5b522bbe3d733771e8ecffac1832",
+          "cases/19-android-background-ignored-r06/device.log": "74a5cd4b1b173c3a5403f1b2225877ad1ab3806a6b91d0c95f070ec0885a7a5a",
+          "cases/19-android-background-ignored-r06/screenshot.png": "084332e24c0481d2cc43c5f841c6b3f0d94a2023207a29debf01d317728f8f33"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 7,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 7449,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r07/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r07/device.log",
+        "commands": "cases/14-android-wrong-destination-r07/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r07/commands.log": "0bfacca0045ddd4a531582ecae7f59036de4ada149fb795c9664aaad154ede17",
+          "cases/14-android-wrong-destination-r07/device.log": "46a5743e618e2daf1ac1c8d1a5239aa78ccb059fa004ceca336bb6824abdbcc0",
+          "cases/14-android-wrong-destination-r07/screenshot.png": "c9eadcc56b060bb0c469eb53de10457759cbb263d7c42c976bcc796e475798bb"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 7,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 5500,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r07/screenshot.png",
+        "logs": "cases/15-android-query-loss-r07/device.log",
+        "commands": "cases/15-android-query-loss-r07/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r07/commands.log": "c3657ceb4d42059bdbcc70bbf50405facd202938d64352fad60eb72059f85525",
+          "cases/15-android-query-loss-r07/device.log": "b209cfd52395789cda928cbeaeca3562b29ab5bf5dcc2b6a410970e38dfb23ff",
+          "cases/15-android-query-loss-r07/screenshot.png": "6e0e7f28f731cf9d15f8be2688029f81106a88e9c8afd9b08e691202e902cf1c"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 7,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 3959,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r07/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r07/device.log",
+        "commands": "cases/16-android-fragment-loss-r07/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r07/commands.log": "3eeaa10d352a1d9a5f7447847702a09f7034e8f2db9747ae72b0f2cbbc72b3c0",
+          "cases/16-android-fragment-loss-r07/device.log": "5583359d2d3cec7c8a1dcb3b24edeca920686e358bbe5a5f2109e6e5ec702ba6",
+          "cases/16-android-fragment-loss-r07/screenshot.png": "1c3378c51ab8a0b2d18ad512f1a33ffc12e5e36701add32f96dff8d8fcfac781"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 7,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 4957,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r07/screenshot.png",
+        "logs": "cases/17-android-route-collision-r07/device.log",
+        "commands": "cases/17-android-route-collision-r07/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r07/commands.log": "b7c5351164b1a107a4baa5d8089aafa28dc5b0c19a6ffbd94b1a71a7d78afb0d",
+          "cases/17-android-route-collision-r07/device.log": "e656a5155b55e25f47b479961a8b6d33504971da98883bb73353dad1225dba0f",
+          "cases/17-android-route-collision-r07/screenshot.png": "05cd5daf3b471cfebd1207428a72f7e8ff7a59410b915ec54bcd27d8d31f8848"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 7,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 6392,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r07/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r07/device.log",
+        "commands": "cases/18-android-warm-stale-r07/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r07/commands.log": "667bf49becebb821364340f8dd513ac8fe5a16310440639b07c591b78837de32",
+          "cases/18-android-warm-stale-r07/device.log": "c601deb7dcb38edd71a1369e59200ddb5bc14b24a6f78ca77816f047d5ea2f76",
+          "cases/18-android-warm-stale-r07/screenshot.png": "5f9bac792677778a3af1f332745362445f7c8af5fdbf119960917d7eb0d2e12d"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 7,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 6722,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r07/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r07/device.log",
+        "commands": "cases/19-android-background-ignored-r07/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r07/commands.log": "56cc430317133352e9f614ff8067415d5d2302f8146b85ac5de27d6103af5b1e",
+          "cases/19-android-background-ignored-r07/device.log": "903146dcfb538c9874225ae283aff5478255faf4eaca96fa69195aa04d4cb688",
+          "cases/19-android-background-ignored-r07/screenshot.png": "5f9bac792677778a3af1f332745362445f7c8af5fdbf119960917d7eb0d2e12d"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 8,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 8422,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r08/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r08/device.log",
+        "commands": "cases/14-android-wrong-destination-r08/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r08/commands.log": "163dd77f30144abcc64c84f5165106a01a9dcd2909f0c4d6c8dcd9deb4ce643a",
+          "cases/14-android-wrong-destination-r08/device.log": "52bf10c2a7f89d270c1e50307cc5650ab61cd3355a121eaef7112b7857b5f3d6",
+          "cases/14-android-wrong-destination-r08/screenshot.png": "3061b611e1c39dbff4f8aa3e13b0b64f3191fed0c4367b4acbbb1d717cef54ac"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 8,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 5279,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r08/screenshot.png",
+        "logs": "cases/15-android-query-loss-r08/device.log",
+        "commands": "cases/15-android-query-loss-r08/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r08/commands.log": "6adc6775d6e4789b3327823fd02d23ca494f34f18aaeb39949e9637ac5da5bda",
+          "cases/15-android-query-loss-r08/device.log": "20a6084b7fdb69139a04828d1175e944307f625cedf9aafc5c5cc0a0119cd353",
+          "cases/15-android-query-loss-r08/screenshot.png": "9f7bddee947e3ce4742e4b52f798e63160da78122ec84da6c2b18abdecadf35b"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 8,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 5252,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r08/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r08/device.log",
+        "commands": "cases/16-android-fragment-loss-r08/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r08/commands.log": "46e6b9c9e860b3962e5945d0c2283812ba813bb1f7b0cdbe78933b3176e9c7fa",
+          "cases/16-android-fragment-loss-r08/device.log": "3fae69bc85ca36b354cd09ae45dff5b93a6cb4137fec3d8026e82e3f6c029966",
+          "cases/16-android-fragment-loss-r08/screenshot.png": "2de60ba960cce645461c92cf5bafc6505ee41af88b7f31a4a0a4003e8f4ab479"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 8,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 5657,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r08/screenshot.png",
+        "logs": "cases/17-android-route-collision-r08/device.log",
+        "commands": "cases/17-android-route-collision-r08/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r08/commands.log": "f9f2a5a107225fe2ff20663e1bff25721e2d1dbf55ea820633b94c688a7e01d5",
+          "cases/17-android-route-collision-r08/device.log": "233c6769ca29e6375bf1ab56754051bed3a9cf001f44db7322a2a48db695e8c2",
+          "cases/17-android-route-collision-r08/screenshot.png": "eb513fcaf8753e9a63f46f7c2b2bff398bf55c33864bf909df1a9dc3c4ef23db"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 8,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 4833,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r08/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r08/device.log",
+        "commands": "cases/18-android-warm-stale-r08/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r08/commands.log": "3b04718fecf9513cdca0d1c3ab551e0d2dcc622dfc349b3b252736feebeeb92f",
+          "cases/18-android-warm-stale-r08/device.log": "a7816b78bc32e797332611d86fd61b27057a5875a6e67b4f20fc5bf41af001c6",
+          "cases/18-android-warm-stale-r08/screenshot.png": "90e021be958cb8c3de7de6c62f9e9e3de8f2f4b89e9830996ecc079fce328910"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 8,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 4798,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r08/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r08/device.log",
+        "commands": "cases/19-android-background-ignored-r08/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r08/commands.log": "9dc389d0cdaf3bb6cecac6c752ce1dca196ff2b65a23c3cabb7841bf744eaaef",
+          "cases/19-android-background-ignored-r08/device.log": "e46f3fc313c0c3348f0a6189d63d8ab6b325ab183c7f9594862369c9d53bbf17",
+          "cases/19-android-background-ignored-r08/screenshot.png": "2aed341990a39130229d31f3123fa1e02b2bca4c1ffd89a72b1c4faebcf8666a"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 9,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 5219,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r09/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r09/device.log",
+        "commands": "cases/14-android-wrong-destination-r09/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r09/commands.log": "94ed0cf228a7b32bd41804ea3201598b9388cd13e21335a8cd72926a2bc5ad4b",
+          "cases/14-android-wrong-destination-r09/device.log": "e7f79d378b866e506bc954918f57737df2931f11b58e9a0c9a073f2ba1428d3c",
+          "cases/14-android-wrong-destination-r09/screenshot.png": "48d9c318a21e1e0e2cc38ea5330de6f3228c20a9569cc728c82561e6017c3bd4"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 9,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 3937,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r09/screenshot.png",
+        "logs": "cases/15-android-query-loss-r09/device.log",
+        "commands": "cases/15-android-query-loss-r09/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r09/commands.log": "680b8ca308c7e3617f21e4f306ff0cdfcc75bc33ed88c90784d508ee87e21d06",
+          "cases/15-android-query-loss-r09/device.log": "e93a183c2c2ed5904d1b8b1d301b51c929147d703f3e5fc43445091d13c30e8f",
+          "cases/15-android-query-loss-r09/screenshot.png": "4d1f1bc45643596e06c4686c5d17b3ed8f8600dacdb00698e5378335cbb754c8"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 9,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 4090,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r09/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r09/device.log",
+        "commands": "cases/16-android-fragment-loss-r09/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r09/commands.log": "52c412fe407b4e6371ec670211ce411b13f2897144ebc2e726b85ed67f675d1e",
+          "cases/16-android-fragment-loss-r09/device.log": "11ad43a13a26c495c46a90b877592c99ce5f16028d773ae95bcbfce0b273b009",
+          "cases/16-android-fragment-loss-r09/screenshot.png": "1533d9ddfa8cf4d4b1a04fa6b131be7d998ba9e8c2669414c347e60c69605333"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 9,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 4018,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r09/screenshot.png",
+        "logs": "cases/17-android-route-collision-r09/device.log",
+        "commands": "cases/17-android-route-collision-r09/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r09/commands.log": "787fa4399dea50511c089ed74628555565b682a66bf3421af84f4edaa5603cf0",
+          "cases/17-android-route-collision-r09/device.log": "3c9509e085e99b30633fe57b75cbbe549161b3337befde64bb8fe82586689ffa",
+          "cases/17-android-route-collision-r09/screenshot.png": "bf6feab104f3ff76f9f77cd2570390e2efbaf04d26f454556e19489fdd537232"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 9,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 4269,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r09/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r09/device.log",
+        "commands": "cases/18-android-warm-stale-r09/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r09/commands.log": "5137f30d9ff045b7f349706824668885cc178c84cfafed88b5f4e89a128b60f6",
+          "cases/18-android-warm-stale-r09/device.log": "857280e610567039f216f6dbeed258daafd63c8fd7369675f94605cb55369dcf",
+          "cases/18-android-warm-stale-r09/screenshot.png": "51025ef072d6652aff4f9cdfd5f7cac49e542b0a88ba53e3655b17fd40ffacf8"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 9,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 4312,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r09/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r09/device.log",
+        "commands": "cases/19-android-background-ignored-r09/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r09/commands.log": "9dde258016030db53973d8aaf81662548994fbbd4764f50f5f1da36126c961d4",
+          "cases/19-android-background-ignored-r09/device.log": "e50614e9f2635cb5158359cdd0da57b64ed46bd8927da7d8515cbd7be67ad17d",
+          "cases/19-android-background-ignored-r09/screenshot.png": "51025ef072d6652aff4f9cdfd5f7cac49e542b0a88ba53e3655b17fd40ffacf8"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 10,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 4658,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r10/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r10/device.log",
+        "commands": "cases/14-android-wrong-destination-r10/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r10/commands.log": "a92efd900cac8f5455f56fd0d62677af4728bee6c8e4c00753f72009675f7b28",
+          "cases/14-android-wrong-destination-r10/device.log": "a6f1473cd1085379aae125e877313714faa3dd4e2d151c8565cd7faaff97fd02",
+          "cases/14-android-wrong-destination-r10/screenshot.png": "f6e7067b36960efa9394fb54b4125c83505634026ab3a19755de99cc8579b03c"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 10,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 3919,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r10/screenshot.png",
+        "logs": "cases/15-android-query-loss-r10/device.log",
+        "commands": "cases/15-android-query-loss-r10/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r10/commands.log": "712334d202bccaef6d6c2a68b07fb8bdf22a11877155296a7b93a029b6463ab9",
+          "cases/15-android-query-loss-r10/device.log": "776ad0ea8fa71209516771f2eee19026bf7588c7e7756ba43ec6dd17ec650259",
+          "cases/15-android-query-loss-r10/screenshot.png": "4d1f1bc45643596e06c4686c5d17b3ed8f8600dacdb00698e5378335cbb754c8"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 10,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 4853,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r10/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r10/device.log",
+        "commands": "cases/16-android-fragment-loss-r10/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r10/commands.log": "e9f97e2fe58b1b58217d2a3fd5405470ba0525b63cd20bb986cd8b1503129954",
+          "cases/16-android-fragment-loss-r10/device.log": "ada792d93dd313a565c8107eddd0fea7be4390ab9f8b3509999b4e093bbbcf64",
+          "cases/16-android-fragment-loss-r10/screenshot.png": "2eeb228f863448720232bf43731b703c0594e1b18a0e1b902baff066239d4ed3"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 10,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 3877,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r10/screenshot.png",
+        "logs": "cases/17-android-route-collision-r10/device.log",
+        "commands": "cases/17-android-route-collision-r10/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r10/commands.log": "e1e4e62eff24ed94c3cee732f0c0ae1b06c94f2f5a62bff2bda7c0d9ce1e9b4f",
+          "cases/17-android-route-collision-r10/device.log": "f3fef7d1ca1ff94c368687602ce681d5a1ec16e1e6411c3fc26c9d476099ddce",
+          "cases/17-android-route-collision-r10/screenshot.png": "fa86e87d9ef0c8500b01caf3151b42bb2428dd4681754625ae90ad7b12cb6ba8"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 10,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 4180,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r10/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r10/device.log",
+        "commands": "cases/18-android-warm-stale-r10/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r10/commands.log": "2bf1f16f48d857b70d0d165dda9881fc869770f5ffccc6f60f231e4a84cc50c3",
+          "cases/18-android-warm-stale-r10/device.log": "a9982cfe6ae61e95fd26c4bd06596683bfded88249628f92e78c12feb866cec1",
+          "cases/18-android-warm-stale-r10/screenshot.png": "058a9c3a6ca97373f8fb2bc07c9799a754b2e710169cb7a1aaf055ff2f0d8856"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 10,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 4033,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r10/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r10/device.log",
+        "commands": "cases/19-android-background-ignored-r10/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r10/commands.log": "b7adc1a611f7630538b1748843c46c773f7f32cfa32dba3962da37cbfcc08b62",
+          "cases/19-android-background-ignored-r10/device.log": "961ad995c46ad19ecae02076aa6afbab4b28a50021e1a6bda91dc25dfbc7c4a2",
+          "cases/19-android-background-ignored-r10/screenshot.png": "e3148d156645ea24c54b5e72ba955e45684b3209343777ba90808bc387a67c49"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 11,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 5390,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r11/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r11/device.log",
+        "commands": "cases/14-android-wrong-destination-r11/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r11/commands.log": "5420a32b524b64faeddc922f4d9f2b59b499cc5259dd38e2e7a89b52348d91b4",
+          "cases/14-android-wrong-destination-r11/device.log": "9e06b784509d76924beb971dac41a7efb192361c8422268d8dbde524d5da1f6d",
+          "cases/14-android-wrong-destination-r11/screenshot.png": "058a9c3a6ca97373f8fb2bc07c9799a754b2e710169cb7a1aaf055ff2f0d8856"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 11,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 6031,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r11/screenshot.png",
+        "logs": "cases/15-android-query-loss-r11/device.log",
+        "commands": "cases/15-android-query-loss-r11/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r11/commands.log": "9007e3249c8cac2a93f868f4d27389660072b6d62bd2dd9dc2eb222c5c9ef53a",
+          "cases/15-android-query-loss-r11/device.log": "042520c8b7aa4cdd69e55353fba211ac30d1d72a71603cc7806d0832537e7a6b",
+          "cases/15-android-query-loss-r11/screenshot.png": "c61753fac3968a4c1bac7ff4b75442efd6d496754119e64df99df041233fb903"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 11,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 3959,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r11/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r11/device.log",
+        "commands": "cases/16-android-fragment-loss-r11/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r11/commands.log": "f3482bed4ebdd00303d75e5ffae08e6b171db93f7ef1f313648b2511033eb19b",
+          "cases/16-android-fragment-loss-r11/device.log": "022ca2942e5b90d4dc4191440e8460c88c6c45f74c45d6666ad023534969f81b",
+          "cases/16-android-fragment-loss-r11/screenshot.png": "7fd553b206a3e66e456c012e40605fd3df6ef00b26dbab1e5d3813d2c191aab4"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 11,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 4123,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r11/screenshot.png",
+        "logs": "cases/17-android-route-collision-r11/device.log",
+        "commands": "cases/17-android-route-collision-r11/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r11/commands.log": "43e41fbf934c3d2468eaaa9d0321c3861b5fd20e064813bedcab9888f2c0582f",
+          "cases/17-android-route-collision-r11/device.log": "8dfbdab8bed712a4c63b45eebcb0d4c52f1ebee10420b3388fe3001c917d64bd",
+          "cases/17-android-route-collision-r11/screenshot.png": "edb501302409931b025bdfe4a7b159f3123b06d7631e6d090d9422eeef3d7b29"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 11,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 5787,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r11/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r11/device.log",
+        "commands": "cases/18-android-warm-stale-r11/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r11/commands.log": "e53469d229de22af5d80aa91c78de9314d90569dc62f32ff3a9294967b008af7",
+          "cases/18-android-warm-stale-r11/device.log": "4b291f747f65fa0fe8120c8a466bee7512a29f1375fd11ec6a1c241c4f39cd17",
+          "cases/18-android-warm-stale-r11/screenshot.png": "78138a255b45d5f5dd07589d8f2c3835586a9f410c00571af7b3f02edb07d546"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 11,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 5460,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r11/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r11/device.log",
+        "commands": "cases/19-android-background-ignored-r11/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r11/commands.log": "0f6ecd28a238aa8f442cc3eb33dffe8ba1001c3141f7cc76f22610371665190e",
+          "cases/19-android-background-ignored-r11/device.log": "8368cfca754a5d39fa24e8f078e9fe6a47082c5b2bff8217779df7b5aa5c09b5",
+          "cases/19-android-background-ignored-r11/screenshot.png": "623bee0aaba965611faa6521674af23c5787151a5ec9c70595260c15a4e1906b"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 12,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 4719,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r12/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r12/device.log",
+        "commands": "cases/14-android-wrong-destination-r12/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r12/commands.log": "ba22fe51b7ba1249e1fab00d4cdbde39ebd358dd85fe6541e993dbc24e36da96",
+          "cases/14-android-wrong-destination-r12/device.log": "e37484b6ac870d8f91404069039e1ca9b43c5403a422fb30ef3d3e1edb96e674",
+          "cases/14-android-wrong-destination-r12/screenshot.png": "238f2f2ddfacddd6c043c186c98705f77d8fb004c723bda121211154a7501040"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 12,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 4080,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r12/screenshot.png",
+        "logs": "cases/15-android-query-loss-r12/device.log",
+        "commands": "cases/15-android-query-loss-r12/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r12/commands.log": "89f0a7b305ab2956fc711f7ad65f650471bdf8377d91cf38708f5c329de3773f",
+          "cases/15-android-query-loss-r12/device.log": "169a6ab733898c664d81148195fb8c8934892fdda0f7b92321fc51c75c273b66",
+          "cases/15-android-query-loss-r12/screenshot.png": "62f46341716c3f1a422064d719c98a3c2e5fc07e22788a4194aa779e088c28ca"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 12,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 4866,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r12/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r12/device.log",
+        "commands": "cases/16-android-fragment-loss-r12/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r12/commands.log": "5f06aa998c8558bd207d0cb7207108d2d5637e4dbf623b5f280ecfffa7e1d958",
+          "cases/16-android-fragment-loss-r12/device.log": "935fb91af17c569fffd8b58e881f418e1fbfb8e6c652bf08ce43536bfcea2827",
+          "cases/16-android-fragment-loss-r12/screenshot.png": "f518157311ff2e59b22ad7b4b4d01cb1944f25bf9f5c2692a44b44fbe75204fb"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 12,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 5053,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r12/screenshot.png",
+        "logs": "cases/17-android-route-collision-r12/device.log",
+        "commands": "cases/17-android-route-collision-r12/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r12/commands.log": "bbc3703abdb940e1347d6bbba8ac9292f2d7bce72da1b731beb1d8052dd3f64c",
+          "cases/17-android-route-collision-r12/device.log": "995ebfb8aac452d98308783228560342aa9cca05b61477b9187c4d8f7fc40e37",
+          "cases/17-android-route-collision-r12/screenshot.png": "781f67acfac74fee4c9fa8da24685d79dd1685531cf9a60f575e1e216b0723b8"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 12,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 5802,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r12/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r12/device.log",
+        "commands": "cases/18-android-warm-stale-r12/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r12/commands.log": "a924173f7f0e0925d90316cee3a8b1cbe46cd106c010d22ef1c91e6f752faf38",
+          "cases/18-android-warm-stale-r12/device.log": "953df1007528e55f713854873ca3472978802a63410b5f20d7521ff91602f4b8",
+          "cases/18-android-warm-stale-r12/screenshot.png": "f7731805101b374b5143384c5d2c1af48af3b5b66de46d420c9d64d5a80b0314"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 12,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 7821,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r12/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r12/device.log",
+        "commands": "cases/19-android-background-ignored-r12/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r12/commands.log": "4decd2d1d864e2a84b2f8f374116514ae26cb0bffbb6b2272839d7d3e0c56c86",
+          "cases/19-android-background-ignored-r12/device.log": "ca23caed656eff2fe7e41e135442ecb0d855833ef183555abdb964131a16ba9d",
+          "cases/19-android-background-ignored-r12/screenshot.png": "9cbd343a2472dfdd321ea2d730289b543177b72406ec94749fd7ca3e02f71d98"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 13,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 6217,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r13/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r13/device.log",
+        "commands": "cases/14-android-wrong-destination-r13/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r13/commands.log": "e767ef159c02cd101981c0931e626a28adebc81afe8613d63a00c45ee1a2b7a4",
+          "cases/14-android-wrong-destination-r13/device.log": "3f5a4a5a8aa3082043e9a9682973ddb6552890cb7b150ad1881f28bca94dbe4a",
+          "cases/14-android-wrong-destination-r13/screenshot.png": "d148bc6f367ed46b060d527c2b93146acb46bb4ae16837bfbba5c8610e2ff0a6"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 13,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 5053,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r13/screenshot.png",
+        "logs": "cases/15-android-query-loss-r13/device.log",
+        "commands": "cases/15-android-query-loss-r13/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r13/commands.log": "3b56bf0919b5ca0c6ec587a43bac504ed80f0fc10e2c99a7e9667dc7805d2281",
+          "cases/15-android-query-loss-r13/device.log": "2b7778d94f516b1ee276feb8d5a11b475c26815443a91fac8b8e6f510dfafa11",
+          "cases/15-android-query-loss-r13/screenshot.png": "9b0a22ac7e25e6a330cd11936d76e2b5fb519d26c5a414287191428534ac3778"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 13,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 5738,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r13/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r13/device.log",
+        "commands": "cases/16-android-fragment-loss-r13/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r13/commands.log": "94fe51d4e24b95933a490bf3fd1b821cd9a9bf012e3980ae9d81bcce2bad9506",
+          "cases/16-android-fragment-loss-r13/device.log": "d0d943390974f38b25ce778df40bab259d3a60d3bab050cda4edf9b77ea96052",
+          "cases/16-android-fragment-loss-r13/screenshot.png": "921e0d63f2ef3262463884b8ec29cd5b84f81b245d86f9cf9cded2144e95cdbe"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 13,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 7557,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r13/screenshot.png",
+        "logs": "cases/17-android-route-collision-r13/device.log",
+        "commands": "cases/17-android-route-collision-r13/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r13/commands.log": "a37a742838b39c967ee27d15b4d2d953a8ded5930a594596abe708bb9a5f41ae",
+          "cases/17-android-route-collision-r13/device.log": "fe45e8dd055f58527640f2ce12a7bf951b1cf4637fa17b0b7ef4136d2cde2807",
+          "cases/17-android-route-collision-r13/screenshot.png": "d8c3a0bc8f4c3ba2611a3c83f9367338998f08111dc7417a8b278f569c7e7fda"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 13,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 6986,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r13/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r13/device.log",
+        "commands": "cases/18-android-warm-stale-r13/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r13/commands.log": "63520d5bee0dc72af452fe368e78773573d396dcad809489199855983e7510ef",
+          "cases/18-android-warm-stale-r13/device.log": "61cc6b00099f615b84cb06a63ef365438c255cb431bab1a4a410714e91d2b3b5",
+          "cases/18-android-warm-stale-r13/screenshot.png": "774c4f2e621ba0274101cf57bf9fb3200af2b38dcde33b42c9c406b239f4e9ff"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 13,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 6315,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r13/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r13/device.log",
+        "commands": "cases/19-android-background-ignored-r13/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r13/commands.log": "d663de8f82d4d91858ff93086065008d3642c5e9b34b0d6fcd5127481deaa891",
+          "cases/19-android-background-ignored-r13/device.log": "94224769af9a6c02428f0c71b28c9d970c4fff5337152ec815fbb206c59ef19f",
+          "cases/19-android-background-ignored-r13/screenshot.png": "fdddca4220d98983ab768588aa969e748cfe3d4759b0b9a074bd9ba9ec09d896"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 14,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 13367,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r14/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r14/device.log",
+        "commands": "cases/14-android-wrong-destination-r14/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r14/commands.log": "c4973b3034dbaa2cad7c3f00acd0efe6790a1c4ab4d8a74b9a7526243106fa49",
+          "cases/14-android-wrong-destination-r14/device.log": "a6bce8da2eac8b0ab0ad1ccbf090bfe2c28eb97f3df5dad60ce6a36c3d23c42d",
+          "cases/14-android-wrong-destination-r14/screenshot.png": "774c4f2e621ba0274101cf57bf9fb3200af2b38dcde33b42c9c406b239f4e9ff"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 14,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 6585,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r14/screenshot.png",
+        "logs": "cases/15-android-query-loss-r14/device.log",
+        "commands": "cases/15-android-query-loss-r14/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r14/commands.log": "99134f024ea1ed11b79b58b6c9d099d7d08c614b56a23e7dfaa62a7c5ff96c11",
+          "cases/15-android-query-loss-r14/device.log": "9847a8599792c75f0085ec9a95c5dce08b35be205b26a9b509ea3ee303bb9a17",
+          "cases/15-android-query-loss-r14/screenshot.png": "441ef308ab61ef71727ceccbdc51e1326b323e517e9328fbb554a4f5b37dd0d5"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 14,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 15372,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r14/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r14/device.log",
+        "commands": "cases/16-android-fragment-loss-r14/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r14/commands.log": "2327dd309fb44e9d532fafdddcc522f7c5bd054f6bd8a4eec4cdf27b0ae9e94c",
+          "cases/16-android-fragment-loss-r14/device.log": "161a20ad2aab2dae2a601ffea3e975264cb432f16176dbe99a1669ed3fa41f1c",
+          "cases/16-android-fragment-loss-r14/screenshot.png": "5ac043abe107802cdcaccaed44bebe18897389bbc008d925d7c2a555eac0f193"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 14,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 6452,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r14/screenshot.png",
+        "logs": "cases/17-android-route-collision-r14/device.log",
+        "commands": "cases/17-android-route-collision-r14/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r14/commands.log": "04ce06d5c9cac9502dbbc250adc942ab435b034cf276cc88cf1785abda2ae9a0",
+          "cases/17-android-route-collision-r14/device.log": "2317b1d967edce0f0d030bde84b4c0080ba5d1f207d65d683b3332c6d3f43660",
+          "cases/17-android-route-collision-r14/screenshot.png": "691f71c4e7445de5bef196269f81b89ee3e66e5b97f0deba05e1950d99aa46c5"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 14,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 8604,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r14/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r14/device.log",
+        "commands": "cases/18-android-warm-stale-r14/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r14/commands.log": "e45de91c56efe238eb2b55b955a2eb6ba8f4bf102eb2cbb62389d023e5e59813",
+          "cases/18-android-warm-stale-r14/device.log": "fb8f95d1c73baede76581db140dfea6eaec7bf18fd0fc9bf5875df16c89c155d",
+          "cases/18-android-warm-stale-r14/screenshot.png": "aec35888028fea82f7c3bdd7c1fa6e1069cdaf49b03a729ac88d11908507e8b3"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 14,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 10035,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r14/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r14/device.log",
+        "commands": "cases/19-android-background-ignored-r14/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r14/commands.log": "dd6d54853ea3cc053dd73bf099454b84bf6ce83c99f378c6e62d5c192932cb46",
+          "cases/19-android-background-ignored-r14/device.log": "6a9facf745c0033855eb9d8d6cdf4b8c5c396ad22e59736d46213637ea5a053c",
+          "cases/19-android-background-ignored-r14/screenshot.png": "aec35888028fea82f7c3bdd7c1fa6e1069cdaf49b03a729ac88d11908507e8b3"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 15,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 14195,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r15/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r15/device.log",
+        "commands": "cases/14-android-wrong-destination-r15/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r15/commands.log": "043d1946c7da5903eba810458c5f54f75a309b60d88b1378a5e1d143f516405d",
+          "cases/14-android-wrong-destination-r15/device.log": "98f390298f9dfa6e6248eda187b04ba63b40acdb57a4000f9025197d42ab467f",
+          "cases/14-android-wrong-destination-r15/screenshot.png": "b547e8fc1880e25b2105219f4292acf106c17b89638c975bf5528ec7e62480ef"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 15,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 8732,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r15/screenshot.png",
+        "logs": "cases/15-android-query-loss-r15/device.log",
+        "commands": "cases/15-android-query-loss-r15/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r15/commands.log": "756fdfd9624642db92cebf1c038dcfda06acde830f91d18893d2c55f77180e94",
+          "cases/15-android-query-loss-r15/device.log": "e83131232f260ece3e7a9c497a9b29618e9f22f1c293a8a77a7fdaace6eb5c18",
+          "cases/15-android-query-loss-r15/screenshot.png": "cef95d2f1988062652c9fc6f3a8bb7ba87bc0cf7c7329e42613ab8206c5f1516"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 15,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 7627,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r15/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r15/device.log",
+        "commands": "cases/16-android-fragment-loss-r15/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r15/commands.log": "4fec9584f411dc0fad10ea8a6528b6151853d2c90ab43b2a9b5f453bb551f82c",
+          "cases/16-android-fragment-loss-r15/device.log": "8ff3a77e8104b85f52dc48e7897a4a16b76844aa66718cf37f079408ea59d108",
+          "cases/16-android-fragment-loss-r15/screenshot.png": "c348f0b7ef4ce3a05d5c295f6130e690ca7150a18e25f5f8d4ab8af1278a0ca6"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 15,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 9796,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r15/screenshot.png",
+        "logs": "cases/17-android-route-collision-r15/device.log",
+        "commands": "cases/17-android-route-collision-r15/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r15/commands.log": "4d78b63223ef428ccfc984348a977156efbfc8b86fa53192426778cf1f38fa38",
+          "cases/17-android-route-collision-r15/device.log": "4d82dfeb86800ac62e58bc2e250e4b7b557bdc24d6991273cc95ed2b8ace6763",
+          "cases/17-android-route-collision-r15/screenshot.png": "29a53509519c549cfe3d90ef8d5de9d000835421d52a91013a8bd98ab4ea748a"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 15,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 9381,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r15/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r15/device.log",
+        "commands": "cases/18-android-warm-stale-r15/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r15/commands.log": "9337741676d73742c2316112a7b1708a18c62f2c9e1e553e76335c2c3a4c193c",
+          "cases/18-android-warm-stale-r15/device.log": "1d3f36bb8a9af9a37b91cb51a2c7e64eb9533bb5eff8fd15e82bf0b701e4cfc8",
+          "cases/18-android-warm-stale-r15/screenshot.png": "0a2645e2f9fa946998046bd6e9a64d3a23f4f7809e0a0d7a78cee8f32ab13b43"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 15,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 9215,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r15/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r15/device.log",
+        "commands": "cases/19-android-background-ignored-r15/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r15/commands.log": "1ef9dbb4488fa093d233642dd5d60c1ef09fb582adc813d101c36a02b29a59f7",
+          "cases/19-android-background-ignored-r15/device.log": "5c8f66d21ecd7be8fa1e2ffa294d86664956c9872caaeded6e26d29936a99555",
+          "cases/19-android-background-ignored-r15/screenshot.png": "2d51521a6e8883b8bcc633aa27bf7dce935e21121066c28cac036a3c32840164"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 16,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 10300,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r16/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r16/device.log",
+        "commands": "cases/14-android-wrong-destination-r16/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r16/commands.log": "aff98e88dc490cad06a9d2432e61be36f9eafa188a1bb54d4804e5bbb4becc10",
+          "cases/14-android-wrong-destination-r16/device.log": "e24bf1fc58268031399ce99345a8f68fb880d319c6b03a7f0c3da01e385672fa",
+          "cases/14-android-wrong-destination-r16/screenshot.png": "2c08fa30e1e0325e43af8d7669491eb8458c9651410fe38bc6a9d7727b99e962"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 16,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 6017,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r16/screenshot.png",
+        "logs": "cases/15-android-query-loss-r16/device.log",
+        "commands": "cases/15-android-query-loss-r16/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r16/commands.log": "38382d99ed124644a75cc19c7b9d3775376c62e801842fcc9bafe19a3880d71f",
+          "cases/15-android-query-loss-r16/device.log": "50f874b43d752ed518d37bc20b9476a5092dbef5d16f704fe902ac57591436dd",
+          "cases/15-android-query-loss-r16/screenshot.png": "8fe1c4e9ea79d1e50595f6393e3137587df5d4002432f433990c6d7bc95c6a73"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 16,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 8294,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r16/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r16/device.log",
+        "commands": "cases/16-android-fragment-loss-r16/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r16/commands.log": "69e992bd48c161dedf5cc7188bfa426f40a0c090a1c2873dd6635640892004eb",
+          "cases/16-android-fragment-loss-r16/device.log": "3f6bd5532657ea4d65fbff899f27b886f3cad3639aace67848929e451ec8fc51",
+          "cases/16-android-fragment-loss-r16/screenshot.png": "a6b8dd1e88df32f47235275275f73f08bb97fee1a5c3c2b48d2cbd57dac92168"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 16,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 5915,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r16/screenshot.png",
+        "logs": "cases/17-android-route-collision-r16/device.log",
+        "commands": "cases/17-android-route-collision-r16/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r16/commands.log": "9821f345403a96f02b4c1e5a5f16d6da74277d1ae7bb112a5261677cffabbe11",
+          "cases/17-android-route-collision-r16/device.log": "e01745b0bb6d9af6d3ca7f41d53b87dd77b0b104f159157c28e997ba230dee14",
+          "cases/17-android-route-collision-r16/screenshot.png": "ecd55f028d205dc23dbf10d3b067baf1ab1a32d06b37a1638d7a25f259044298"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 16,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 11367,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r16/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r16/device.log",
+        "commands": "cases/18-android-warm-stale-r16/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r16/commands.log": "99df82a0f8d85b0d0fe11458a7d24ffdf57abc03293b92400011b05ef5a3689d",
+          "cases/18-android-warm-stale-r16/device.log": "89727a42e9ec5d00fb79116e291ec426e5716bcb08ea92df37cf8ff515c0ba12",
+          "cases/18-android-warm-stale-r16/screenshot.png": "69007072313f1c162ca0a29b3e62adeb69e66909e36990afa47d95103f8452ff"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 16,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 7772,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r16/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r16/device.log",
+        "commands": "cases/19-android-background-ignored-r16/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r16/commands.log": "1588f61f071d4fe1851f366b8ba54a119646a02e8679141d55ec295b6eb413b7",
+          "cases/19-android-background-ignored-r16/device.log": "50ba75f3132f47aee04bd889ae09ac55249a68258b917207b9029d6f69ccd71e",
+          "cases/19-android-background-ignored-r16/screenshot.png": "69007072313f1c162ca0a29b3e62adeb69e66909e36990afa47d95103f8452ff"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 17,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 9746,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r17/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r17/device.log",
+        "commands": "cases/14-android-wrong-destination-r17/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r17/commands.log": "d092b1fbeb8a084f18f0c7ff2c95958e456ffe987da4f14060ca61fbbbf516fd",
+          "cases/14-android-wrong-destination-r17/device.log": "467e69807fd8ebfa38270e66a176e6a3bb4c807900035357aae29771be8cbd61",
+          "cases/14-android-wrong-destination-r17/screenshot.png": "5cd8647a3a283167f99dfa459d45faad19c7214d846b310ecfb8731826cbc0ae"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 17,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 5330,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r17/screenshot.png",
+        "logs": "cases/15-android-query-loss-r17/device.log",
+        "commands": "cases/15-android-query-loss-r17/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r17/commands.log": "3badb1ba5a75a4b65c3222eba30982154b6a2cd4a317b9ea010f41651473f60f",
+          "cases/15-android-query-loss-r17/device.log": "12e7b26f66c23af783807d32b119c1b3e2980be80600e13e5c9c54a0c2bdc00a",
+          "cases/15-android-query-loss-r17/screenshot.png": "24ac085cc0829270f7ab020ceb442596d84e7f5aef26c6b56d7376b68be31718"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 17,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 9581,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r17/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r17/device.log",
+        "commands": "cases/16-android-fragment-loss-r17/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r17/commands.log": "ce7d67627499d13de5369627dcc9372c518233619a6d9922a278f70aafb23fb6",
+          "cases/16-android-fragment-loss-r17/device.log": "00542d1e7135c4a20eafc2e17bc3426ef120b22685cfc7a83e443cefe58b7ff8",
+          "cases/16-android-fragment-loss-r17/screenshot.png": "a090ef78249665e9e068df9d66718f2c966a8dcdf2e6c210edda3f2219055e0a"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 17,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 8451,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r17/screenshot.png",
+        "logs": "cases/17-android-route-collision-r17/device.log",
+        "commands": "cases/17-android-route-collision-r17/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r17/commands.log": "d20f26a50fa3ee509574bab3b312ae1ec18dc02a46febbe9ecac2a396d843f54",
+          "cases/17-android-route-collision-r17/device.log": "fc7550e6fd34697577a0b3dd38ff380d88eb8ec01555bb8015378734d4613d1e",
+          "cases/17-android-route-collision-r17/screenshot.png": "a88c9530b23937ac81ed474a4b5fc0e0061e319b8343f9516b90ba1248f29f29"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 17,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 6213,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r17/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r17/device.log",
+        "commands": "cases/18-android-warm-stale-r17/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r17/commands.log": "b764d2bef7564b760e1cc5278fae76bd48d062a3da23f5ca52552de9e41cef58",
+          "cases/18-android-warm-stale-r17/device.log": "40817307e298d57282233bc26d8aec4b9caa9f602e08d55c13b92e2f05cecff5",
+          "cases/18-android-warm-stale-r17/screenshot.png": "314426dd1d2a68e4e4d58034534ab36ee4bdc41b5390ba0e6a9d61e67405fbb2"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 17,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 9446,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r17/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r17/device.log",
+        "commands": "cases/19-android-background-ignored-r17/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r17/commands.log": "2878c22dd3f29ab9e1671b5426ae1e2099530d28730e26ed5737753a5283c683",
+          "cases/19-android-background-ignored-r17/device.log": "7c2de8deecc7e3824b652e073b1cbe7dc69ded9922fbafcd5630748b7acd25a7",
+          "cases/19-android-background-ignored-r17/screenshot.png": "bc213b3f0d55299aa6bad93852bee7543923813aeb5e481f0cfd4ce8f762fa26"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 18,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 8949,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r18/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r18/device.log",
+        "commands": "cases/14-android-wrong-destination-r18/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r18/commands.log": "e8b68017a2b34b0535f2447339ff76e31960f45ed4627a539b261db2f97e2a32",
+          "cases/14-android-wrong-destination-r18/device.log": "de5837dab4848436735158ef7f2a32caaab9925d1d43fce2a9d850effc4c54fd",
+          "cases/14-android-wrong-destination-r18/screenshot.png": "bd34b186d90a945992bb21a7ab4c2cbc9c276cc602dbe9e1f3c13e4c9eb30aec"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 18,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 8431,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r18/screenshot.png",
+        "logs": "cases/15-android-query-loss-r18/device.log",
+        "commands": "cases/15-android-query-loss-r18/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r18/commands.log": "f4f3da13b4309e64ed84bf88ae2cdd6548ee0abc7d47cdb58ffcf78ea52aec95",
+          "cases/15-android-query-loss-r18/device.log": "83ca213c3c279f5b38964a31c18841b0ae98fba67e718d61a974c470c81aa085",
+          "cases/15-android-query-loss-r18/screenshot.png": "1653f5c08e1d17916fe799f84f8a81e7345d36a3c9f8a267e8d3c56e57fdde53"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 18,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 6647,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r18/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r18/device.log",
+        "commands": "cases/16-android-fragment-loss-r18/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r18/commands.log": "da28e61750f7cb90a4ffdf9dc59086cb91c3bc216470e8744627ffa30e37f318",
+          "cases/16-android-fragment-loss-r18/device.log": "456315cea0db18e21de3341d869a6d76f8c6f11b29fbd2d128c09c692fe65a12",
+          "cases/16-android-fragment-loss-r18/screenshot.png": "8e3da3964036a877d2724be72befdfa746300a772f24eda601b95fde74be7e58"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 18,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 4509,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r18/screenshot.png",
+        "logs": "cases/17-android-route-collision-r18/device.log",
+        "commands": "cases/17-android-route-collision-r18/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r18/commands.log": "8fd9bd9f6467bd199c21550b999b958305a2a5ad91b5b6df1807397f86e44240",
+          "cases/17-android-route-collision-r18/device.log": "726027a4f03436aa5f6ef6fec6e8b5d4d5258336a3d61750b842380e2e7ddb33",
+          "cases/17-android-route-collision-r18/screenshot.png": "9dd881dc5adea2a6ba7f102e8e092403cfd92edcefc9223013c5f4f45d82a397"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 18,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 7941,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r18/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r18/device.log",
+        "commands": "cases/18-android-warm-stale-r18/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r18/commands.log": "a5f34720907db79801e39fb59c47b9fded2c2068f515f9743cbd3d8be7180010",
+          "cases/18-android-warm-stale-r18/device.log": "bd75852ad896ce8bbf93f3f6ac279649596995e626d22b4ec926c5b13b321eca",
+          "cases/18-android-warm-stale-r18/screenshot.png": "cf9f07e5e6a6c367d31f247d3468096a064d8373292cb674090fa9e0ba1e2e38"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 18,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 16472,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r18/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r18/device.log",
+        "commands": "cases/19-android-background-ignored-r18/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r18/commands.log": "851d650344ceb83fdd2065484c8dabd277338752a865eb5184142e67914d3bc5",
+          "cases/19-android-background-ignored-r18/device.log": "337759589c1e61b04e74770a347fb6a4cc8f602d067c48ad2c644db04ef46f98",
+          "cases/19-android-background-ignored-r18/screenshot.png": "d7fcec8ea10e1f9fe3c39bafdbb03fab59e6a77a1f7db6d0874f607b87457ff5"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 19,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 9912,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r19/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r19/device.log",
+        "commands": "cases/14-android-wrong-destination-r19/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r19/commands.log": "de41b857ca53b9929b022e2a60d28bda3bc77c821e7f75e8ba7af6f10b9db055",
+          "cases/14-android-wrong-destination-r19/device.log": "92f59c058262ae2e1e75eb7c8a7657103b3db16bd14487ec8ba1412f474adf82",
+          "cases/14-android-wrong-destination-r19/screenshot.png": "95a4ef4a746c25303abb64156ffdc49aeb8a215a526b1d4cf7ba44caa100a2c4"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 19,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 7077,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r19/screenshot.png",
+        "logs": "cases/15-android-query-loss-r19/device.log",
+        "commands": "cases/15-android-query-loss-r19/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r19/commands.log": "ff3ab37267181881412e3a55f1ec0c077136dc105e39f10b5271428b13247fe7",
+          "cases/15-android-query-loss-r19/device.log": "ff9035f90962152a1f0df3b96253acd4a7b4beeab654b15c5ad66d9e7311803c",
+          "cases/15-android-query-loss-r19/screenshot.png": "56452369ce40154c88f1e4781cd0a6b49614b11f89a25ac977ad63bc8c99a3ae"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 19,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 6730,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r19/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r19/device.log",
+        "commands": "cases/16-android-fragment-loss-r19/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r19/commands.log": "7566a78c76276f33f914d907bb439bc70987061a3b5305287abd2c1e18a9de59",
+          "cases/16-android-fragment-loss-r19/device.log": "ef475f27e24bfa2401d42c6fd0022c58b76a943d4df1143672646c611b0af3b9",
+          "cases/16-android-fragment-loss-r19/screenshot.png": "90f6e7169a5f48253fabad2f53b94f021803495be35d88ae9da91fdf5c0fedff"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 19,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 9656,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r19/screenshot.png",
+        "logs": "cases/17-android-route-collision-r19/device.log",
+        "commands": "cases/17-android-route-collision-r19/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r19/commands.log": "01434468189b2fe0ae68d47c12bb2e3d96d6104cd20aa6a3daa7910ba0c84f68",
+          "cases/17-android-route-collision-r19/device.log": "196780f80c4b12f257b19c094c5d24f25f882c8495e01b7dfba5067d970a515f",
+          "cases/17-android-route-collision-r19/screenshot.png": "7776843d02260e973fe3cff3d5774623172720e8bcf456092c79cf1dd492fba1"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 19,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 7161,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r19/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r19/device.log",
+        "commands": "cases/18-android-warm-stale-r19/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r19/commands.log": "cc9b1fc401a7c6156eaa496eec0f9eca55177bbda5fc4cedc24824abd0f50278",
+          "cases/18-android-warm-stale-r19/device.log": "a37a651c12ce5217d7647af35c7488bdc7ea3c8ff2c89c99d5b082b73c33b2b9",
+          "cases/18-android-warm-stale-r19/screenshot.png": "e08652095094297736f502a35c5ab6e10484e989def53792555d4c5b68888f44"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 19,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 9662,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r19/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r19/device.log",
+        "commands": "cases/19-android-background-ignored-r19/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r19/commands.log": "f97d9597f0a3ce367580c19aefeaa2f70d8ca99239f3a05cf29eace104386e24",
+          "cases/19-android-background-ignored-r19/device.log": "206fc94429a97572c6cbb3d29d40ae55978436265c58592a6a84683fe40d7bb2",
+          "cases/19-android-background-ignored-r19/screenshot.png": "e08652095094297736f502a35c5ab6e10484e989def53792555d4c5b68888f44"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-wrong-destination",
+      "repeat": 20,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "product/42"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 10612,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/14-android-wrong-destination-r20/screenshot.png",
+        "logs": "cases/14-android-wrong-destination-r20/device.log",
+        "commands": "cases/14-android-wrong-destination-r20/commands.log",
+        "sha256": {
+          "cases/14-android-wrong-destination-r20/commands.log": "f73effa41ed8d7f64ed4399515673145b35e0991fa4cb86bf2605ad26425e6f5",
+          "cases/14-android-wrong-destination-r20/device.log": "22bd1197f8d1cbb7cc7cd6257626dfcdcb0ab3a9220ad19b799006b62068fa32",
+          "cases/14-android-wrong-destination-r20/screenshot.png": "631174b98ad95d42a39362a4f650792f1d4402e84e03820ca0def7dcaac76b53"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-wrong-destination",
+      "runtimeFailureClass": "wrong_destination",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-query-loss",
+      "repeat": 20,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "search?q=blue"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "search"
+      },
+      "durationMs": 8037,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/15-android-query-loss-r20/screenshot.png",
+        "logs": "cases/15-android-query-loss-r20/device.log",
+        "commands": "cases/15-android-query-loss-r20/commands.log",
+        "sha256": {
+          "cases/15-android-query-loss-r20/commands.log": "e0fcac029a49d9637eb464449af0257a46b1618bf73161ee028b6f34a198f126",
+          "cases/15-android-query-loss-r20/device.log": "56bc0f934ed2060d66562ea93f4d187fafc04f8d126f588f524e61c3d5a4cc1e",
+          "cases/15-android-query-loss-r20/screenshot.png": "2f4adc51fc1c00683c28e5a8dc89bb39b69c5c26f9b9715629d7fed93c9ec1f3"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-query-loss",
+      "runtimeFailureClass": "query_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-fragment-loss",
+      "repeat": 20,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "article/7#comments"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "article/7"
+      },
+      "durationMs": 11503,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/16-android-fragment-loss-r20/screenshot.png",
+        "logs": "cases/16-android-fragment-loss-r20/device.log",
+        "commands": "cases/16-android-fragment-loss-r20/commands.log",
+        "sha256": {
+          "cases/16-android-fragment-loss-r20/commands.log": "43dc2f14c0d551ac2bb093142952bc0101fb26e3432e0146d3664db6b590722d",
+          "cases/16-android-fragment-loss-r20/device.log": "4ff6c69d9931e4fe6ea16ede9c275578f1b12646e071a38b0d4fee12874cea80",
+          "cases/16-android-fragment-loss-r20/screenshot.png": "083494f22189d28fe00dc16fa595a82933fb40946bb8e04db4ea744481ebcd2d"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-fragment-loss",
+      "runtimeFailureClass": "fragment_loss",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-route-collision",
+      "repeat": 20,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "admin"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "user/admin"
+      },
+      "durationMs": 7107,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/17-android-route-collision-r20/screenshot.png",
+        "logs": "cases/17-android-route-collision-r20/device.log",
+        "commands": "cases/17-android-route-collision-r20/commands.log",
+        "sha256": {
+          "cases/17-android-route-collision-r20/commands.log": "621c63b0aadbe4e3d7d4be47aa1107def26c2c220fb6992ce17d7d30a8b4bcc3",
+          "cases/17-android-route-collision-r20/device.log": "5af5882f22961c71a57e48a397dd8eb429a046f96fccccfc6adfb6ad854420e7",
+          "cases/17-android-route-collision-r20/screenshot.png": "abd537ddfa1424d67f2a7dd9d8c5b115de60e1e43b78dbda4f4d583d69772c39"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-route-collision",
+      "runtimeFailureClass": "route_collision",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-warm-stale",
+      "repeat": 20,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "offer/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 13356,
+      "startingState": {
+        "install": "installed",
+        "launch": "warm",
+        "verification": "reset",
+        "userDefault": "reset"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/18-android-warm-stale-r20/screenshot.png",
+        "logs": "cases/18-android-warm-stale-r20/device.log",
+        "commands": "cases/18-android-warm-stale-r20/commands.log",
+        "sha256": {
+          "cases/18-android-warm-stale-r20/commands.log": "8596f0f67e4fb49c891b7599ad247424743759da19aeef36e839f22b0fdfa100",
+          "cases/18-android-warm-stale-r20/device.log": "7ac234ca4c6f5dd4a3365cab379588c68cda8e71cf2aaa5883b45ac10bb51fa2",
+          "cases/18-android-warm-stale-r20/screenshot.png": "dde45a5080ab017bc6b15878218a5e150662ae838566661a3dc0f535884671f3"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-warm-stale",
+      "runtimeFailureClass": "warm_state_stale",
+      "staticPreflightPassed": true,
+      "notes": []
+    },
+    {
+      "caseId": "android-background-ignored",
+      "repeat": 20,
+      "platform": "android",
+      "classification": "destination_mismatch",
+      "expected": {
+        "target": "app",
+        "destination": "inbox"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "home"
+      },
+      "durationMs": 16236,
+      "startingState": {
+        "install": "installed",
+        "launch": "background",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/19-android-background-ignored-r20/screenshot.png",
+        "logs": "cases/19-android-background-ignored-r20/device.log",
+        "commands": "cases/19-android-background-ignored-r20/commands.log",
+        "sha256": {
+          "cases/19-android-background-ignored-r20/commands.log": "8948e794dba956580c69da5cb50be5720b270d39bfab790449b4f5d6dc61a6e7",
+          "cases/19-android-background-ignored-r20/device.log": "1bdfabde8142dccd8e3bf38d6c00ddc5ea36b4dd1dd4fca08cc2eacf2022453c",
+          "cases/19-android-background-ignored-r20/screenshot.png": "a9f48d7c3a417260d531c273a56aace11b0d677927da8a3a223da1228c4b6f72"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec deeplinklab.yml --case android-background-ignored",
+      "runtimeFailureClass": "background_handler_ignored",
+      "staticPreflightPassed": true,
+      "notes": []
+    }
+  ]
+}

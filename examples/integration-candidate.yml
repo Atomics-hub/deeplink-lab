@@ -1,0 +1,26 @@
+version: 1
+metadata:
+  name: Configuration-only candidate app integration
+  description: A distinct Android package integrated without changing runner code.
+apps:
+  candidate-shop:
+    platform: android
+    appId: dev.deeplinklab.candidate
+    artifact: ../fixtures/android-candidate/build/CandidateFixture.apk
+    manifest: ../fixtures/android-candidate/AndroidManifest.xml
+    certFingerprints:
+      - 10:21:32:43:54:65:76:87:98:A9:BA:CB:DC:ED:FE:0F:10:21:32:43:54:65:76:87:98:A9:BA:CB:DC:ED:FE:0F
+    launchActivity: dev.deeplinklab.candidate/dev.deeplinklab.fixture.MainActivity
+    logProcess: DeepLinkFixture
+    probe:
+      kind: android_run_as_file
+      path: files/destination.txt
+associations:
+  - domain: candidate.example.test
+    assetlinks: ../fixtures/site/candidate/assetlinks.json
+cases:
+  - id: candidate-product-cold
+    app: candidate-shop
+    link: candidatelab://good/product/7
+    expected: {target: app, destination: product/7}
+    state: {install: installed, launch: cold}

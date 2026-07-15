@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["ABCDE12345.dev.deeplinklab.fixture"],
+        "components": [
+          {"/": "/good/*", "comment": "Known-good fixture routes"},
+          {"/": "/broken/*", "comment": "Association-valid routes with app-level faults"}
+        ]
+      }
+    ]
+  }
+}

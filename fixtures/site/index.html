@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DeepLink Lab controlled-page fixture</title>
+  <style>
+    body{max-width:720px;margin:48px auto;padding:0 20px;background:#071225;color:#eef5ff;font:17px/1.55 system-ui,sans-serif}
+    h1{font-size:38px;letter-spacing:-.03em}a{display:block;margin:12px 0;padding:14px 18px;background:#1769e0;color:white;border-radius:10px;text-decoration:none;font-weight:700}
+    .broken{background:#a52336}.note{color:#9fb0c6}
+  </style>
+</head>
+<body>
+  <h1>Controlled deep-link fixture</h1>
+  <p class="note">The blue route is known-good. Red routes are association-valid but intentionally misroute inside the fixture app.</p>
+  <a href="deeplinklab://good/product/42">Open known-good product 42</a>
+  <a class="broken" href="deeplinklab://wrong/product/42">Open wrong-destination fixture</a>
+  <a class="broken" href="deeplinklab://query-loss/search?q=blue">Open query-loss fixture</a>
+  <a class="broken" href="deeplinklab://fragment-loss/article/7#comments">Open fragment-loss fixture</a>
+</body>
+</html>

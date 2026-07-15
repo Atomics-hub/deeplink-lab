@@ -1,0 +1,25 @@
+name: Reproducible bug
+description: Report incorrect preflight, classification, evidence, or orchestration behavior.
+title: "bug: "
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: Minimal contract and fixture
+      description: Remove credentials, private app names, and absolute paths.
+    validations: {required: true}
+  - type: textarea
+    attributes:
+      label: Expected and actual classification
+    validations: {required: true}
+  - type: textarea
+    attributes:
+      label: Tool and platform versions
+      description: Include `deeplink-lab doctor --format json` with sensitive details removed.
+    validations: {required: true}
+  - type: checkboxes
+    attributes:
+      label: Evidence boundary
+      options:
+        - label: I have stated whether this was static, Simulator/emulator, or physical-device evidence.
+          required: true

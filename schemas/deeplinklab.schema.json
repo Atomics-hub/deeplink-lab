@@ -1,0 +1,531 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "definitions": {
+    "AppSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "appId": {
+          "type": "string"
+        },
+        "artifact": {
+          "type": "string"
+        },
+        "certFingerprints": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "entitlements": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "infoPlist": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "launchActivity": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "logProcess": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "manifest": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "platform": {
+          "$ref": "#/definitions/Platform"
+        },
+        "probe": {
+          "$ref": "#/definitions/ProbeSpec"
+        },
+        "teamId": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "appId",
+        "artifact",
+        "platform",
+        "probe"
+      ],
+      "type": "object"
+    },
+    "AssociationSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "aasa": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "assetlinks": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "domain": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "domain"
+      ],
+      "type": "object"
+    },
+    "CaseSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "app": {
+          "type": "string"
+        },
+        "expected": {
+          "$ref": "#/definitions/ExpectedOutcome"
+        },
+        "id": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string"
+        },
+        "runtimeFailureClass": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "settleMs": {
+          "default": 400,
+          "format": "uint64",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "source": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/SourceSpec"
+            }
+          ],
+          "default": {
+            "context": "direct",
+            "pageUrl": null,
+            "tapText": null
+          }
+        },
+        "state": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/StartingState"
+            }
+          ],
+          "default": {
+            "install": "installed",
+            "launch": "cold",
+            "userDefault": "preserve",
+            "verification": "preserve"
+          }
+        }
+      },
+      "required": [
+        "app",
+        "expected",
+        "id",
+        "link"
+      ],
+      "type": "object"
+    },
+    "ExpectedOutcome": {
+      "additionalProperties": false,
+      "properties": {
+        "destination": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target": {
+          "$ref": "#/definitions/ExpectedTarget"
+        }
+      },
+      "required": [
+        "target"
+      ],
+      "type": "object"
+    },
+    "ExpectedTarget": {
+      "enum": [
+        "app",
+        "browser",
+        "unhandled"
+      ],
+      "type": "string"
+    },
+    "GateConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "maxDurationMs": {
+          "default": 600000,
+          "format": "uint64",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "maxIntegrationSeconds": {
+          "default": 1800,
+          "format": "uint64",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "novelFailureClasses": {
+          "default": 5,
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "repeatRuns": {
+          "default": 20,
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "repeatabilityPercent": {
+          "default": 95.0,
+          "format": "double",
+          "type": "number"
+        },
+        "representativeCaseCount": {
+          "default": 20,
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "representativePlatformCount": {
+          "default": 2,
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "InstallState": {
+      "enum": [
+        "installed",
+        "uninstalled"
+      ],
+      "type": "string"
+    },
+    "LaunchState": {
+      "enum": [
+        "cold",
+        "warm",
+        "background"
+      ],
+      "type": "string"
+    },
+    "Platform": {
+      "enum": [
+        "ios",
+        "android"
+      ],
+      "type": "string"
+    },
+    "ProbeSpec": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "ios_app_data_file"
+              ],
+              "type": "string"
+            },
+            "path": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "path"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "android_run_as_file"
+              ],
+              "type": "string"
+            },
+            "path": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "path"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "log_regex"
+              ],
+              "type": "string"
+            },
+            "pattern": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "pattern"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "maestro_visible_text"
+              ],
+              "type": "string"
+            },
+            "template": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "template"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "SourceContext": {
+      "enum": [
+        "direct",
+        "safari",
+        "chrome",
+        "controlled_page"
+      ],
+      "type": "string"
+    },
+    "SourceSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "context": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/SourceContext"
+            }
+          ],
+          "default": "direct"
+        },
+        "pageUrl": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tapText": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SpecMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "integrationSeconds": {
+          "default": null,
+          "format": "uint64",
+          "minimum": 0.0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "name": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "referenceSetup": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "StartingState": {
+      "additionalProperties": false,
+      "properties": {
+        "install": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/InstallState"
+            }
+          ],
+          "default": "installed"
+        },
+        "launch": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/LaunchState"
+            }
+          ],
+          "default": "cold"
+        },
+        "userDefault": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/UserDefaultState"
+            }
+          ],
+          "default": "preserve"
+        },
+        "verification": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/VerificationState"
+            }
+          ],
+          "default": "preserve"
+        }
+      },
+      "type": "object"
+    },
+    "UserDefaultState": {
+      "enum": [
+        "preserve",
+        "reset"
+      ],
+      "type": "string"
+    },
+    "VerificationState": {
+      "enum": [
+        "preserve",
+        "reset",
+        "reverify"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "apps": {
+      "additionalProperties": {
+        "$ref": "#/definitions/AppSpec"
+      },
+      "type": "object"
+    },
+    "associations": {
+      "default": [],
+      "items": {
+        "$ref": "#/definitions/AssociationSpec"
+      },
+      "type": "array"
+    },
+    "cases": {
+      "items": {
+        "$ref": "#/definitions/CaseSpec"
+      },
+      "type": "array"
+    },
+    "gates": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/GateConfig"
+        }
+      ],
+      "default": {
+        "maxDurationMs": 600000,
+        "maxIntegrationSeconds": 1800,
+        "novelFailureClasses": 5,
+        "repeatRuns": 20,
+        "repeatabilityPercent": 95.0,
+        "representativeCaseCount": 20,
+        "representativePlatformCount": 2
+      }
+    },
+    "metadata": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SpecMetadata"
+        }
+      ],
+      "default": {
+        "description": null,
+        "integrationSeconds": null,
+        "name": null,
+        "referenceSetup": null
+      }
+    },
+    "version": {
+      "format": "uint32",
+      "minimum": 0.0,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "apps",
+    "cases",
+    "version"
+  ],
+  "title": "LabSpec",
+  "type": "object"
+}

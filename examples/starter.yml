@@ -1,0 +1,29 @@
+version: 1
+metadata:
+  name: My deep-link contract
+apps:
+  ios-app:
+    platform: ios
+    appId: com.example.app
+    artifact: build/MyApp.app
+    teamId: TEAMID1234
+    entitlements: ios/MyApp.entitlements
+    infoPlist: ios/Info.plist
+    probe:
+      kind: maestro_visible_text
+      template: "Destination: {destination}"
+associations:
+  - domain: links.example.com
+    aasa: fixtures/apple-app-site-association
+cases:
+  - id: ios-product-cold
+    app: ios-app
+    link: https://links.example.com/products/42
+    expected:
+      target: app
+      destination: product/42
+    state:
+      install: installed
+      launch: cold
+    source:
+      context: direct

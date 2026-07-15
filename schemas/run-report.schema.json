@@ -1,0 +1,425 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "CaseResult": {
+      "properties": {
+        "actual": {
+          "$ref": "#/definitions/ObservedDestination"
+        },
+        "caseId": {
+          "type": "string"
+        },
+        "classification": {
+          "$ref": "#/definitions/Classification"
+        },
+        "durationMs": {
+          "format": "uint64",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "evidence": {
+          "$ref": "#/definitions/Evidence"
+        },
+        "expected": {
+          "$ref": "#/definitions/ObservedDestination"
+        },
+        "notes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "platform": {
+          "$ref": "#/definitions/Platform"
+        },
+        "repeat": {
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "replay": {
+          "type": "string"
+        },
+        "runtimeFailureClass": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "$ref": "#/definitions/SourceSpec"
+        },
+        "startingState": {
+          "$ref": "#/definitions/StartingState"
+        },
+        "staticPreflightPassed": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "actual",
+        "caseId",
+        "classification",
+        "durationMs",
+        "evidence",
+        "expected",
+        "platform",
+        "repeat",
+        "replay",
+        "source",
+        "startingState",
+        "staticPreflightPassed"
+      ],
+      "type": "object"
+    },
+    "Classification": {
+      "enum": [
+        "passed",
+        "destination_mismatch",
+        "app_not_opened",
+        "fallback_mismatch",
+        "open_failed",
+        "observation_unavailable",
+        "infrastructure_error"
+      ],
+      "type": "string"
+    },
+    "Evidence": {
+      "properties": {
+        "commands": {
+          "type": "string"
+        },
+        "completeForFailure": {
+          "type": "boolean"
+        },
+        "logs": {
+          "type": "string"
+        },
+        "screenshot": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sha256": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "commands",
+        "completeForFailure",
+        "logs",
+        "sha256"
+      ],
+      "type": "object"
+    },
+    "InstallState": {
+      "enum": [
+        "installed",
+        "uninstalled"
+      ],
+      "type": "string"
+    },
+    "LaunchState": {
+      "enum": [
+        "cold",
+        "warm",
+        "background"
+      ],
+      "type": "string"
+    },
+    "ObservedDestination": {
+      "properties": {
+        "destination": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "target"
+      ],
+      "type": "object"
+    },
+    "Platform": {
+      "enum": [
+        "ios",
+        "android"
+      ],
+      "type": "string"
+    },
+    "PreflightIssue": {
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "severity": {
+          "$ref": "#/definitions/Severity"
+        },
+        "subject": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "severity"
+      ],
+      "type": "object"
+    },
+    "PreflightReport": {
+      "properties": {
+        "errors": {
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "issues": {
+          "items": {
+            "$ref": "#/definitions/PreflightIssue"
+          },
+          "type": "array"
+        },
+        "schemaVersion": {
+          "format": "uint32",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "specVersion": {
+          "format": "uint32",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "valid": {
+          "type": "boolean"
+        },
+        "warnings": {
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "errors",
+        "issues",
+        "schemaVersion",
+        "specVersion",
+        "valid",
+        "warnings"
+      ],
+      "type": "object"
+    },
+    "RunSummary": {
+      "properties": {
+        "durationMs": {
+          "format": "uint64",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "failed": {
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "passed": {
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "platforms": {
+          "items": {
+            "$ref": "#/definitions/Platform"
+          },
+          "type": "array"
+        },
+        "repeats": {
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "total": {
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "unavailable": {
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "durationMs",
+        "failed",
+        "passed",
+        "platforms",
+        "repeats",
+        "total",
+        "unavailable"
+      ],
+      "type": "object"
+    },
+    "Severity": {
+      "enum": [
+        "error",
+        "warning",
+        "info"
+      ],
+      "type": "string"
+    },
+    "SourceContext": {
+      "enum": [
+        "direct",
+        "safari",
+        "chrome",
+        "controlled_page"
+      ],
+      "type": "string"
+    },
+    "SourceSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "context": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/SourceContext"
+            }
+          ],
+          "default": "direct"
+        },
+        "pageUrl": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tapText": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "StartingState": {
+      "additionalProperties": false,
+      "properties": {
+        "install": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/InstallState"
+            }
+          ],
+          "default": "installed"
+        },
+        "launch": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/LaunchState"
+            }
+          ],
+          "default": "cold"
+        },
+        "userDefault": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/UserDefaultState"
+            }
+          ],
+          "default": "preserve"
+        },
+        "verification": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/VerificationState"
+            }
+          ],
+          "default": "preserve"
+        }
+      },
+      "type": "object"
+    },
+    "UserDefaultState": {
+      "enum": [
+        "preserve",
+        "reset"
+      ],
+      "type": "string"
+    },
+    "VerificationState": {
+      "enum": [
+        "preserve",
+        "reset",
+        "reverify"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "generatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "preflight": {
+      "$ref": "#/definitions/PreflightReport"
+    },
+    "referenceSetup": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "results": {
+      "items": {
+        "$ref": "#/definitions/CaseResult"
+      },
+      "type": "array"
+    },
+    "runId": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "format": "uint32",
+      "minimum": 0.0,
+      "type": "integer"
+    },
+    "spec": {
+      "type": "string"
+    },
+    "summary": {
+      "$ref": "#/definitions/RunSummary"
+    },
+    "toolVersion": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "generatedAt",
+    "preflight",
+    "results",
+    "runId",
+    "schemaVersion",
+    "spec",
+    "summary",
+    "toolVersion"
+  ],
+  "title": "RunReport",
+  "type": "object"
+}

@@ -1,0 +1,145 @@
+version: 1
+metadata:
+  name: DeepLink Lab deterministic two-platform fixture
+  description: Known-good routes and runtime-only routing failures against static-valid configuration.
+  referenceSetup: Apple M4, macOS 26.5.2, Xcode 26.6/iOS 26.5 Simulator, Android API 36 arm64 emulator at 720x1600
+  integrationSeconds: 71
+apps:
+  ios-fixture:
+    platform: ios
+    appId: dev.deeplinklab.fixture
+    artifact: fixtures/ios/build/DeepLinkFixture.app
+    teamId: ABCDE12345
+    entitlements: fixtures/ios/Fixture.entitlements
+    infoPlist: fixtures/ios/Info.plist
+    logProcess: DeepLinkFixture
+    probe:
+      kind: ios_app_data_file
+      path: Documents/destination.txt
+  android-fixture:
+    platform: android
+    appId: dev.deeplinklab.fixture
+    artifact: fixtures/android/build/DeepLinkFixture.apk
+    manifest: fixtures/android/AndroidManifest.xml
+    certFingerprints:
+      - 00:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD:EE:FF:00:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD:EE:FF
+    launchActivity: dev.deeplinklab.fixture/.MainActivity
+    logProcess: DeepLinkFixture
+    probe:
+      kind: android_run_as_file
+      path: files/destination.txt
+associations:
+  - domain: links.example.test
+    aasa: fixtures/site/.well-known/apple-app-site-association
+    assetlinks: fixtures/site/.well-known/assetlinks.json
+gates:
+  novelFailureClasses: 5
+  repeatRuns: 20
+  repeatabilityPercent: 95
+  representativeCaseCount: 20
+  representativePlatformCount: 2
+  maxDurationMs: 600000
+  maxIntegrationSeconds: 1800
+cases:
+  - id: ios-good-cold
+    app: ios-fixture
+    link: deeplinklab://good/product/42
+    expected: {target: app, destination: product/42}
+  - id: ios-good-query
+    app: ios-fixture
+    link: deeplinklab://good/search?q=blue
+    expected: {target: app, destination: "search?q=blue"}
+    state: {launch: warm}
+  - id: ios-good-background
+    app: ios-fixture
+    link: deeplinklab://good/inbox
+    expected: {target: app, destination: inbox}
+    state: {launch: background}
+  - id: ios-wrong-destination
+    app: ios-fixture
+    link: deeplinklab://wrong/product/42
+    expected: {target: app, destination: product/42}
+    runtimeFailureClass: wrong_destination
+  - id: ios-query-loss
+    app: ios-fixture
+    link: deeplinklab://query-loss/search?q=blue
+    expected: {target: app, destination: "search?q=blue"}
+    runtimeFailureClass: query_loss
+  - id: ios-fragment-loss
+    app: ios-fixture
+    link: deeplinklab://fragment-loss/article/7#comments
+    expected: {target: app, destination: "article/7#comments"}
+    runtimeFailureClass: fragment_loss
+  - id: ios-route-collision
+    app: ios-fixture
+    link: deeplinklab://route-collision/users/admin
+    expected: {target: app, destination: admin}
+    runtimeFailureClass: route_collision
+  - id: ios-warm-stale
+    app: ios-fixture
+    link: deeplinklab://warm-stale/offer/7
+    expected: {target: app, destination: offer/7}
+    state: {launch: warm}
+    runtimeFailureClass: warm_state_stale
+  - id: ios-background-ignored
+    app: ios-fixture
+    link: deeplinklab://background-ignore/inbox
+    expected: {target: app, destination: inbox}
+    state: {launch: background}
+    runtimeFailureClass: background_handler_ignored
+  - id: ios-uninstalled
+    app: ios-fixture
+    link: deeplinklab://good/product/42
+    expected: {target: unhandled, destination: no_handler}
+    state: {install: uninstalled}
+  - id: android-good-cold
+    app: android-fixture
+    link: deeplinklab://good/product/42
+    expected: {target: app, destination: product/42}
+  - id: android-good-query
+    app: android-fixture
+    link: deeplinklab://good/search?q=blue
+    expected: {target: app, destination: "search?q=blue"}
+    state: {launch: warm}
+  - id: android-good-background
+    app: android-fixture
+    link: deeplinklab://good/inbox
+    expected: {target: app, destination: inbox}
+    state: {launch: background}
+  - id: android-wrong-destination
+    app: android-fixture
+    link: deeplinklab://wrong/product/42
+    expected: {target: app, destination: product/42}
+    runtimeFailureClass: wrong_destination
+  - id: android-query-loss
+    app: android-fixture
+    link: deeplinklab://query-loss/search?q=blue
+    expected: {target: app, destination: "search?q=blue"}
+    runtimeFailureClass: query_loss
+  - id: android-fragment-loss
+    app: android-fixture
+    link: deeplinklab://fragment-loss/article/7#comments
+    expected: {target: app, destination: "article/7#comments"}
+    runtimeFailureClass: fragment_loss
+  - id: android-route-collision
+    app: android-fixture
+    link: deeplinklab://route-collision/users/admin
+    expected: {target: app, destination: admin}
+    runtimeFailureClass: route_collision
+  - id: android-warm-stale
+    app: android-fixture
+    link: deeplinklab://warm-stale/offer/7
+    expected: {target: app, destination: offer/7}
+    state: {launch: warm, verification: reset, userDefault: reset}
+    runtimeFailureClass: warm_state_stale
+  - id: android-background-ignored
+    app: android-fixture
+    link: deeplinklab://background-ignore/inbox
+    expected: {target: app, destination: inbox}
+    state: {launch: background}
+    runtimeFailureClass: background_handler_ignored
+  - id: android-uninstalled
+    app: android-fixture
+    link: deeplinklab://good/product/42
+    expected: {target: unhandled, destination: no_handler}
+    state: {install: uninstalled}

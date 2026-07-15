@@ -1,0 +1,26 @@
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 install --no-incremental -r -t examples/../fixtures/android-candidate/build/CandidateFixture.apk
+Performing Streamed Install
+Success
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell run-as dev.deeplinklab.candidate rm -f files/destination.txt
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 logcat -c
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell am force-stop dev.deeplinklab.candidate
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell am start -W -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d candidatelab://good/product/7
+Starting: Intent { act=android.intent.action.VIEW cat=[android.intent.category.BROWSABLE] dat=candidatelab://good/... }
+Status: ok
+LaunchState: COLD
+Activity: dev.deeplinklab.candidate/dev.deeplinklab.fixture.MainActivity
+TotalTime: 4186
+WaitTime: 4195
+Complete
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 exec-out screencap -p
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 logcat -d -v threadtime
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell run-as dev.deeplinklab.candidate cat files/destination.txt
+product/7
+[exit 0]

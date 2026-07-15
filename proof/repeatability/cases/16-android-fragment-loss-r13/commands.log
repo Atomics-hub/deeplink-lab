@@ -1,0 +1,22 @@
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell run-as dev.deeplinklab.fixture rm -f files/destination.txt
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 logcat -c
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell am force-stop dev.deeplinklab.fixture
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell am start -W -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d 'deeplinklab://fragment-loss/article/7#comments'
+Starting: Intent { act=android.intent.action.VIEW cat=[android.intent.category.BROWSABLE] dat=deeplinklab://fragment-loss/... }
+Status: ok
+LaunchState: COLD
+Activity: dev.deeplinklab.fixture/.MainActivity
+TotalTime: 2723
+WaitTime: 2747
+Complete
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 exec-out screencap -p
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 logcat -d -v threadtime
+[exit 0]
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell run-as dev.deeplinklab.fixture cat files/destination.txt
+article/7
+[exit 0]

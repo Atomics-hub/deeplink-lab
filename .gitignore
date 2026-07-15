@@ -1,0 +1,10 @@
+/target/
+/outputs/
+/work/
+fixtures/android/build/
+fixtures/android-candidate/build/
+fixtures/ios/build/
+*.xcresult
+.DS_Store
+.idea/
+.vscode/

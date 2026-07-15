@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-07-15T19:57:25Z",
+  "durationSeconds": 71,
+  "spec": "examples/integration-candidate.yml",
+  "caseId": "candidate-product-cold",
+  "classification": "passed",
+  "actualDestination": "product/7",
+  "runnerCodeChanged": false,
+  "runtimeSha256": "48846f98d8452103b9bda26784b6e90d3dace8543dfab210839b82bd9d17d5f0",
+  "report": "report.json"
+}

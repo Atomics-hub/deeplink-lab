@@ -1,0 +1,29 @@
+version: 1
+apps:
+  ios-fixture:
+    platform: ios
+    appId: dev.deeplinklab.fixture
+    artifact: ../fixtures/ios/build/DeepLinkFixture.app
+    teamId: ABCDE12345
+    entitlements: ../fixtures/ios/Fixture.entitlements
+    infoPlist: ../fixtures/ios/Info.plist
+    probe: {kind: ios_app_data_file, path: Documents/destination.txt}
+  android-fixture:
+    platform: android
+    appId: dev.deeplinklab.fixture
+    artifact: ../fixtures/android/build/DeepLinkFixture.apk
+    manifest: ../fixtures/android/AndroidManifest.xml
+    probe: {kind: android_run_as_file, path: files/destination.txt}
+associations:
+  - domain: links.example.test
+    aasa: ../fixtures/site/broken/apple-app-site-association
+    assetlinks: ../fixtures/site/broken/assetlinks.json
+cases:
+  - id: ios-broken-association
+    app: ios-fixture
+    link: https://links.example.test/broken/route
+    expected: {target: app, destination: route}
+  - id: android-broken-association
+    app: android-fixture
+    link: https://links.example.test/broken/route
+    expected: {target: app, destination: route}

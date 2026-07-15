@@ -1,0 +1,23 @@
+version: 1
+metadata:
+  name: Browser-context examples requiring Maestro
+apps:
+  ios-fixture:
+    platform: ios
+    appId: dev.deeplinklab.fixture
+    artifact: ../fixtures/ios/build/DeepLinkFixture.app
+    teamId: ABCDE12345
+    entitlements: ../fixtures/ios/Fixture.entitlements
+    infoPlist: ../fixtures/ios/Info.plist
+    logProcess: DeepLinkFixture
+    probe: {kind: ios_app_data_file, path: Documents/destination.txt}
+associations: []
+cases:
+  - id: ios-safari-controlled-page
+    app: ios-fixture
+    link: deeplinklab://good/product/42
+    expected: {target: app, destination: product/42}
+    source:
+      context: safari
+      pageUrl: http://127.0.0.1:8765/
+      tapText: Open known-good product 42

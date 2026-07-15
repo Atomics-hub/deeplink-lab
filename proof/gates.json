@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "novelty": {
+    "status": "passed",
+    "observed": "6 unique runtime-only failure classes: background_handler_ignored, fragment_loss, query_loss, route_collision, warm_state_stale, wrong_destination",
+    "required": "at least 5"
+  },
+  "repeatability": {
+    "status": "passed",
+    "observed": "100.00% minimum per-case modal classification agreement",
+    "required": "at least 95.00% over at least 20 repeats per case"
+  },
+  "speed": {
+    "status": "passed",
+    "observed": "20 cases, 2 platform(s), 137.402s",
+    "required": "at least 20 cases across 2 platforms in under 600s"
+  },
+  "integration": {
+    "status": "passed",
+    "observed": "71s declarative integration path",
+    "required": "under 1800s without runner code"
+  },
+  "evidence": {
+    "status": "passed",
+    "observed": "12/12 runtime failures have complete evidence",
+    "required": "every runtime failure has actual destination, screenshot, logs, starting state, and replay"
+  },
+  "allVerifiedGatesPassed": true
+}

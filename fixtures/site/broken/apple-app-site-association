@@ -1,0 +1,7 @@
+{
+  "applinks": {
+    "details": [
+      {"appIDs": ["WRONGTEAM.dev.deeplinklab.other"], "components": [{"/": "/*"}]}
+    ]
+  }
+}

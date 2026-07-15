@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "toolVersion": "0.1.0",
+  "runId": "20260715T195827Z",
+  "generatedAt": "2026-07-15T19:58:27.391332Z",
+  "spec": "integration-candidate.yml",
+  "referenceSetup": null,
+  "preflight": {
+    "schemaVersion": 1,
+    "specVersion": 1,
+    "valid": true,
+    "errors": 0,
+    "warnings": 0,
+    "issues": []
+  },
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "unavailable": 0,
+    "durationMs": 8867,
+    "platforms": [
+      "android"
+    ],
+    "repeats": 1
+  },
+  "results": [
+    {
+      "caseId": "candidate-product-cold",
+      "repeat": 1,
+      "platform": "android",
+      "classification": "passed",
+      "expected": {
+        "target": "app",
+        "destination": "product/7"
+      },
+      "actual": {
+        "target": "app",
+        "destination": "product/7"
+      },
+      "durationMs": 8676,
+      "startingState": {
+        "install": "installed",
+        "launch": "cold",
+        "verification": "preserve",
+        "userDefault": "preserve"
+      },
+      "source": {
+        "context": "direct",
+        "pageUrl": null,
+        "tapText": null
+      },
+      "evidence": {
+        "screenshot": "cases/01-candidate-product-cold-r01/screenshot.png",
+        "logs": "cases/01-candidate-product-cold-r01/device.log",
+        "commands": "cases/01-candidate-product-cold-r01/commands.log",
+        "sha256": {
+          "cases/01-candidate-product-cold-r01/commands.log": "d2b3fefaf02bbcccacdf90e8919472373081468222ff0c157c8588f3d6a65665",
+          "cases/01-candidate-product-cold-r01/device.log": "b9dd67b4a23c2c8db49c55f46ef0aaa600e33497ea8a337271e766dea36ff229",
+          "cases/01-candidate-product-cold-r01/screenshot.png": "1564427900c63ce176aabb63391f1e6db4fdb80dc0937c3b97093b400073cd11"
+        },
+        "completeForFailure": true
+      },
+      "replay": "deeplink-lab replay --spec integration-candidate.yml --case candidate-product-cold",
+      "staticPreflightPassed": true,
+      "notes": []
+    }
+  ]
+}

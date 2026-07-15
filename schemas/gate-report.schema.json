@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "GateResult": {
+      "properties": {
+        "observed": {
+          "type": "string"
+        },
+        "required": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/GateStatus"
+        }
+      },
+      "required": [
+        "observed",
+        "required",
+        "status"
+      ],
+      "type": "object"
+    },
+    "GateStatus": {
+      "enum": [
+        "passed",
+        "failed",
+        "unverified"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "allVerifiedGatesPassed": {
+      "type": "boolean"
+    },
+    "evidence": {
+      "$ref": "#/definitions/GateResult"
+    },
+    "integration": {
+      "$ref": "#/definitions/GateResult"
+    },
+    "novelty": {
+      "$ref": "#/definitions/GateResult"
+    },
+    "repeatability": {
+      "$ref": "#/definitions/GateResult"
+    },
+    "schemaVersion": {
+      "format": "uint32",
+      "minimum": 0.0,
+      "type": "integer"
+    },
+    "speed": {
+      "$ref": "#/definitions/GateResult"
+    }
+  },
+  "required": [
+    "allVerifiedGatesPassed",
+    "evidence",
+    "integration",
+    "novelty",
+    "repeatability",
+    "schemaVersion",
+    "speed"
+  ],
+  "title": "GateReport",
+  "type": "object"
+}

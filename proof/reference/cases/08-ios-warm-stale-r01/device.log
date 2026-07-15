@@ -1,0 +1,248 @@
+Timestamp               Ty Process[PID:TID]
+2026-07-15 13:00:34.257 Df DeepLinkFixture[51084:107dd75] (libMobileGestalt.dylib) No persisted cache on this platform.
+2026-07-15 13:00:34.258 Df DeepLinkFixture[51084:107dd96] [com.apple.xpc:connection] [0x1035117c0] activating connection: mach=true listener=false peer=false name=com.apple.cfprefsd.daemon
+2026-07-15 13:00:34.260 Df DeepLinkFixture[51084:107dd97] [com.apple.BoardServices:XPCErrors] [C:1] Alloc com.apple.frontboard.systemappservices
+2026-07-15 13:00:34.262 A  DeepLinkFixture[51084:107dd96] (CoreFoundation) Loading Preferences From User Session CFPrefsD
+2026-07-15 13:00:34.262 Df DeepLinkFixture[51084:107dd97] [com.apple.xpc:connection] [0x103511f30] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-07-15 13:00:34.268 Df DeepLinkFixture[51084:107dd95] [com.apple.UIKit:BackgroundTask] Creating new assertion because there is no existing background assertion.
+2026-07-15 13:00:34.268 Df DeepLinkFixture[51084:107dd95] [com.apple.UIKit:BackgroundTask] Creating new background assertion
+2026-07-15 13:00:34.268 Df DeepLinkFixture[51084:107dd95] [com.apple.UIKit:BackgroundTask] Created new background assertion <BKSProcessAssertion: 0x1035154b0>
+2026-07-15 13:00:34.268 Df DeepLinkFixture[51084:107dd95] [com.apple.runningboard:connection] Initializing connection
+2026-07-15 13:00:34.269 Df DeepLinkFixture[51084:107dd95] [com.apple.runningboard:process] Removing all cached process handles
+2026-07-15 13:00:34.269 Df DeepLinkFixture[51084:107dd9a] [com.apple.runningboard:connection] Sending handshake request attempt #1 to server
+2026-07-15 13:00:34.269 Df DeepLinkFixture[51084:107dd9a] [com.apple.runningboard:connection] Creating connection to com.apple.runningboard
+2026-07-15 13:00:34.270 Df DeepLinkFixture[51084:107dd9a] [com.apple.xpc:connection] [0x103d5c280] activating connection: mach=true listener=false peer=false name=com.apple.runningboard
+2026-07-15 13:00:34.281 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:Application] Deactivation reason added: 10; deactivation reasons: 0 -> 1024; animating application lifecycle event: 0
+2026-07-15 13:00:34.281 A  DeepLinkFixture[51084:107dd96] (RunningBoardServices) didChangeInheritances
+2026-07-15 13:00:34.281 Df DeepLinkFixture[51084:107dd75] [com.apple.BoardServices:Injection] activating monitor for service com.apple.frontboard.open
+2026-07-15 13:00:34.281 Df DeepLinkFixture[51084:107dd9a] [com.apple.runningboard:connection] Handshake succeeded
+2026-07-15 13:00:34.282 Df DeepLinkFixture[51084:107dd9a] [com.apple.runningboard:connection] Identity resolved as app<dev.deeplinklab.fixture((null))>
+2026-07-15 13:00:34.282 Df DeepLinkFixture[51084:107dd75] [com.apple.BoardServices:Injection] activating monitor for service com.apple.frontboard.workspace-service
+2026-07-15 13:00:34.283 Df DeepLinkFixture[51084:107dd95] [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x1035154b0>
+2026-07-15 13:00:34.283 Df DeepLinkFixture[51084:107dd95] [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x103c40800>: taskID = 1, taskName = Launch Background Task for Coalescing, creationTime = 396257 (elapsed = 0).
+2026-07-15 13:00:34.283 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UIApplicationSceneKeyboardSettings on FBSSceneSettings
+2026-07-15 13:00:34.283 Df DeepLinkFixture[51084:107dd75] [com.apple.FrontBoard:Common] FBSWorkspace registering source: com.apple.frontboard.systemappservices
+2026-07-15 13:00:34.284 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneOcclusionSettings> on FBSSceneSettings
+2026-07-15 13:00:34.284 Df DeepLinkFixture[51084:107dd75] [com.apple.FrontBoard:Common] FBSWorkspace connected to endpoint : <BSServiceConnectionEndpoint: 0x103cf0920; target: com.apple.frontboard.systemappservices; service: com.apple.frontboard.workspace-service>
+2026-07-15 13:00:34.284 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneInterfaceProtectionSettings> on FBSSceneSettings
+2026-07-15 13:00:34.284 Df DeepLinkFixture[51084:107dd75] [com.apple.FrontBoard:Common] <FBSWorkspaceScenesClient:0x103cd41e0 com.apple.frontboard.systemappservices> attempting immediate handshake from activate
+2026-07-15 13:00:34.285 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneLayoutPreferencesHostSettingsExtension on FBSSceneSettings
+2026-07-15 13:00:34.285 Df DeepLinkFixture[51084:107dd75] [com.apple.FrontBoard:Common] <FBSWorkspaceScenesClient:0x103cd41e0 com.apple.frontboard.systemappservices> sent handshake
+2026-07-15 13:00:34.285 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneSafeAreaSettingsExtension on FBSSceneSettings
+2026-07-15 13:00:34.285 Df DeepLinkFixture[51084:107dd75] [com.apple.runningboard:general] Added observer for process assertions expiration warning: <_RBSExpirationWarningClient: 0x103cf0e80>
+2026-07-15 13:00:34.286 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneLayoutPreferenceClientSettingsExtension on FBSSceneClientSettings
+2026-07-15 13:00:34.287 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UIHomeAffordanceHostSceneSettings> on FBSSceneSettings
+2026-07-15 13:00:34.287 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISystemShellSceneHostingEnvironmentSettings on FBSSceneSettings
+2026-07-15 13:00:34.287 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneRenderingEnvironmentSettings on FBSSceneSettings
+2026-07-15 13:00:34.288 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneRenderingEnvironmentClientSettings> on FBSSceneClientSettings
+2026-07-15 13:00:34.288 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneTransitioningHostSettings> on FBSSceneSettings
+2026-07-15 13:00:34.288 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneFocusSystemSettings> on FBSSceneSettings
+2026-07-15 13:00:34.288 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneOrientationSettingsExtension on FBSSceneSettings
+2026-07-15 13:00:34.288 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneOrientationClientSettingsExtension on FBSSceneClientSettings
+2026-07-15 13:00:34.289 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneWindowingControlClientSettings on FBSSceneClientSettings
+2026-07-15 13:00:34.289 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingContentSizePreferenceClientSettings> on FBSSceneClientSettings
+2026-07-15 13:00:34.289 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneHostingTraitCollectionPropagationSettings on FBSSceneSettings
+2026-07-15 13:00:34.290 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingSheetPresentationSettings> on FBSSceneSettings
+2026-07-15 13:00:34.290 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingSheetPresentationClientSettings> on FBSSceneClientSettings
+2026-07-15 13:00:34.290 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:UIScreen] Evaluated capturing state as 0 on <UIScreen: 0x103d5c500> for initial
+2026-07-15 13:00:34.291 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingEventDeferringSettings> on FBSSceneSettings
+2026-07-15 13:00:34.291 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:UIScreen] Evaluated capturing state as 0 on <UIScreen: 0x103d5c500> for CADisplay KVO
+2026-07-15 13:00:34.291 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <UIKit__UITypedKeyValueSceneSettings> on FBSSceneSettings
+2026-07-15 13:00:34.291 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <UIKit__UITypedKeyValueSceneSettings> on FBSSceneClientSettings
+2026-07-15 13:00:34.291 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingViewControllerPreferencePropagationClientSettings> on FBSSceneClientSettings
+2026-07-15 13:00:34.292 Df DeepLinkFixture[51084:107dd95] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneZoomTransitionSettings> on FBSSceneSettings
+2026-07-15 13:00:34.292 Df DeepLinkFixture[51084:107dd97] [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneSettingsCore on FBSSceneSettings
+2026-07-15 13:00:34.293 Df DeepLinkFixture[51084:107dd97] [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneClientSettingsCore on FBSSceneClientSettings
+2026-07-15 13:00:34.293 Df DeepLinkFixture[51084:107dd75] [com.apple.Accessibility:AXSupportCommon] Read CategoryName: per-app = 1, category name = (null)
+2026-07-15 13:00:34.294 Df DeepLinkFixture[51084:107dd75] [com.apple.Accessibility:AXSupportCommon] Read CategoryName: per-app = 0, category name = (null)
+2026-07-15 13:00:34.311 Df DeepLinkFixture[51084:107dd97] [com.apple.FrontBoard:SceneExtension] UIMutableApplicationSceneSettings setting counterpart class: UIApplicationSceneSettings
+2026-07-15 13:00:34.312 Df DeepLinkFixture[51084:107dd97] [com.apple.FrontBoard:SceneExtension] UIMutableApplicationSceneClientSettings setting counterpart class: UIApplicationSceneClientSettings
+2026-07-15 13:00:34.312 Df DeepLinkFixture[51084:107dd97] [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneTransitionContextCore on FBSSceneTransitionContext
+2026-07-15 13:00:34.338 Df DeepLinkFixture[51084:107dd97] [com.apple.xpc:connection] [0x103d5cf00] activating connection: mach=true listener=false peer=false name=com.apple.fontservicesd
+2026-07-15 13:00:34.345 Df DeepLinkFixture[51084:107dd75] [com.apple.dt.xctest:Default] Registering for test daemon availability notify post.
+2026-07-15 13:00:34.345 Df DeepLinkFixture[51084:107dd75] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-07-15 13:00:34.346 Df DeepLinkFixture[51084:107dd75] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-07-15 13:00:34.346 Df DeepLinkFixture[51084:107dd75] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-07-15 13:00:34.347 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:UpdateScheduler] Selected display: name=LCD (PurpleMain), id=1
+2026-07-15 13:00:34.348 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:EventBus] Event Timing Profile for Touch: not found, path="/System/Library/EventTimingProfiles/Sim.Touch.plist"
+2026-07-15 13:00:34.348 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:EventBus] Event Timing Profile for Pencil: not found, path="/System/Library/EventTimingProfiles/Sim.Pencil.plist"
+2026-07-15 13:00:34.350 Df DeepLinkFixture[51084:107dd75] [com.apple.app_launch_measurement:ApplicationLaunch] alm_acquire_pageins_recording_assertion: acquired pageins recording assertion!
+2026-07-15 13:00:34.351 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:BackgroundTask] Will add backgroundTask with taskName: Persistent SceneSession Map Update, expirationHandler: <__NSGlobalBlock__: 0x1e78c84e8>
+2026-07-15 13:00:34.351 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:BackgroundTask] Reusing background assertion <BKSProcessAssertion: 0x1035154b0>
+2026-07-15 13:00:34.351 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x1035154b0>
+2026-07-15 13:00:34.351 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x103e50080>: taskID = 2, taskName = Persistent SceneSession Map Update, creationTime = 396258 (elapsed = 0).
+2026-07-15 13:00:34.352 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:Application] Deactivation reason added: 5; deactivation reasons: 1024 -> 1056; animating application lifecycle event: 1
+2026-07-15 13:00:34.353 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x10351c390> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:34.353 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:InterfaceStyle] Should send trait collection or coordinate space update, interface style 1 -> 1, <UIWindowScene: 0x10351c390> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:34.354 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x10351c390> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:34.354 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:HomeAffordanceObservation] Initializing: <_UIHomeAffordanceSceneNotifier: 0x103e55180>; with scene: <UIWindowScene: 0x10351c390>
+2026-07-15 13:00:34.355 Df DeepLinkFixture[51084:107dd75] [com.apple.BacklightServices:scenes] 0x103e19b60 setDelegate:<0x103e183c0 _UIBacklightEnvironment> hasDelegate:YES for environment:sceneID:dev.deeplinklab.fixture-default
+2026-07-15 13:00:34.355 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x10351c390> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:34.355 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:EventDeferring] [0x103e54000] Initialized with scene: <UIWindowScene: 0x10351c390>; behavior: <_UIEventDeferringBehavior_iOS: 0x103cf2f40>; availableForProcess: 1, systemShellManagesKeyboardFocus: 1
+2026-07-15 13:00:34.355 Df DeepLinkFixture[51084:107dd75] [com.apple.BoardServices:XPCErrors] [C:2] Alloc com.apple.backboard.hid-services.xpc
+2026-07-15 13:00:34.355 Df DeepLinkFixture[51084:107dd75] [com.apple.xpc:connection] [0x103d5d180] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-07-15 13:00:34.359 Df DeepLinkFixture[51084:107dd97] [com.apple.BackBoard:EventDelivery] BKSHIDEventObserver - connection activation
+2026-07-15 13:00:34.359 Df DeepLinkFixture[51084:107dd75] [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x103e142a0; process scope; status: target> was:none
+2026-07-15 13:00:34.359 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPhone to LastOneWins
+2026-07-15 13:00:34.359 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:KeyWindow] Scene target of keyboard event deferring environment did change: 1; scene: UIWindowScene: 0x10351c390; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Adev.deeplinklab.fixture-default
+2026-07-15 13:00:34.359 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:EventDeferring] [0x103e54000] Scene target of event deferring environments did update: scene: 0x10351c390; current systemShellManagesKeyboardFocus: 1; systemShellManagesKeyboardFocusForScene: 1; eligibleForRecordRemoval: 1;
+2026-07-15 13:00:34.359 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x10351c390; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Adev.deeplinklab.fixture-default
+2026-07-15 13:00:34.359 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:KeyWindow] Stack[KeyWindow] 0x103e1a580: Taking no further action for migration from LastOneWins -> SystemShellManaged as there are no scenes
+2026-07-15 13:00:34.359 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPhone to SystemShellManaged
+2026-07-15 13:00:34.359 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:KeyWindow] Key window needs update: 0; currentKeyWindowScene: 0x0; evaluatedKeyWindowScene: 0x10351c390; currentApplicationKeyWindow: 0x0; evaluatedApplicationKeyWindow: 0x0; reason: UIWindowScene: 0x10351c390: Window scene became target of keyboard environment
+2026-07-15 13:00:34.359 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x10351c390> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:34.360 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x10351c390> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:34.362 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x10351c390> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:34.363 F  DeepLinkFixture[51084:107dd75] [com.apple.runtime-issues:UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
+2026-07-15 13:00:34.363 A  DeepLinkFixture[51084:107dd75] (libsystem_trace.dylib) Activity for state dumps
+2026-07-15 13:00:34.363 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x10351c390> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:34.364 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:dev.deeplinklab.fixture-default  persistentID: 3D84A9CB-87ED-4007-A009-97EBC0C875C2
+2026-07-15 13:00:34.364 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:Application] Ignoring already applied deactivation reason: 5; deactivation reasons: 1056
+2026-07-15 13:00:34.364 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:Application] Deactivation reason added: 11; deactivation reasons: 1056 -> 3104; animating application lifecycle event: 1
+2026-07-15 13:00:34.364 Df DeepLinkFixture[51084:107dd75] [com.apple.KeyboardArbiter:Client] startConnection
+2026-07-15 13:00:34.365 Df DeepLinkFixture[51084:107dd75] [com.apple.xpc:connection] [0x103d5d7c0] activating connection: mach=true listener=false peer=false name=com.apple.UIKit.KeyboardManagement.hosted
+2026-07-15 13:00:34.377 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:Orientation] <UIWindowScene: 0x10351c390> (3D84A9CB-87ED-4007-A009-97EBC0C875C2) Scene updated orientation preferences: none -> ( Pu )
+2026-07-15 13:00:34.387 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:KeyWindow] Key window API is scene-level: YES
+2026-07-15 13:00:34.387 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:KeyWindow] UIWindowScene: 0x10351c390: Window became key in scene: UIWindow: 0x103d80000; contextId: 0xFEC3C8EA: reason: UIWindowScene: 0x10351c390: Window requested to become key in scene: 0x103d80000
+2026-07-15 13:00:34.387 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:KeyWindow] Key window needs update: 1; currentKeyWindowScene: 0x0; evaluatedKeyWindowScene: 0x10351c390; currentApplicationKeyWindow: 0x0; evaluatedApplicationKeyWindow: 0x103d80000; reason: UIWindowScene: 0x10351c390: Window requested to become key in scene: 0x103d80000
+2026-07-15 13:00:34.387 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:KeyWindow] Window did become application key: UIWindow: 0x103d80000; contextId: 0xFEC3C8EA; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Adev.deeplinklab.fixture-default
+2026-07-15 13:00:34.388 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:EventDeferring] [0x103e54000] Begin local event deferring requested for token: 0x103e15380; environments: 1; reason: UIWindowScene: 0x10351c390: Begin event deferring in keyboardFocus for window: 0x103d80000
+2026-07-15 13:00:34.389 Df DeepLinkFixture[51084:107dd9f] [com.apple.BackBoard:EventDelivery] BKSHIDEventDeliveryManager - connection activation
+2026-07-15 13:00:34.391 Df DeepLinkFixture[51084:107dd9f] [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x103e142a0; token: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Adev.deeplinklab.fixture-default; status: ancestor> was:target
+2026-07-15 13:00:34.393 Df DeepLinkFixture[51084:107dd75] (Foundation) DEEPLINKLAB_DESTINATION=home
+2026-07-15 13:00:34.393 Df DeepLinkFixture[51084:107dd75] [com.apple.UIKit:Application] Deactivation reason removed: 10; deactivation reasons: 3104 -> 2080; animating application lifecycle event: 1
+2026-07-15 13:00:34.393 E  DeepLinkFixture[51084:107dd75] [com.apple.Foundation:general] *** Assertion failure in -[UIApplication _runWithMainScene:transitionContext:completion:], UIApplication.m:4988
+2026-07-15 13:00:34.406 Df DeepLinkFixture[51084:107dd75] (CoreFoundation) *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: 'Application windows are expected to have a root view controller at the end of application launch'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x00000001804c3dec __exceptionPreprocess + 172
+	1   libobjc.A.dylib                     0x0000000180063438 objc_exception_throw + 72
+	2   Foundation                          0x0000000181075818 _userInfoForFileAndLine + 0
+	3   UIKitCore                           0x00000001864a885c -[UIApplication _runWithMainScene:transitionContext:completion:] + 1420
+	4   UIKitCore                           0x00000001859a41e8 -[_UISceneLifecycleMultiplexer completeApplicationLaunchWithFBSScene:transitionContext:] + 88
+	5   UIKitCore                           0x0000000185fafa28 _UIScenePerformActionsWithLifecycleActionMask + 96
+	6   UIKitCore                           0x00000001859a4a8c __101-[_UISceneLifecycleMultiplexer _evalTransitionToSettings:fromSettings:fo<…>
+2026-07-15 13:00:35.278 Df DeepLinkFixture[51092:107ddfe] (libMobileGestalt.dylib) No persisted cache on this platform.
+2026-07-15 13:00:35.280 Df DeepLinkFixture[51092:107de04] [com.apple.xpc:connection] [0x1015ab2e0] activating connection: mach=true listener=false peer=false name=com.apple.cfprefsd.daemon
+2026-07-15 13:00:35.282 Df DeepLinkFixture[51092:107de06] [com.apple.BoardServices:XPCErrors] [C:1] Alloc com.apple.frontboard.systemappservices
+2026-07-15 13:00:35.283 Df DeepLinkFixture[51092:107de06] [com.apple.xpc:connection] [0x1015ac060] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-07-15 13:00:35.286 Df DeepLinkFixture[51092:107de04] [com.apple.UIKit:BackgroundTask] Creating new assertion because there is no existing background assertion.
+2026-07-15 13:00:35.288 A  DeepLinkFixture[51092:107de05] (CoreFoundation) Loading Preferences From User Session CFPrefsD
+2026-07-15 13:00:35.295 Df DeepLinkFixture[51092:107de04] [com.apple.UIKit:BackgroundTask] Creating new background assertion
+2026-07-15 13:00:35.295 Df DeepLinkFixture[51092:107de04] [com.apple.UIKit:BackgroundTask] Created new background assertion <BKSProcessAssertion: 0x1015a7780>
+2026-07-15 13:00:35.295 Df DeepLinkFixture[51092:107de04] [com.apple.runningboard:connection] Initializing connection
+2026-07-15 13:00:35.295 Df DeepLinkFixture[51092:107de04] [com.apple.runningboard:process] Removing all cached process handles
+2026-07-15 13:00:35.295 Df DeepLinkFixture[51092:107de0a] [com.apple.runningboard:connection] Sending handshake request attempt #1 to server
+2026-07-15 13:00:35.295 Df DeepLinkFixture[51092:107de0a] [com.apple.runningboard:connection] Creating connection to com.apple.runningboard
+2026-07-15 13:00:35.296 Df DeepLinkFixture[51092:107de0a] [com.apple.xpc:connection] [0x101d24280] activating connection: mach=true listener=false peer=false name=com.apple.runningboard
+2026-07-15 13:00:35.297 A  DeepLinkFixture[51092:107de08] (RunningBoardServices) didChangeInheritances
+2026-07-15 13:00:35.297 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:Application] Deactivation reason added: 10; deactivation reasons: 0 -> 1024; animating application lifecycle event: 0
+2026-07-15 13:00:35.298 Df DeepLinkFixture[51092:107ddfe] [com.apple.BoardServices:Injection] activating monitor for service com.apple.frontboard.open
+2026-07-15 13:00:35.298 Df DeepLinkFixture[51092:107de0a] [com.apple.runningboard:connection] Handshake succeeded
+2026-07-15 13:00:35.298 Df DeepLinkFixture[51092:107ddfe] [com.apple.BoardServices:Injection] activating monitor for service com.apple.frontboard.workspace-service
+2026-07-15 13:00:35.298 Df DeepLinkFixture[51092:107de0a] [com.apple.runningboard:connection] Identity resolved as app<dev.deeplinklab.fixture((null))>
+2026-07-15 13:00:35.300 Df DeepLinkFixture[51092:107ddfe] [com.apple.FrontBoard:Common] FBSWorkspace registering source: com.apple.frontboard.systemappservices
+2026-07-15 13:00:35.300 Df DeepLinkFixture[51092:107de04] [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x1015a7780>
+2026-07-15 13:00:35.300 Df DeepLinkFixture[51092:107de04] [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x101c40c80>: taskID = 1, taskName = Launch Background Task for Coalescing, creationTime = 396258 (elapsed = 0).
+2026-07-15 13:00:35.300 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UIApplicationSceneKeyboardSettings on FBSSceneSettings
+2026-07-15 13:00:35.302 Df DeepLinkFixture[51092:107ddfe] [com.apple.FrontBoard:Common] FBSWorkspace connected to endpoint : <BSServiceConnectionEndpoint: 0x101cf0480; target: com.apple.frontboard.systemappservices; service: com.apple.frontboard.workspace-service>
+2026-07-15 13:00:35.302 Df DeepLinkFixture[51092:107ddfe] [com.apple.FrontBoard:Common] <FBSWorkspaceScenesClient:0x101cdcbe0 com.apple.frontboard.systemappservices> attempting immediate handshake from activate
+2026-07-15 13:00:35.302 Df DeepLinkFixture[51092:107ddfe] [com.apple.FrontBoard:Common] <FBSWorkspaceScenesClient:0x101cdcbe0 com.apple.frontboard.systemappservices> sent handshake
+2026-07-15 13:00:35.303 Df DeepLinkFixture[51092:107ddfe] [com.apple.runningboard:general] Added observer for process assertions expiration warning: <_RBSExpirationWarningClient: 0x101cf0cc0>
+2026-07-15 13:00:35.303 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneOcclusionSettings> on FBSSceneSettings
+2026-07-15 13:00:35.304 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneInterfaceProtectionSettings> on FBSSceneSettings
+2026-07-15 13:00:35.304 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneLayoutPreferencesHostSettingsExtension on FBSSceneSettings
+2026-07-15 13:00:35.304 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneSafeAreaSettingsExtension on FBSSceneSettings
+2026-07-15 13:00:35.305 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneLayoutPreferenceClientSettingsExtension on FBSSceneClientSettings
+2026-07-15 13:00:35.306 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UIHomeAffordanceHostSceneSettings> on FBSSceneSettings
+2026-07-15 13:00:35.307 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISystemShellSceneHostingEnvironmentSettings on FBSSceneSettings
+2026-07-15 13:00:35.307 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneRenderingEnvironmentSettings on FBSSceneSettings
+2026-07-15 13:00:35.307 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneRenderingEnvironmentClientSettings> on FBSSceneClientSettings
+2026-07-15 13:00:35.307 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneTransitioningHostSettings> on FBSSceneSettings
+2026-07-15 13:00:35.308 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneFocusSystemSettings> on FBSSceneSettings
+2026-07-15 13:00:35.308 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneOrientationSettingsExtension on FBSSceneSettings
+2026-07-15 13:00:35.308 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneOrientationClientSettingsExtension on FBSSceneClientSettings
+2026-07-15 13:00:35.308 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneWindowingControlClientSettings on FBSSceneClientSettings
+2026-07-15 13:00:35.308 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:UIScreen] Evaluated capturing state as 0 on <UIScreen: 0x101d24500> for initial
+2026-07-15 13:00:35.308 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingContentSizePreferenceClientSettings> on FBSSceneClientSettings
+2026-07-15 13:00:35.309 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:UIScreen] Evaluated capturing state as 0 on <UIScreen: 0x101d24500> for CADisplay KVO
+2026-07-15 13:00:35.309 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneHostingTraitCollectionPropagationSettings on FBSSceneSettings
+2026-07-15 13:00:35.309 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingSheetPresentationSettings> on FBSSceneSettings
+2026-07-15 13:00:35.309 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingSheetPresentationClientSettings> on FBSSceneClientSettings
+2026-07-15 13:00:35.310 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingEventDeferringSettings> on FBSSceneSettings
+2026-07-15 13:00:35.310 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <UIKit__UITypedKeyValueSceneSettings> on FBSSceneSettings
+2026-07-15 13:00:35.310 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <UIKit__UITypedKeyValueSceneSettings> on FBSSceneClientSettings
+2026-07-15 13:00:35.311 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingViewControllerPreferencePropagationClientSettings> on FBSSceneClientSettings
+2026-07-15 13:00:35.311 Df DeepLinkFixture[51092:107de04] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneZoomTransitionSettings> on FBSSceneSettings
+2026-07-15 13:00:35.312 Df DeepLinkFixture[51092:107de08] [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneSettingsCore on FBSSceneSettings
+2026-07-15 13:00:35.312 Df DeepLinkFixture[51092:107ddfe] [com.apple.Accessibility:AXSupportCommon] Read CategoryName: per-app = 1, category name = (null)
+2026-07-15 13:00:35.313 Df DeepLinkFixture[51092:107ddfe] [com.apple.Accessibility:AXSupportCommon] Read CategoryName: per-app = 0, category name = (null)
+2026-07-15 13:00:35.314 Df DeepLinkFixture[51092:107de08] [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneClientSettingsCore on FBSSceneClientSettings
+2026-07-15 13:00:35.330 Df DeepLinkFixture[51092:107de08] [com.apple.FrontBoard:SceneExtension] UIMutableApplicationSceneSettings setting counterpart class: UIApplicationSceneSettings
+2026-07-15 13:00:35.331 Df DeepLinkFixture[51092:107de08] [com.apple.FrontBoard:SceneExtension] UIMutableApplicationSceneClientSettings setting counterpart class: UIApplicationSceneClientSettings
+2026-07-15 13:00:35.331 Df DeepLinkFixture[51092:107de08] [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneTransitionContextCore on FBSSceneTransitionContext
+2026-07-15 13:00:35.344 Df DeepLinkFixture[51092:107de08] [com.apple.xpc:connection] [0x101d24f00] activating connection: mach=true listener=false peer=false name=com.apple.fontservicesd
+2026-07-15 13:00:35.355 Df DeepLinkFixture[51092:107ddfe] [com.apple.dt.xctest:Default] Registering for test daemon availability notify post.
+2026-07-15 13:00:35.355 Df DeepLinkFixture[51092:107ddfe] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-07-15 13:00:35.355 Df DeepLinkFixture[51092:107ddfe] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-07-15 13:00:35.355 Df DeepLinkFixture[51092:107ddfe] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-07-15 13:00:35.357 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:UpdateScheduler] Selected display: name=LCD (PurpleMain), id=1
+2026-07-15 13:00:35.358 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:EventBus] Event Timing Profile for Touch: not found, path="/System/Library/EventTimingProfiles/Sim.Touch.plist"
+2026-07-15 13:00:35.358 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:EventBus] Event Timing Profile for Pencil: not found, path="/System/Library/EventTimingProfiles/Sim.Pencil.plist"
+2026-07-15 13:00:35.359 Df DeepLinkFixture[51092:107ddfe] [com.apple.FrontBoard:SceneClient] [(FBSceneManager):sceneID:dev.deeplinklab.fixture-default] Received action(s) in scene-create: UIOpenURLAction
+2026-07-15 13:00:35.361 Df DeepLinkFixture[51092:107ddfe] [com.apple.app_launch_measurement:ApplicationLaunch] alm_acquire_pageins_recording_assertion: acquired pageins recording assertion!
+2026-07-15 13:00:35.362 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:BackgroundTask] Will add backgroundTask with taskName: Persistent SceneSession Map Update, expirationHandler: <__NSGlobalBlock__: 0x1e78c84e8>
+2026-07-15 13:00:35.362 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:BackgroundTask] Reusing background assertion <BKSProcessAssertion: 0x1015a7780>
+2026-07-15 13:00:35.362 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x1015a7780>
+2026-07-15 13:00:35.362 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x101e44ec0>: taskID = 2, taskName = Persistent SceneSession Map Update, creationTime = 396259 (elapsed = 0).
+2026-07-15 13:00:35.362 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:Application] Deactivation reason added: 5; deactivation reasons: 1024 -> 1056; animating application lifecycle event: 1
+2026-07-15 13:00:35.363 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x1015ad1a0> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:35.363 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:InterfaceStyle] Should send trait collection or coordinate space update, interface style 1 -> 1, <UIWindowScene: 0x1015ad1a0> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:35.365 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x1015ad1a0> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:35.365 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:HomeAffordanceObservation] Initializing: <_UIHomeAffordanceSceneNotifier: 0x101e49180>; with scene: <UIWindowScene: 0x1015ad1a0>
+2026-07-15 13:00:35.366 Df DeepLinkFixture[51092:107ddfe] [com.apple.BacklightServices:scenes] 0x101e11320 setDelegate:<0x101e10ff0 _UIBacklightEnvironment> hasDelegate:YES for environment:sceneID:dev.deeplinklab.fixture-default
+2026-07-15 13:00:35.366 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x1015ad1a0> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:35.366 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:EventDeferring] [0x101e49500] Initialized with scene: <UIWindowScene: 0x1015ad1a0>; behavior: <_UIEventDeferringBehavior_iOS: 0x101cf2f60>; availableForProcess: 1, systemShellManagesKeyboardFocus: 1
+2026-07-15 13:00:35.367 Df DeepLinkFixture[51092:107ddfe] [com.apple.BoardServices:XPCErrors] [C:2] Alloc com.apple.backboard.hid-services.xpc
+2026-07-15 13:00:35.367 Df DeepLinkFixture[51092:107ddfe] [com.apple.xpc:connection] [0x101d25180] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-07-15 13:00:35.371 Df DeepLinkFixture[51092:107de08] [com.apple.BackBoard:EventDelivery] BKSHIDEventObserver - connection activation
+2026-07-15 13:00:35.371 Df DeepLinkFixture[51092:107ddfe] [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x101de41e0; process scope; status: target> was:none
+2026-07-15 13:00:35.371 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPhone to LastOneWins
+2026-07-15 13:00:35.371 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:KeyWindow] Scene target of keyboard event deferring environment did change: 1; scene: UIWindowScene: 0x1015ad1a0; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Adev.deeplinklab.fixture-default
+2026-07-15 13:00:35.371 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:EventDeferring] [0x101e49500] Scene target of event deferring environments did update: scene: 0x1015ad1a0; current systemShellManagesKeyboardFocus: 1; systemShellManagesKeyboardFocusForScene: 1; eligibleForRecordRemoval: 1;
+2026-07-15 13:00:35.371 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x1015ad1a0; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Adev.deeplinklab.fixture-default
+2026-07-15 13:00:35.371 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:KeyWindow] Stack[KeyWindow] 0x101e10a50: Taking no further action for migration from LastOneWins -> SystemShellManaged as there are no scenes
+2026-07-15 13:00:35.371 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPhone to SystemShellManaged
+2026-07-15 13:00:35.372 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:KeyWindow] Key window needs update: 0; currentKeyWindowScene: 0x0; evaluatedKeyWindowScene: 0x1015ad1a0; currentApplicationKeyWindow: 0x0; evaluatedApplicationKeyWindow: 0x0; reason: UIWindowScene: 0x1015ad1a0: Window scene became target of keyboard environment
+2026-07-15 13:00:35.372 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x1015ad1a0> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:35.373 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x1015ad1a0> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:35.375 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x1015ad1a0> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:35.375 F  DeepLinkFixture[51092:107ddfe] [com.apple.runtime-issues:UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
+2026-07-15 13:00:35.375 A  DeepLinkFixture[51092:107ddfe] (libsystem_trace.dylib) Activity for state dumps
+2026-07-15 13:00:35.376 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x1015ad1a0> (3D84A9CB-87ED-4007-A009-97EBC0C875C2)
+2026-07-15 13:00:35.376 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:dev.deeplinklab.fixture-default  persistentID: 3D84A9CB-87ED-4007-A009-97EBC0C875C2
+2026-07-15 13:00:35.377 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:Application] Ignoring already applied deactivation reason: 5; deactivation reasons: 1056
+2026-07-15 13:00:35.377 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:Application] Deactivation reason added: 11; deactivation reasons: 1056 -> 3104; animating application lifecycle event: 1
+2026-07-15 13:00:35.377 Df DeepLinkFixture[51092:107ddfe] [com.apple.KeyboardArbiter:Client] startConnection
+2026-07-15 13:00:35.377 Df DeepLinkFixture[51092:107ddfe] [com.apple.xpc:connection] [0x101d25900] activating connection: mach=true listener=false peer=false name=com.apple.UIKit.KeyboardManagement.hosted
+2026-07-15 13:00:35.393 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:Orientation] <UIWindowScene: 0x1015ad1a0> (3D84A9CB-87ED-4007-A009-97EBC0C875C2) Scene updated orientation preferences: none -> ( Pu )
+2026-07-15 13:00:35.404 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:KeyWindow] Key window API is scene-level: YES
+2026-07-15 13:00:35.405 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:KeyWindow] UIWindowScene: 0x1015ad1a0: Window became key in scene: UIWindow: 0x101d7c000; contextId: 0x1892A6F5: reason: UIWindowScene: 0x1015ad1a0: Window requested to become key in scene: 0x101d7c000
+2026-07-15 13:00:35.405 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:KeyWindow] Key window needs update: 1; currentKeyWindowScene: 0x0; evaluatedKeyWindowScene: 0x1015ad1a0; currentApplicationKeyWindow: 0x0; evaluatedApplicationKeyWindow: 0x101d7c000; reason: UIWindowScene: 0x1015ad1a0: Window requested to become key in scene: 0x101d7c000
+2026-07-15 13:00:35.405 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:KeyWindow] Window did become application key: UIWindow: 0x101d7c000; contextId: 0x1892A6F5; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Adev.deeplinklab.fixture-default
+2026-07-15 13:00:35.405 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:EventDeferring] [0x101e49500] Begin local event deferring requested for token: 0x101de72a0; environments: 1; reason: UIWindowScene: 0x1015ad1a0: Begin event deferring in keyboardFocus for window: 0x101d7c000
+2026-07-15 13:00:35.406 Df DeepLinkFixture[51092:107de06] [com.apple.BackBoard:EventDelivery] BKSHIDEventDeliveryManager - connection activation
+2026-07-15 13:00:35.410 Df DeepLinkFixture[51092:107de06] [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x101de41e0; token: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Adev.deeplinklab.fixture-default; status: ancestor> was:target
+2026-07-15 13:00:35.411 Df DeepLinkFixture[51092:107ddfe] (Foundation) DEEPLINKLAB_DESTINATION=home
+2026-07-15 13:00:35.412 Df DeepLinkFixture[51092:107ddfe] [com.apple.UIKit:Application] Deactivation reason removed: 10; deactivation reasons: 3104 -> 2080; animating application lifecycle event: 1
+2026-07-15 13:00:35.413 E  DeepLinkFixture[51092:107ddfe] [com.apple.Foundation:general] *** Assertion failure in -[UIApplication _runWithMainScene:transitionContext:completion:], UIApplication.m:4988
+2026-07-15 13:00:35.426 Df DeepLinkFixture[51092:107ddfe] (CoreFoundation) *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: 'Application windows are expected to have a root view controller at the end of application launch'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x00000001804c3dec __exceptionPreprocess + 172
+	1   libobjc.A.dylib                     0x0000000180063438 objc_exception_throw + 72
+	2   Foundation                          0x0000000181075818 _userInfoForFileAndLine + 0
+	3   UIKitCore                           0x00000001864a885c -[UIApplication _runWithMainScene:transitionContext:completion:] + 1420
+	4   UIKitCore                           0x00000001859a41e8 -[_UISceneLifecycleMultiplexer completeApplicationLaunchWithFBSScene:transitionContext:] + 88
+	5   UIKitCore                           0x0000000185fafa28 _UIScenePerformActionsWithLifecycleActionMask + 96
+	6   UIKitCore                           0x00000001859a4a8c __101-[_UISceneLifecycleMultiplexer _evalTransitionToSettings:fromSettings:fo<…>
