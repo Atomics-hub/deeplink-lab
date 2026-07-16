@@ -10,7 +10,7 @@ DeepLink Lab is a vendor-neutral contract and local evidence runner for iOS Univ
 
 It orchestrates platform tools; it is not another device driver. Built-in local lanes use `xcrun simctl` and `adb`. Safari, Chrome, controlled-page taps, and generic visible-text assertions use an optional Maestro adapter.
 
-The committed reference proof observed 20 cases across both local platforms in 137.402 seconds: 8 controls passed, 12 deliberately broken routes failed at the exact destination assertion, and none were unavailable. Six failure-class cases then produced identical classifications over 20 explicit-reset repetitions. These are local Simulator/emulator measurements, not physical-device claims; inspect the [proof ledger](docs/PROOF.md) and [self-contained report](proof/reference/report.html).
+The committed reference proof observed 20 cases across both local platforms in 90.183 seconds: 8 controls passed, 12 deliberately broken routes failed at the exact destination assertion, and none were unavailable. Six failure-class cases then produced identical classifications over 20 explicit-reset repetitions. These are local Simulator/emulator measurements, not physical-device claims; inspect the [proof ledger](docs/PROOF.md) and [self-contained report](proof/reference/report.html).
 
 ## The evidence boundary
 

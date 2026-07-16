@@ -1,23 +1,17 @@
 $ xcrun simctl get_app_container 9974A09E-BF19-458B-A770-19D020102395 dev.deeplinklab.fixture data
-$HOME/Library/Developer/CoreSimulator/Devices/9974A09E-BF19-458B-A770-19D020102395/data/Containers/Data/Application/18C70131-4D6A-422C-BD09-23696D257792
+$HOME/Library/Developer/CoreSimulator/Devices/9974A09E-BF19-458B-A770-19D020102395/data/Containers/Data/Application/BFBAA5DE-BF5F-4DA3-AB4D-BC7D177F6A6F
 [exit 0]
 $ xcrun simctl terminate 9974A09E-BF19-458B-A770-19D020102395 dev.deeplinklab.fixture
-An error was encountered processing the command (domain=NSPOSIXErrorDomain, code=3):
-Simulator device failed to terminate dev.deeplinklab.fixture.
-found nothing to terminate
-Underlying error (domain=NSPOSIXErrorDomain, code=3):
-	The request to terminate "dev.deeplinklab.fixture" failed. found nothing to terminate
-	found nothing to terminate
-[exit 3]
+[exit 0]
 $ xcrun simctl openurl 9974A09E-BF19-458B-A770-19D020102395 'deeplinklab://query-loss/search?q=blue'
 [exit 0]
-$ xcrun simctl io 9974A09E-BF19-458B-A770-19D020102395 screenshot '--type=jpeg' work/proof-reference-public/cases/05-ios-query-loss-r01/screenshot.jpg
-Note: No display specified. Defaulting to display: 8F95D91F-FCB9-4754-8D9E-205D2812ECF4 (screenID: 1, name: LCD)
-Wrote screenshot to: $WORKSPACE/work/proof-reference-public/cases/05-ios-query-loss-r01/screenshot.jpg
+$ xcrun simctl io 9974A09E-BF19-458B-A770-19D020102395 screenshot '--type=jpeg' work/proof-reference-stable/cases/05-ios-query-loss-r01/screenshot.jpg
+Note: No display specified. Defaulting to display: 2D19A0DE-B228-4550-A58D-9DBBFA035358 (screenID: 1, name: LCD)
+Wrote screenshot to: $WORKSPACE/work/proof-reference-stable/cases/05-ios-query-loss-r01/screenshot.jpg
 [exit 0]
 $ xcrun simctl spawn 9974A09E-BF19-458B-A770-19D020102395 log show --style compact --last 4s --predicate 'process == "DeepLinkFixture"'
 getpwuid_r did not find a match for uid 501
 [exit 0]
 $ xcrun simctl get_app_container 9974A09E-BF19-458B-A770-19D020102395 dev.deeplinklab.fixture data
-$HOME/Library/Developer/CoreSimulator/Devices/9974A09E-BF19-458B-A770-19D020102395/data/Containers/Data/Application/18C70131-4D6A-422C-BD09-23696D257792
+$HOME/Library/Developer/CoreSimulator/Devices/9974A09E-BF19-458B-A770-19D020102395/data/Containers/Data/Application/BFBAA5DE-BF5F-4DA3-AB4D-BC7D177F6A6F
 [exit 0]

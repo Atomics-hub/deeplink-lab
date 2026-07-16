@@ -6,9 +6,9 @@ Simulator device failed to open deeplinklab://good/product/42.
 Underlying error (domain=LSApplicationWorkspaceErrorDomain, code=115):
 	The operation couldn’t be completed. (LSApplicationWorkspaceErrorDomain error 115.)
 [exit 115]
-$ xcrun simctl io 9974A09E-BF19-458B-A770-19D020102395 screenshot '--type=jpeg' work/proof-reference-public/cases/10-ios-uninstalled-r01/screenshot.jpg
-Note: No display specified. Defaulting to display: 8F95D91F-FCB9-4754-8D9E-205D2812ECF4 (screenID: 1, name: LCD)
-Wrote screenshot to: $WORKSPACE/work/proof-reference-public/cases/10-ios-uninstalled-r01/screenshot.jpg
+$ xcrun simctl io 9974A09E-BF19-458B-A770-19D020102395 screenshot '--type=jpeg' work/proof-reference-stable/cases/10-ios-uninstalled-r01/screenshot.jpg
+Note: No display specified. Defaulting to display: 2D19A0DE-B228-4550-A58D-9DBBFA035358 (screenID: 1, name: LCD)
+Wrote screenshot to: $WORKSPACE/work/proof-reference-stable/cases/10-ios-uninstalled-r01/screenshot.jpg
 [exit 0]
 $ xcrun simctl spawn 9974A09E-BF19-458B-A770-19D020102395 log show --style compact --last 4s --predicate 'process == "DeepLinkFixture"'
 getpwuid_r did not find a match for uid 501

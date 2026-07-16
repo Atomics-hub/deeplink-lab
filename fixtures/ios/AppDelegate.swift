@@ -10,7 +10,14 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.backgroundColor = UIColor(red: 0.035, green: 0.075, blue: 0.14, alpha: 1)
+        let rootViewController = UIViewController()
+        rootViewController.view.backgroundColor = UIColor(
+            red: 0.035,
+            green: 0.075,
+            blue: 0.14,
+            alpha: 1
+        )
+        window.rootViewController = rootViewController
 
         let title = UILabel()
         title.text = "DeepLink Lab Fixture"
@@ -35,11 +42,14 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         stack.axis = .vertical
         stack.spacing = 22
         stack.translatesAutoresizingMaskIntoConstraints = false
-        window.addSubview(stack)
+        rootViewController.view.addSubview(stack)
         NSLayoutConstraint.activate([
-            stack.leadingAnchor.constraint(equalTo: window.leadingAnchor, constant: 28),
-            stack.trailingAnchor.constraint(equalTo: window.trailingAnchor, constant: -28),
-            stack.centerYAnchor.constraint(equalTo: window.centerYAnchor),
+            stack.leadingAnchor.constraint(equalTo: rootViewController.view.leadingAnchor, constant: 28),
+            stack.trailingAnchor.constraint(
+                equalTo: rootViewController.view.trailingAnchor,
+                constant: -28
+            ),
+            stack.centerYAnchor.constraint(equalTo: rootViewController.view.centerYAnchor),
         ])
 
         self.window = window

@@ -12,7 +12,7 @@
   },
   "speed": {
     "status": "passed",
-    "observed": "20 cases, 2 platform(s), 137.402s",
+    "observed": "20 cases, 2 platform(s), 90.183s",
     "required": "at least 20 cases across 2 platforms in under 600s"
   },
   "integration": {

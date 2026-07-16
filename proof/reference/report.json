@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "toolVersion": "0.1.0",
-  "runId": "20260715T195915Z",
-  "generatedAt": "2026-07-15T19:59:15.264393Z",
+  "runId": "20260716T034207Z",
+  "generatedAt": "2026-07-16T03:42:07.684517Z",
   "spec": "deeplinklab.yml",
   "referenceSetup": "Apple M4, macOS 26.5.2, Xcode 26.6/iOS 26.5 Simulator, Android API 36 arm64 emulator at 720x1600",
   "preflight": {
@@ -18,7 +18,7 @@
     "passed": 8,
     "failed": 12,
     "unavailable": 0,
-    "durationMs": 137402,
+    "durationMs": 90183,
     "platforms": [
       "ios",
       "android"
@@ -39,7 +39,7 @@
         "target": "app",
         "destination": "product/42"
       },
-      "durationMs": 11898,
+      "durationMs": 4961,
       "startingState": {
         "install": "installed",
         "launch": "cold",
@@ -56,9 +56,9 @@
         "logs": "cases/01-ios-good-cold-r01/device.log",
         "commands": "cases/01-ios-good-cold-r01/commands.log",
         "sha256": {
-          "cases/01-ios-good-cold-r01/commands.log": "311f2cfd4676f32acf8e5cfe82f18fbd54f1bfa66c47b83ccfa532e166d78a19",
-          "cases/01-ios-good-cold-r01/device.log": "66405f10289f590ed8ecd6021eda563fe5cad9f018a1ff981c8cb47c4fdf1b48",
-          "cases/01-ios-good-cold-r01/screenshot.jpg": "575beb2c4535ac4024043c99deec6df942546df16f26da914376bdbe2c67c9b2"
+          "cases/01-ios-good-cold-r01/commands.log": "26b8ab4a060a2089985891758e710edd63973091efd536020c2442b1f5e9421b",
+          "cases/01-ios-good-cold-r01/device.log": "59af55e778eee9861bed8aa007a3e62f150031b0178a0b70c4e4534ac1c912de",
+          "cases/01-ios-good-cold-r01/screenshot.jpg": "72ff584b0fda09e21262393e498e050ad715d1b25d4570b34bd74475a3518202"
         },
         "completeForFailure": true
       },
@@ -79,7 +79,7 @@
         "target": "app",
         "destination": "search?q=blue"
       },
-      "durationMs": 8394,
+      "durationMs": 4222,
       "startingState": {
         "install": "installed",
         "launch": "warm",
@@ -96,9 +96,9 @@
         "logs": "cases/02-ios-good-query-r01/device.log",
         "commands": "cases/02-ios-good-query-r01/commands.log",
         "sha256": {
-          "cases/02-ios-good-query-r01/commands.log": "bc3f74044b80d2643e2cee885407039c0f5a8607278d321f332cc960150e87f3",
-          "cases/02-ios-good-query-r01/device.log": "7a1c8a053a4ed514ace9b03dbc2d9e4b533d3b26154b234045789959070572fc",
-          "cases/02-ios-good-query-r01/screenshot.jpg": "575beb2c4535ac4024043c99deec6df942546df16f26da914376bdbe2c67c9b2"
+          "cases/02-ios-good-query-r01/commands.log": "f253f1acb51c3e0f69646dca819ba37e7d3c2aec8e093b72bb6a64f0df96fef8",
+          "cases/02-ios-good-query-r01/device.log": "33b882fecbede5ccf9ffaa97de8ee9243361b2a8b1c0494d3f8fa322f6e85c03",
+          "cases/02-ios-good-query-r01/screenshot.jpg": "04109aecd5caca8dfea58294f6dd7ea19dcb9e96492936b0310a525e47f26cb5"
         },
         "completeForFailure": true
       },
@@ -119,7 +119,7 @@
         "target": "app",
         "destination": "inbox"
       },
-      "durationMs": 12032,
+      "durationMs": 5128,
       "startingState": {
         "install": "installed",
         "launch": "background",
@@ -136,9 +136,9 @@
         "logs": "cases/03-ios-good-background-r01/device.log",
         "commands": "cases/03-ios-good-background-r01/commands.log",
         "sha256": {
-          "cases/03-ios-good-background-r01/commands.log": "dfc3afa8d6b22b76e8e084b8064d20528d0839c4069aff061692b8bd595b9a9c",
-          "cases/03-ios-good-background-r01/device.log": "f09f17bf95bb4a674d7f2fad2547da00665d0007f76adbb94a5418b15c09d639",
-          "cases/03-ios-good-background-r01/screenshot.jpg": "fcb123db80eab82dcc7e21203edac40c0b59c66163f84c3101722e9b4f17724a"
+          "cases/03-ios-good-background-r01/commands.log": "f09c31a4bbfdf7e84226375c73cd856bede385a6095ed76f3f3d92b63499d970",
+          "cases/03-ios-good-background-r01/device.log": "c201049e06d16212bd0ca30b83fdb2368ecc8707fde5d6618e9ad3e7900d975b",
+          "cases/03-ios-good-background-r01/screenshot.jpg": "26a29f8d79fd4c51ddad2468403cb65385dc02eaa84a3e64ab4dde940b6614bd"
         },
         "completeForFailure": true
       },
@@ -159,7 +159,7 @@
         "target": "app",
         "destination": "home"
       },
-      "durationMs": 6589,
+      "durationMs": 3378,
       "startingState": {
         "install": "installed",
         "launch": "cold",
@@ -176,9 +176,9 @@
         "logs": "cases/04-ios-wrong-destination-r01/device.log",
         "commands": "cases/04-ios-wrong-destination-r01/commands.log",
         "sha256": {
-          "cases/04-ios-wrong-destination-r01/commands.log": "b33c68902afa5ed97677d41978c28b06a9782df87b9e67f0511a7eae58e2e7ae",
-          "cases/04-ios-wrong-destination-r01/device.log": "3cb920ce4c2b843ee3d3e6bec94c4b40088cbed71408301a9cfd07cfd7f92aac",
-          "cases/04-ios-wrong-destination-r01/screenshot.jpg": "fcb123db80eab82dcc7e21203edac40c0b59c66163f84c3101722e9b4f17724a"
+          "cases/04-ios-wrong-destination-r01/commands.log": "19c6254cddfbdb352328d5f41387c4019d666b9e33ee9965ee3fc5647348b44b",
+          "cases/04-ios-wrong-destination-r01/device.log": "03ddd4d8838e8d039b2ec4fb0ba10db756c073722a9427063a5f89a1d2f22308",
+          "cases/04-ios-wrong-destination-r01/screenshot.jpg": "2829593c538ed72e383fc999cb1e9edd606d83d7addc9275c3d672bcf29de6aa"
         },
         "completeForFailure": true
       },
@@ -200,7 +200,7 @@
         "target": "app",
         "destination": "search"
       },
-      "durationMs": 5126,
+      "durationMs": 3278,
       "startingState": {
         "install": "installed",
         "launch": "cold",
@@ -217,9 +217,9 @@
         "logs": "cases/05-ios-query-loss-r01/device.log",
         "commands": "cases/05-ios-query-loss-r01/commands.log",
         "sha256": {
-          "cases/05-ios-query-loss-r01/commands.log": "e2b155ac4aec45ec4b9ae473e89a03884f98548b29df1ed37b3b3a6999014e08",
-          "cases/05-ios-query-loss-r01/device.log": "64e603be828e369e0c8165adaadc813dc31dab89fe7641184dd7adb8c04f8a6e",
-          "cases/05-ios-query-loss-r01/screenshot.jpg": "f294aa8fe1a754ca9cb57f474de735781ae8d584b0ed9dbac2447d57de600939"
+          "cases/05-ios-query-loss-r01/commands.log": "ce084e7bb82099242fc67ade27d533b0fca9483ab8d813032c46f93a88271b47",
+          "cases/05-ios-query-loss-r01/device.log": "bb976570dd84eaf5447b96ecd4cf3f1f792f4b841325bc3f300a63eaaea07b5e",
+          "cases/05-ios-query-loss-r01/screenshot.jpg": "f8b0963c7ae6b05fca23e63ec9ee4c36b9dd03e8943ea471db4d231d4a7fe3da"
         },
         "completeForFailure": true
       },
@@ -241,7 +241,7 @@
         "target": "app",
         "destination": "article/7"
       },
-      "durationMs": 19924,
+      "durationMs": 3589,
       "startingState": {
         "install": "installed",
         "launch": "cold",
@@ -258,9 +258,9 @@
         "logs": "cases/06-ios-fragment-loss-r01/device.log",
         "commands": "cases/06-ios-fragment-loss-r01/commands.log",
         "sha256": {
-          "cases/06-ios-fragment-loss-r01/commands.log": "60ac2ff85d5da248ea365f1aa9362d14b5fb17e5d819886b53eca2e1347b8679",
-          "cases/06-ios-fragment-loss-r01/device.log": "9f56fca152030dba9e8ee76dee4fc8967ab667507b5878f0f9ab819d55b6b9a6",
-          "cases/06-ios-fragment-loss-r01/screenshot.jpg": "650d0a1df361f7800cc7904b95e23cc88d3378f27990b6db39edd45c8e5ebc2f"
+          "cases/06-ios-fragment-loss-r01/commands.log": "3995b09c50c94b5a5221d1a9733c677700627fe51088bd030bb479aa24325c64",
+          "cases/06-ios-fragment-loss-r01/device.log": "cf0ed5c4fa690b527201762f8cf53dfc06a84591ceb6ade019bd13222ad91822",
+          "cases/06-ios-fragment-loss-r01/screenshot.jpg": "50bb2c07111b20fbabd003ac7e375f073d8146c56d5e9f57f8b784bcaa49311f"
         },
         "completeForFailure": true
       },
@@ -282,7 +282,7 @@
         "target": "app",
         "destination": "user/admin"
       },
-      "durationMs": 11375,
+      "durationMs": 3994,
       "startingState": {
         "install": "installed",
         "launch": "cold",
@@ -299,9 +299,9 @@
         "logs": "cases/07-ios-route-collision-r01/device.log",
         "commands": "cases/07-ios-route-collision-r01/commands.log",
         "sha256": {
-          "cases/07-ios-route-collision-r01/commands.log": "8c995582f3217936ce6834b4dabc14a980f0ee928aff3076e19c7f67ca5f9842",
-          "cases/07-ios-route-collision-r01/device.log": "9f56fca152030dba9e8ee76dee4fc8967ab667507b5878f0f9ab819d55b6b9a6",
-          "cases/07-ios-route-collision-r01/screenshot.jpg": "650d0a1df361f7800cc7904b95e23cc88d3378f27990b6db39edd45c8e5ebc2f"
+          "cases/07-ios-route-collision-r01/commands.log": "8ef5a896b706fd6650b1abd6ea626588c1251c3a3773ede2df7701c7ed1a42bc",
+          "cases/07-ios-route-collision-r01/device.log": "762723aef2a6cbd895614c8440820b5129781682d1d05ab223ce9012daf94336",
+          "cases/07-ios-route-collision-r01/screenshot.jpg": "388bf6f9781948a15b899b66b99dabde08e65f340043fb0587ad8f500e782ba5"
         },
         "completeForFailure": true
       },
@@ -323,7 +323,7 @@
         "target": "app",
         "destination": "home"
       },
-      "durationMs": 6152,
+      "durationMs": 3867,
       "startingState": {
         "install": "installed",
         "launch": "warm",
@@ -340,9 +340,9 @@
         "logs": "cases/08-ios-warm-stale-r01/device.log",
         "commands": "cases/08-ios-warm-stale-r01/commands.log",
         "sha256": {
-          "cases/08-ios-warm-stale-r01/commands.log": "4da26fa4019a21f540bba47b3a74b0fd6c53d9c578acc04f5c714aafa8d7a264",
-          "cases/08-ios-warm-stale-r01/device.log": "3dd5183b79890a3e6bbffe1ff94d2d5ce184d9ad6c5c563ee6216e24099a9a4b",
-          "cases/08-ios-warm-stale-r01/screenshot.jpg": "d7a157674f7bec84f5db17a316a9148cce1a6d4a685a1be8316139735faefc35"
+          "cases/08-ios-warm-stale-r01/commands.log": "aecbe3eef1b960edb0cf437127877edb9e95167de3f5485e4a6ba8e30e9417bf",
+          "cases/08-ios-warm-stale-r01/device.log": "58b20d747f4aebcd52c3bf28ba211e6941fc601f70c4787a615cea4dcd17825a",
+          "cases/08-ios-warm-stale-r01/screenshot.jpg": "43d7aac4104a2f0ce8abc3d818b61eaddbb747856671b8f121304f3a0e9054c3"
         },
         "completeForFailure": true
       },
@@ -364,7 +364,7 @@
         "target": "app",
         "destination": "home"
       },
-      "durationMs": 7408,
+      "durationMs": 6592,
       "startingState": {
         "install": "installed",
         "launch": "background",
@@ -381,9 +381,9 @@
         "logs": "cases/09-ios-background-ignored-r01/device.log",
         "commands": "cases/09-ios-background-ignored-r01/commands.log",
         "sha256": {
-          "cases/09-ios-background-ignored-r01/commands.log": "41b2ceff3e290c97bc0c40f60f52140df918b13023fcc7da40ec0a91a6c7cd12",
-          "cases/09-ios-background-ignored-r01/device.log": "f92a8f9df81badb2359f2fa97471b7917d9fed607694a19f540944f7030c20de",
-          "cases/09-ios-background-ignored-r01/screenshot.jpg": "d1164eb74329dd2280df555554d0866d4c0725c45591991b338277b6aae61edf"
+          "cases/09-ios-background-ignored-r01/commands.log": "01843340ce5db579c710a9b851a82f8adc255d92a064bcd9fff833beb8d9f6d2",
+          "cases/09-ios-background-ignored-r01/device.log": "fbbabbf846ab7c35da0fce3a5504ed47090e8e4221af0f1cff3293f901d085f3",
+          "cases/09-ios-background-ignored-r01/screenshot.jpg": "514f6cf3bfec93e61f8187b383211240dc51bdbeb05d8ef58beb3e40db2d44ea"
         },
         "completeForFailure": true
       },
@@ -405,7 +405,7 @@
         "target": "unhandled",
         "destination": "no_handler"
       },
-      "durationMs": 3390,
+      "durationMs": 3737,
       "startingState": {
         "install": "uninstalled",
         "launch": "cold",
@@ -422,9 +422,9 @@
         "logs": "cases/10-ios-uninstalled-r01/device.log",
         "commands": "cases/10-ios-uninstalled-r01/commands.log",
         "sha256": {
-          "cases/10-ios-uninstalled-r01/commands.log": "fae7b572d27e5120fc9f9f08ad4207fc8f14a24ff20855e941cefc733d0b5e32",
+          "cases/10-ios-uninstalled-r01/commands.log": "f98a27c48f3565a3fa6af198ae69c7f1855aaa5c657184335de9d5b90a046da7",
           "cases/10-ios-uninstalled-r01/device.log": "9f56fca152030dba9e8ee76dee4fc8967ab667507b5878f0f9ab819d55b6b9a6",
-          "cases/10-ios-uninstalled-r01/screenshot.jpg": "23dd1480ff08574ff500286c1b94ad9ca8e381cad317577760f2a8fcb70e9d77"
+          "cases/10-ios-uninstalled-r01/screenshot.jpg": "070a2d4060dd3fec96510cb26c007e83e690f75467a1f84c49ed2763a9e0d7aa"
         },
         "completeForFailure": true
       },
@@ -445,7 +445,7 @@
         "target": "app",
         "destination": "product/42"
       },
-      "durationMs": 6736,
+      "durationMs": 3977,
       "startingState": {
         "install": "installed",
         "launch": "cold",
@@ -462,9 +462,9 @@
         "logs": "cases/11-android-good-cold-r01/device.log",
         "commands": "cases/11-android-good-cold-r01/commands.log",
         "sha256": {
-          "cases/11-android-good-cold-r01/commands.log": "da5592fea32016e81a20bf9afa765ff86a3c3ca567f6ff7a54bfb9cae7109338",
-          "cases/11-android-good-cold-r01/device.log": "32a264fcb2e3ae0e72ae75b627a0c26447b4ff99e94a5d51fa3c240a946d4c06",
-          "cases/11-android-good-cold-r01/screenshot.png": "af2882fb8d8673b1fddf95cceaa9fb3fb61ef34526f1aca088536fa9262cb009"
+          "cases/11-android-good-cold-r01/commands.log": "7897316c54d2f1d74b7c456734a174ae9ddfff68b884ded8c39319f14cb3e6cc",
+          "cases/11-android-good-cold-r01/device.log": "fe995f13256d59129a589e19dba264f32babe31853af7ac6337ad0c411206a0f",
+          "cases/11-android-good-cold-r01/screenshot.png": "749581ec12b2ce445f1cca6ec46b3c737c3dcc71884241cdc168e8d44caa01a5"
         },
         "completeForFailure": true
       },
@@ -485,7 +485,7 @@
         "target": "app",
         "destination": "search?q=blue"
       },
-      "durationMs": 6019,
+      "durationMs": 3845,
       "startingState": {
         "install": "installed",
         "launch": "warm",
@@ -502,9 +502,9 @@
         "logs": "cases/12-android-good-query-r01/device.log",
         "commands": "cases/12-android-good-query-r01/commands.log",
         "sha256": {
-          "cases/12-android-good-query-r01/commands.log": "747c045c7f85ebe8dc57d70a83fde16556f64ebaf6764f952f51e984d33729c6",
-          "cases/12-android-good-query-r01/device.log": "3576909732cad6aa64aadb53a761a7dd0ecd306bbe4ee073eb79817fc4b2df1b",
-          "cases/12-android-good-query-r01/screenshot.png": "191f9f46c82a12c96e21ce305b989b7e2230c77587fd29edd133f55dfb1a5fcf"
+          "cases/12-android-good-query-r01/commands.log": "3157e7a45d1601160a669d3f28ead3176249b54313d6096eb97fab48e0561b27",
+          "cases/12-android-good-query-r01/device.log": "fca430264230a22cd95df9922318d94b202e4151325188d7f0f602aace357390",
+          "cases/12-android-good-query-r01/screenshot.png": "2a99758786f0f99543becc93bd0cd6de520272789e73694f95c4194a9be6a0e0"
         },
         "completeForFailure": true
       },
@@ -525,7 +525,7 @@
         "target": "app",
         "destination": "inbox"
       },
-      "durationMs": 3692,
+      "durationMs": 6954,
       "startingState": {
         "install": "installed",
         "launch": "background",
@@ -542,9 +542,9 @@
         "logs": "cases/13-android-good-background-r01/device.log",
         "commands": "cases/13-android-good-background-r01/commands.log",
         "sha256": {
-          "cases/13-android-good-background-r01/commands.log": "e2f33d8f8255be42a5cccdecaa0040ad095ec7d49b143b51e63029bf98e60b00",
-          "cases/13-android-good-background-r01/device.log": "7c465567eff4206d0989b76713e9e8795bd2f4df9bf95fa812b625d671d49989",
-          "cases/13-android-good-background-r01/screenshot.png": "1342d41bbedf9ce1941dcf17443011ba98026ae6f288a5d0a56fb7ec66a174f7"
+          "cases/13-android-good-background-r01/commands.log": "70652b52740c67143a29286352a456a5b2d89014bb4d908ef3254898016d9965",
+          "cases/13-android-good-background-r01/device.log": "514ba73e8783113f896d60bfbf60b35ec7e84f8223a0da1a7e0f615b12ee4fc3",
+          "cases/13-android-good-background-r01/screenshot.png": "161e3a1389ede1e79c279ec79ec6af5ee3a73691d8a46e1163cb02ff300cec05"
         },
         "completeForFailure": true
       },
@@ -565,7 +565,7 @@
         "target": "app",
         "destination": "home"
       },
-      "durationMs": 3563,
+      "durationMs": 4202,
       "startingState": {
         "install": "installed",
         "launch": "cold",
@@ -582,9 +582,9 @@
         "logs": "cases/14-android-wrong-destination-r01/device.log",
         "commands": "cases/14-android-wrong-destination-r01/commands.log",
         "sha256": {
-          "cases/14-android-wrong-destination-r01/commands.log": "5c419510cc1ac02704c98efe4c58d134832654fdf1145d50c9c3bbc243f9028d",
-          "cases/14-android-wrong-destination-r01/device.log": "fc61cdb9978d12ce439dad1a8a81828dfebbb7b0e989ec8f8102e9dd1f9a27f3",
-          "cases/14-android-wrong-destination-r01/screenshot.png": "773f6ab44c1c456d1b4fb5cbda616aea47dbb76cf62c253d4a1d8534aceadbe5"
+          "cases/14-android-wrong-destination-r01/commands.log": "c61e1dfe533309cae976a67cb27c3731cdb9b18545c925e3f4181d3cec081963",
+          "cases/14-android-wrong-destination-r01/device.log": "ce24a9961ab556f1965a0c8711c8b49e0aba755435724b0af023795e42d9ce04",
+          "cases/14-android-wrong-destination-r01/screenshot.png": "1b055f807acdfa3f77248bec64028abdeaebd79c0fb3179acc12a6d3b7354a2f"
         },
         "completeForFailure": true
       },
@@ -606,7 +606,7 @@
         "target": "app",
         "destination": "search"
       },
-      "durationMs": 4517,
+      "durationMs": 4391,
       "startingState": {
         "install": "installed",
         "launch": "cold",
@@ -623,9 +623,9 @@
         "logs": "cases/15-android-query-loss-r01/device.log",
         "commands": "cases/15-android-query-loss-r01/commands.log",
         "sha256": {
-          "cases/15-android-query-loss-r01/commands.log": "e698437b13bcec975eb0693fef594b9b9f0cebb0d54aaeff4bcf9fe9ad37900d",
-          "cases/15-android-query-loss-r01/device.log": "0cb7a243e2c2afbae502f8f1fca674f5740769100b8c2c326d74540575a2b02a",
-          "cases/15-android-query-loss-r01/screenshot.png": "4ae287f6651004090cc78910cf13f255ef6ae957c3ac444bf88e1ca5e193fcc4"
+          "cases/15-android-query-loss-r01/commands.log": "643b3466010d4ab9bd183918657123b8b6343bceb28bb10e709e697ae89eaa35",
+          "cases/15-android-query-loss-r01/device.log": "d1e6d4941ffbfede7913fb054fe92f5f5fc44bedfa780a9846fc0facba36281a",
+          "cases/15-android-query-loss-r01/screenshot.png": "30861e4e59016b6d4ee803b55e17830129bbfe9176f489da288bf9e86664bdeb"
         },
         "completeForFailure": true
       },
@@ -647,7 +647,7 @@
         "target": "app",
         "destination": "article/7"
       },
-      "durationMs": 4312,
+      "durationMs": 8652,
       "startingState": {
         "install": "installed",
         "launch": "cold",
@@ -664,9 +664,9 @@
         "logs": "cases/16-android-fragment-loss-r01/device.log",
         "commands": "cases/16-android-fragment-loss-r01/commands.log",
         "sha256": {
-          "cases/16-android-fragment-loss-r01/commands.log": "393d30ecb7b1d70146380ec639187fe2e3a05dbaf4d8e68d7278ee7620c815d5",
-          "cases/16-android-fragment-loss-r01/device.log": "41fca00ccb98f76e93cf21589e6c5990e2ad4e353a097f9347cd5a54ff496664",
-          "cases/16-android-fragment-loss-r01/screenshot.png": "65f0647e5074e55b3eedecb67c851ba6181d28b988cd2c6d0a418e7b828d548a"
+          "cases/16-android-fragment-loss-r01/commands.log": "b2f5ee8985e40c0b66b56af6143fdb00816e0b3d13296e1bf320c68c786a3225",
+          "cases/16-android-fragment-loss-r01/device.log": "0013bc7cccad41b26f50d928e76b485a071224500c94717dc39f229da3080dd0",
+          "cases/16-android-fragment-loss-r01/screenshot.png": "0d1ef8863939745d73df7d5123ac81deaf31df99d9fa2951f366be1c8ad2a178"
         },
         "completeForFailure": true
       },
@@ -688,7 +688,7 @@
         "target": "app",
         "destination": "user/admin"
       },
-      "durationMs": 3303,
+      "durationMs": 3471,
       "startingState": {
         "install": "installed",
         "launch": "cold",
@@ -705,9 +705,9 @@
         "logs": "cases/17-android-route-collision-r01/device.log",
         "commands": "cases/17-android-route-collision-r01/commands.log",
         "sha256": {
-          "cases/17-android-route-collision-r01/commands.log": "3fb8ce3f13badf5a8f694d0878108b8307611307b44b1dac7172a8969a912b84",
-          "cases/17-android-route-collision-r01/device.log": "70a8ca0155fc734f3bf2c190bbcb87a78783c4dc175e5a0994150e44a585e982",
-          "cases/17-android-route-collision-r01/screenshot.png": "4b4024405fb09e9644a3dd4641a8ec1422fbe4c5e292a96e9e43eb6735c133d9"
+          "cases/17-android-route-collision-r01/commands.log": "4f8e5055dc2a15977a24330a0d783700d6e8dc10cfa22e8b08be18df9055342f",
+          "cases/17-android-route-collision-r01/device.log": "7920abd04dd358046dd62794eec7d2bd8a5d625ea22c9efba33a764814d277aa",
+          "cases/17-android-route-collision-r01/screenshot.png": "a8f9d7a77c1240860442450b72f5d1509e5e28972f02f02d6a03bdd4d8bb9ecf"
         },
         "completeForFailure": true
       },
@@ -729,7 +729,7 @@
         "target": "app",
         "destination": "home"
       },
-      "durationMs": 4050,
+      "durationMs": 4345,
       "startingState": {
         "install": "installed",
         "launch": "warm",
@@ -746,9 +746,9 @@
         "logs": "cases/18-android-warm-stale-r01/device.log",
         "commands": "cases/18-android-warm-stale-r01/commands.log",
         "sha256": {
-          "cases/18-android-warm-stale-r01/commands.log": "7cc3cede373fe3ccccd2201ff03929e3812c15e2412705c84e7d4351727ea8fa",
-          "cases/18-android-warm-stale-r01/device.log": "7229bb0a6237b6b187da4280c76f72942533cf994a7079892da86657d5316e02",
-          "cases/18-android-warm-stale-r01/screenshot.png": "9b6990aee3d622dc9da88fb1705cac318dd733ea78e608b12410176a19cef346"
+          "cases/18-android-warm-stale-r01/commands.log": "fe2911dd52ebf8e3903360c22cc4fe520ecb5cc38cfe5ab0fd1be6b30e7cde55",
+          "cases/18-android-warm-stale-r01/device.log": "5162a657eda7d60d098420bc01b9b3f013c3a7841c882464802dfca8edf2596e",
+          "cases/18-android-warm-stale-r01/screenshot.png": "51ee315ba9d07160b4b8096e20df5092e77ba788e5aeccb69e2da232abce3b3c"
         },
         "completeForFailure": true
       },
@@ -770,7 +770,7 @@
         "target": "app",
         "destination": "home"
       },
-      "durationMs": 4180,
+      "durationMs": 4376,
       "startingState": {
         "install": "installed",
         "launch": "background",
@@ -787,9 +787,9 @@
         "logs": "cases/19-android-background-ignored-r01/device.log",
         "commands": "cases/19-android-background-ignored-r01/commands.log",
         "sha256": {
-          "cases/19-android-background-ignored-r01/commands.log": "ce9b4033e4c854183bf6d35035773b3e7fe2a34a2a4a546c36ca9f04090ee233",
-          "cases/19-android-background-ignored-r01/device.log": "cc79435644bfd7292e9e754bf9c7d50ae6f1d946713443d96792668312302ec0",
-          "cases/19-android-background-ignored-r01/screenshot.png": "57c7a585972bafcb4c173109b79e206b49d642a4a35ea50fb9ed0ad7f6f758a1"
+          "cases/19-android-background-ignored-r01/commands.log": "493be6b4999c45c826f9978e1faa8556c0e3450e116c70a27dec895599615e75",
+          "cases/19-android-background-ignored-r01/device.log": "b965231a535d1c7b55df7f2e2aca2dccc8fcf57e177bac4ab2fdf2b7926931d3",
+          "cases/19-android-background-ignored-r01/screenshot.png": "51ee315ba9d07160b4b8096e20df5092e77ba788e5aeccb69e2da232abce3b3c"
         },
         "completeForFailure": true
       },
@@ -811,7 +811,7 @@
         "target": "unhandled",
         "destination": "no_handler"
       },
-      "durationMs": 2666,
+      "durationMs": 2729,
       "startingState": {
         "install": "uninstalled",
         "launch": "cold",
@@ -828,9 +828,9 @@
         "logs": "cases/20-android-uninstalled-r01/device.log",
         "commands": "cases/20-android-uninstalled-r01/commands.log",
         "sha256": {
-          "cases/20-android-uninstalled-r01/commands.log": "83953939689ccf3ce314f5191b1af4c176e286e954e5b1dd024ed07a97425060",
-          "cases/20-android-uninstalled-r01/device.log": "6957d317d2ce6f10bb77e17c44ce4174ab90fbec3760b49bc19225c8a4257f46",
-          "cases/20-android-uninstalled-r01/screenshot.png": "1c5d11a2d0a6e419f9d21f8e82b0a02fb6e515f542d570de02adf34feb4b64f7"
+          "cases/20-android-uninstalled-r01/commands.log": "03eea640558ab32e464530d85f72c07b8d288571bbb9df36ecd4cce119f85679",
+          "cases/20-android-uninstalled-r01/device.log": "752cebe8a467f2969838b57c76ffa3b83a70a492789bb0242566f6cca67af79f",
+          "cases/20-android-uninstalled-r01/screenshot.png": "9fe02dfbda31c5c0cce42b84504f364cbd0cb4e06e5a5aeb704c5b9dbc201dbe"
         },
         "completeForFailure": true
       },

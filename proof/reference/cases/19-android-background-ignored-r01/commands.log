@@ -1,33 +1,33 @@
-$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell run-as dev.deeplinklab.fixture rm -f files/destination.txt
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5554 shell run-as dev.deeplinklab.fixture rm -f files/destination.txt
 [exit 0]
-$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 logcat -c
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5554 logcat -c
 [exit 0]
-$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell am force-stop dev.deeplinklab.fixture
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5554 shell am force-stop dev.deeplinklab.fixture
 [exit 0]
-$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell am start -W -n dev.deeplinklab.fixture/.MainActivity
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5554 shell am start -W -n dev.deeplinklab.fixture/.MainActivity
 Starting: Intent { cmp=dev.deeplinklab.fixture/.MainActivity }
 Status: ok
 LaunchState: COLD
 Activity: dev.deeplinklab.fixture/.MainActivity
-TotalTime: 1720
-WaitTime: 1803
+TotalTime: 1901
+WaitTime: 1915
 Complete
 [exit 0]
-$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell input keyevent KEYCODE_HOME
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5554 shell input keyevent KEYCODE_HOME
 [exit 0]
-$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell am start -W -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d deeplinklab://background-ignore/inbox
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5554 shell am start -W -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d deeplinklab://background-ignore/inbox
 Starting: Intent { act=android.intent.action.VIEW cat=[android.intent.category.BROWSABLE] dat=deeplinklab://background-ignore/... }
 Warning: Activity not started, its current task has been brought to the front
 Status: ok
 LaunchState: UNKNOWN (0)
 Activity: dev.deeplinklab.fixture/.MainActivity
-WaitTime: 104
+WaitTime: 136
 Complete
 [exit 0]
-$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 exec-out screencap -p
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5554 exec-out screencap -p
 [exit 0]
-$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 logcat -d -v threadtime
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5554 logcat -d -v threadtime
 [exit 0]
-$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5580 shell run-as dev.deeplinklab.fixture cat files/destination.txt
+$ $HOME/Library/Android/sdk/platform-tools/adb -s emulator-5554 shell run-as dev.deeplinklab.fixture cat files/destination.txt
 home
 [exit 0]
