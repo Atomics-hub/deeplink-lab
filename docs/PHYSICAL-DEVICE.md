@@ -1,12 +1,13 @@
 # Physical iPhone testing
 
-DeepLink Lab v1 does not enroll, provision, or drive physical iPhones. Its built-in
+DeepLink Lab v1 does not manage a physical-device fleet or drive device UI. Its built-in
 `--ios-device` lane calls `xcrun simctl` and is Simulator-only. Do not pass a physical
-device identifier to that option or label a manual device run as a built-in runtime result.
+device identifier to that option or label a device run as a built-in runtime result.
 
 This guide defines two bring-your-own-device lanes:
 
-1. a fast `devicectl` router smoke test against an already signed app;
+1. a one-command `devicectl` build, install, router, and destination smoke test against the
+   checked-in fixture, or the equivalent manual flow for another signed app;
 2. an actual Universal Link test, driven manually or with Appium/XCUITest.
 
 Both are physical-device observations. Neither proves deferred App Store attribution,
@@ -36,6 +37,38 @@ xcrun devicectl device info lockState --device "My iPhone"
 This lane proves that a physical build receives a URL and commits the expected in-app
 destination. It does **not** exercise iOS Universal Link association because `devicectl`
 delivers the payload directly to the named app.
+
+For the checked-in fixture, pass the CoreDevice identifier printed by
+`xcrun devicectl list devices`:
+
+```bash
+REQUIRE_INSTALL=1 DEVICECTL_TIMEOUT=120 \
+  scripts/run_deeplink_lab_device_path_launch.sh <coredevice-id>
+```
+
+The script reuses the team from its last successful local run or Xcode's most recently
+cached development team, creates a stable team-specific development bundle identifier,
+builds with automatic signing, installs the fresh app, launches
+`deeplinklab://good/product/42`, verifies the process, and copies
+`Documents/destination.txt` back from the app container. It exits zero only when the
+observed destination is exactly `product/42`. Automatic signing may register the development
+bundle identifier or connected device in the selected Apple Developer team. Local evidence
+is written under `work/physical-device/latest/`, which is ignored by Git because it contains
+device and signing details.
+
+If Xcode's most recently cached team is not the one you intend, select one explicitly:
+
+```bash
+DEVELOPMENT_TEAM=<team-id> REQUIRE_INSTALL=1 DEVICECTL_TIMEOUT=120 \
+  scripts/run_deeplink_lab_device_path_launch.sh <coredevice-id>
+```
+
+Override `PAYLOAD_URL` and `EXPECTED_DESTINATION` together to exercise another fixture
+route. Set `BUNDLE_ID` only when automatic registration policy requires a pre-approved app
+identifier. A failure to read destination evidence is `observation_unavailable`, never a
+pass.
+
+For a different already-signed app, the equivalent manual flow is:
 
 ```bash
 export DEVICE="My iPhone"
@@ -123,13 +156,15 @@ Keep this evidence outside the built-in Simulator report unless an adapter valid
 normalizes it. Missing destination observability remains `observation_unavailable`, never a
 pass.
 
-## Why the committed fixture is not a physical Universal Link fixture
+## Why the device fixture is not a physical Universal Link fixture
 
-The checked-in iOS fixture is intentionally compiled for the Simulator and ad-hoc signed.
-Its team ID is a placeholder, `links.example.test` is a reserved offline domain, and the app
-implements the custom-scheme URL callbacks used by the deterministic suite. It therefore
-must not be installed or cited as real Universal Link proof without a separate device build,
-real team/bundle identity, live domain, and universal-link continuation handler.
+The default deterministic build is compiled for the Simulator and ad-hoc signed. The
+separate Xcode device target uses a real local signing team but intentionally omits the
+placeholder Associated Domains entitlement: `links.example.test` is a reserved offline
+domain and cannot establish an Apple association. The device launcher therefore proves the
+fixture's custom-scheme router and exact destination on one phone. It must not be cited as
+Universal Link proof without a live domain, matching AASA, associated-domain entitlement,
+and universal-link continuation path.
 
 ## Primary references
 

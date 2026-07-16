@@ -23,7 +23,11 @@ The committed reference proof observed 20 cases across both local platforms in 9
 
 The report labels these layers separately. A green Simulator or emulator case is never described as real-device proof.
 
-For a bring-your-own iPhone smoke test or an Appium/XCUITest evidence lane, follow the [physical iPhone guide](docs/PHYSICAL-DEVICE.md). The built-in `--ios-device` option remains Simulator-only.
+For a bring-your-own iPhone smoke test, run the checked-in signed-device launcher documented
+in the [physical iPhone guide](docs/PHYSICAL-DEVICE.md). It builds, installs, launches a URL,
+and reads the exact committed destination back from the fixture's app container. The
+built-in `--ios-device` option remains Simulator-only, and the direct-payload smoke does not
+prove Universal Link association.
 
 ## Install
 
