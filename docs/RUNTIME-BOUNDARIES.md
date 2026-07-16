@@ -26,4 +26,6 @@ If only app foregrounding can be seen, the result is `observation_unavailable`; 
 
 ## Physical devices
 
-The v1 repository intentionally has no device enrollment, signing custody, USB provisioning, or cloud credentials. A future physical-device adapter must preserve the evidence contract and use an established Appium or Maestro transport supplied by the user. It must be labeled separately from local simulated evidence.
+The v1 repository intentionally has no device enrollment, signing custody, USB provisioning, or cloud credentials. A future physical-device adapter must preserve the evidence contract and use an established transport supported on the target platform, such as Appium/XCUITest on iOS. It must be labeled separately from local simulated evidence.
+
+The [physical iPhone guide](PHYSICAL-DEVICE.md) documents the supported BYO procedure and distinguishes direct app payload delivery from a real Universal Link tap.

@@ -23,6 +23,8 @@ The committed reference proof observed 20 cases across both local platforms in 9
 
 The report labels these layers separately. A green Simulator or emulator case is never described as real-device proof.
 
+For a bring-your-own iPhone smoke test or an Appium/XCUITest evidence lane, follow the [physical iPhone guide](docs/PHYSICAL-DEVICE.md). The built-in `--ios-device` option remains Simulator-only.
+
 ## Install
 
 The npm package supports macOS on both Apple Silicon and Intel. It contains one universal native binary: there are no runtime npm dependencies and no post-install download.
@@ -205,6 +207,7 @@ The runner has no fixture bundle IDs, activities, routes, or screenshots compile
 - `src/gates.rs` — hostile proof-gate evaluation;
 - `fixtures/` — dependency-light native apps and controlled website;
 - `schemas/` — generated contract and report schemas;
+- `docs/PHYSICAL-DEVICE.md` — honest BYO iPhone router and Universal Link runbook;
 - `scripts/build-npm.sh` — reproducible universal macOS npm artifact build;
 - `proof/` — sanitized reference evidence, never marketing screenshots presented as certification.
 
