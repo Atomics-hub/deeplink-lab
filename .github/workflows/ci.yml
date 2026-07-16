@@ -66,6 +66,17 @@ jobs:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
       - run: fixtures/ios/build.sh
       - run: codesign --verify --deep --strict fixtures/ios/build/DeepLinkFixture.app
+      - run: bash -n scripts/run_deeplink_lab_device_path_launch.sh
+      - name: Build unsigned iPhone fixture target
+        run: |
+          xcodebuild \
+            -project fixtures/ios/DeepLinkFixture.xcodeproj \
+            -scheme DeepLinkFixture \
+            -configuration Debug \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath /tmp/deeplink-lab-device-fixture \
+            CODE_SIGNING_ALLOWED=NO \
+            build
 
   android-fixture:
     name: Build Android fixture
