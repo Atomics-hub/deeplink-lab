@@ -44,8 +44,8 @@ if git ls-files --error-unmatch dist/npm/deeplink-lab >/dev/null 2>&1; then
   exit 1
 fi
 
-rg -q 'npm install --global deeplink-lab' README.md
-rg -q 'macOS' README.md
-rg -q 'no post-install download' README.md
+grep -Fq 'npm install --global deeplink-lab' README.md
+grep -Fq 'macOS' README.md
+grep -Fq 'no post-install download' README.md
 
 echo "npm metadata: deeplink-lab@$PACKAGE_VERSION (macOS arm64/x64)"

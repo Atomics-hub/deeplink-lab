@@ -31,7 +31,7 @@ diff -u "$TMP/expected.txt" "$TMP/contents.txt"
 
 mkdir -p "$TMP/unpacked"
 tar -xzf "$TARBALL" -C "$TMP/unpacked"
-if rg -a -n '/Users/|/home/[[:alnum:]_.-]+/|Documents/Codex' "$TMP/unpacked/package"; then
+if LC_ALL=C grep -ERan '/Users/|/home/[[:alnum:]_.-]+/|Documents/Codex' "$TMP/unpacked/package"; then
   echo "error: npm tarball contains a private absolute path" >&2
   exit 1
 fi
