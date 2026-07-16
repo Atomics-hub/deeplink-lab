@@ -1,0 +1,42 @@
+name: Publish npm package
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: npm-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Verify and publish
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+      - uses: dtolnay/rust-toolchain@4be7066ada62dd38de10e7b70166bc74ed198c30 # stable
+        with:
+          toolchain: 1.88.0
+          targets: aarch64-apple-darwin,x86_64-apple-darwin
+      - uses: Swatinem/rust-cache@e18b497796c12c097a38de10e7b70166bc74ed198c30 # v2
+        with:
+          cache-targets: false
+      - run: npm install --global npm@11.18.0
+      - run: npm run test:package
+      - name: Refuse an existing version
+        run: |
+          VERSION="$(node -p 'require("./package.json").version')"
+          if npm view "deeplink-lab@$VERSION" version >/dev/null 2>&1; then
+            echo "deeplink-lab@$VERSION already exists" >&2
+            exit 1
+          fi
+      - name: Publish through npm trusted publishing
+        run: npm publish --ignore-scripts --access public --provenance

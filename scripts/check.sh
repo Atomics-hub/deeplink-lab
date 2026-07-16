@@ -8,6 +8,7 @@ cargo fmt --all -- --check
 cargo clippy --all-targets --all-features -- -D warnings
 cargo test --all-targets --all-features
 cargo run --quiet -- validate --spec deeplinklab.yml --strict
+scripts/check-npm-metadata.sh
 
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT

@@ -1,0 +1,50 @@
+name: npm package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - Cargo.lock
+      - Cargo.toml
+      - package.json
+      - src/**
+      - scripts/build-npm.sh
+      - scripts/check-npm-*.sh
+      - .github/workflows/npm.yml
+      - .github/workflows/npm-publish.yml
+  pull_request:
+    paths:
+      - Cargo.lock
+      - Cargo.toml
+      - package.json
+      - src/**
+      - scripts/build-npm.sh
+      - scripts/check-npm-*.sh
+      - .github/workflows/npm.yml
+      - .github/workflows/npm-publish.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: Universal macOS tarball
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+      - uses: dtolnay/rust-toolchain@4be7066ada62dd38de10e7b70166bc74ed198c30 # stable
+        with:
+          toolchain: 1.88.0
+          targets: aarch64-apple-darwin,x86_64-apple-darwin
+      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
+        with:
+          cache-targets: false
+      - run: npm install --global npm@11.18.0
+      - run: npm test
+      - run: npm run test:package

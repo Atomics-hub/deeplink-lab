@@ -3,6 +3,7 @@
 **Test where a deep link lands—not merely whether its association files parse.**
 
 [![CI](https://github.com/Atomics-hub/deeplink-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Atomics-hub/deeplink-lab/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/deeplink-lab)](https://www.npmjs.com/package/deeplink-lab)
 [![Security](https://img.shields.io/badge/security-policy-1769e0)](SECURITY.md)
 [![License](https://img.shields.io/badge/license-Apache--2.0-1769e0)](LICENSE)
 
@@ -22,12 +23,32 @@ The committed reference proof observed 20 cases across both local platforms in 9
 
 The report labels these layers separately. A green Simulator or emulator case is never described as real-device proof.
 
-## Five-minute static preflight
+## Install
 
-Rust 1.88 or newer is the only requirement for static validation.
+The npm package supports macOS on both Apple Silicon and Intel. It contains one universal native binary: there are no runtime npm dependencies and no post-install download.
+
+```bash
+npm install --global deeplink-lab
+deeplink-lab --help
+```
+
+Or run it without keeping a global install:
+
+```bash
+npx deeplink-lab --help
+```
+
+To build from source instead, install Rust 1.88 or newer:
 
 ```bash
 cargo install --path . --locked
+```
+
+## Five-minute static preflight
+
+After either installation path:
+
+```bash
 deeplink-lab validate --spec deeplinklab.yml
 deeplink-lab doctor
 ```
@@ -184,6 +205,7 @@ The runner has no fixture bundle IDs, activities, routes, or screenshots compile
 - `src/gates.rs` — hostile proof-gate evaluation;
 - `fixtures/` — dependency-light native apps and controlled website;
 - `schemas/` — generated contract and report schemas;
+- `scripts/build-npm.sh` — reproducible universal macOS npm artifact build;
 - `proof/` — sanitized reference evidence, never marketing screenshots presented as certification.
 
 Read [SECURITY.md](SECURITY.md) before testing links from untrusted parties. Contributions are welcome under the [Apache-2.0 license](LICENSE).
