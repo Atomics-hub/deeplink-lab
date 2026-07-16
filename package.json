@@ -1,0 +1,59 @@
+{
+  "name": "deeplink-lab",
+  "version": "0.1.0",
+  "description": "Open-source deep link testing CLI for iOS Universal Links and Android App Links with exact-destination evidence",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/Atomics-hub/deeplink-lab#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atomics-hub/deeplink-lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Atomics-hub/deeplink-lab/issues"
+  },
+  "keywords": [
+    "deep-link",
+    "deeplink",
+    "universal-links",
+    "android-app-links",
+    "aasa",
+    "assetlinks",
+    "mobile-testing",
+    "ios",
+    "android",
+    "maestro",
+    "simctl",
+    "adb",
+    "cli"
+  ],
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "deeplink-lab": "dist/npm/deeplink-lab"
+  },
+  "files": [
+    "dist/npm/deeplink-lab",
+    "dist/npm/deeplink-lab.sha256",
+    "NOTICE"
+  ],
+  "scripts": {
+    "test": "scripts/check-npm-metadata.sh",
+    "build:npm": "scripts/build-npm.sh",
+    "check:npm": "scripts/check-npm-package.sh",
+    "test:package": "scripts/check-npm-tarball.sh",
+    "prepack": "npm run build:npm && npm run check:npm"
+  },
+  "packageManager": "npm@11.18.0",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

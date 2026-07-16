@@ -11,3 +11,4 @@
 - exact destination probes, screenshots, logs, hashes, starting-state evidence, and replay;
 - portable JSON and self-contained HTML reports;
 - deterministic native fixture apps, controlled website, and hostile proof-gate evaluator.
+- dependency-free npm distribution containing a checksummed universal macOS CLI binary.

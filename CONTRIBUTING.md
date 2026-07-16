@@ -9,6 +9,13 @@ cargo test --all-targets
 cargo clippy --all-targets --all-features -- -D warnings
 cargo fmt --all -- --check
 scripts/check-public.sh
+scripts/check-npm-metadata.sh
+```
+
+On macOS, verify the exact npm tarball and a clean install of its universal binary:
+
+```bash
+npm run test:package
 ```
 
 Build fixture apps on a Mac with Xcode and Android SDK installed:

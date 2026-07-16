@@ -8,6 +8,8 @@ Use GitHub's private vulnerability reporting for this repository. Please include
 
 Until a stable release exists, only the current default branch receives security fixes.
 
+The official npm package is `deeplink-lab`. It contains a universal macOS binary and does not run install scripts or download an executable after installation. Verify the package repository points to `https://github.com/Atomics-hub/deeplink-lab` before installing it.
+
 ## Threat model
 
 DeepLink Lab opens user-declared URLs on local test devices and reads user-declared local configuration files. Treat specifications and fixtures from untrusted parties as code-adjacent input:
